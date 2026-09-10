@@ -1,0 +1,31 @@
+{
+  "format": "advance-wars-ai-map",
+  "version": 1,
+  "width": 6,
+  "height": 6,
+  "current_player": 1,
+  "terrain": [
+    {"x": 0, "y": 0, "type": "hq"},
+    {"x": 5, "y": 5, "type": "hq"},
+    {"x": 1, "y": 1, "type": "city"},
+    {"x": 4, "y": 4, "type": "city"},
+    {"x": 2, "y": 1, "type": "forest"},
+    {"x": 3, "y": 4, "type": "forest"},
+    {"x": 2, "y": 3, "type": "forest"},
+    {"x": 3, "y": 2, "type": "forest"},
+    {"x": 0, "y": 3, "type": "mountain"},
+    {"x": 5, "y": 2, "type": "mountain"},
+    {"x": 2, "y": 2, "type": "road"},
+    {"x": 3, "y": 3, "type": "road"}
+  ],
+  "units": [
+    {"id": "human_art", "owner": 0, "type": "artillery", "hp": 100, "x": 1, "y": 1},
+    {"id": "human_inf_1", "owner": 0, "type": "infantry", "hp": 100, "x": 1, "y": 2},
+    {"id": "human_inf_2", "owner": 0, "type": "infantry", "hp": 100, "x": 2, "y": 1},
+    {"id": "human_tank", "owner": 0, "type": "tank", "hp": 100, "x": 1, "y": 0},
+    {"id": "ai_art", "owner": 1, "type": "artillery", "hp": 100, "x": 5, "y": 3},
+    {"id": "ai_inf_1", "owner": 1, "type": "infantry", "hp": 100, "x": 4, "y": 4},
+    {"id": "ai_inf_2", "owner": 1, "type": "infantry", "hp": 100, "x": 5, "y": 5},
+    {"id": "ai_tank", "owner": 1, "type": "tank", "hp": 100, "x": 3, "y": 5}
+  ]
+}

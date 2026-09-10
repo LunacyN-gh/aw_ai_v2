@@ -1,0 +1,418 @@
+[
+  {
+    "version": 1,
+    "fixture": "opening_0",
+    "passed": false,
+    "same_as_raw": false,
+    "actions": "(Action(kind='wait', actor='human_infantry_1', destination=12, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.214555,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "complete_bundles": 10,
+        "distinct_bundles": 10,
+        "nodes": 72,
+        "policy_steps": 36,
+        "production_expansions": 36,
+        "production_peak_frontier": 2,
+        "reply_bundles": 20,
+        "reply_checked_roots": 10,
+        "root_value_batches": 1,
+        "value_evaluations": 30
+      }
+    },
+    "candidates": []
+  },
+  {
+    "version": 1,
+    "fixture": "finish_capture_0",
+    "passed": true,
+    "same_as_raw": true,
+    "actions": "(Action(kind='capture', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.171831,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "complete_bundles": 8,
+        "distinct_bundles": 8,
+        "nodes": 64,
+        "policy_steps": 32,
+        "production_expansions": 32,
+        "production_peak_frontier": 2,
+        "reply_bundles": 16,
+        "reply_checked_roots": 8,
+        "root_value_batches": 1,
+        "value_evaluations": 24
+      }
+    },
+    "candidates": []
+  },
+  {
+    "version": 1,
+    "fixture": "opening_1",
+    "passed": true,
+    "same_as_raw": true,
+    "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.236767,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "complete_bundles": 13,
+        "distinct_bundles": 13,
+        "nodes": 83,
+        "policy_steps": 42,
+        "production_expansions": 41,
+        "production_peak_frontier": 2,
+        "reply_bundles": 26,
+        "reply_checked_roots": 13,
+        "root_value_batches": 1,
+        "value_evaluations": 39
+      }
+    },
+    "candidates": []
+  },
+  {
+    "version": 1,
+    "fixture": "finish_capture_1",
+    "passed": false,
+    "same_as_raw": false,
+    "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.250542,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "complete_bundles": 12,
+        "distinct_bundles": 12,
+        "nodes": 80,
+        "policy_steps": 40,
+        "production_expansions": 40,
+        "production_peak_frontier": 2,
+        "reply_bundles": 24,
+        "reply_checked_roots": 12,
+        "root_value_batches": 1,
+        "value_evaluations": 36
+      }
+    },
+    "candidates": []
+  },
+  {
+    "version": 2,
+    "fixture": "opening_0",
+    "passed": true,
+    "same_as_raw": true,
+    "actions": "(Action(kind='capture', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.122786,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "common_reply_rounds": 2,
+        "complete_bundles": 5,
+        "distinct_bundles": 5,
+        "nodes": 58,
+        "policy_steps": 52,
+        "production_expansions": 6,
+        "production_peak_frontier": 2,
+        "raw_baseline_retained": 1,
+        "raw_baseline_selected": 1,
+        "reply_bundles": 10,
+        "reply_checked_roots": 5,
+        "soft_targets": 0,
+        "value_evaluations": 15
+      }
+    },
+    "candidates": [
+      {
+        "source": "greedy policy",
+        "actions": "(Action(kind='capture', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": true,
+        "root_value": -0.014493571836409248,
+        "reply_value": -0.488077745571982,
+        "policy_preference": -0.4303612783551216,
+        "selection_score": -0.5311138734074942,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='human_infantry_1', destination=18, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": -0.01630292938547311,
+        "reply_value": -0.4579342461975924,
+        "policy_preference": -0.732357706874609,
+        "selection_score": -0.5311700168850533,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='wait', actor='human_infantry_1', destination=13, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.02337859145041371,
+        "reply_value": -0.5010350995417288,
+        "policy_preference": -2.107278600335121,
+        "selection_score": -0.7117629595752408,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": -0.3575358262066237,
+        "reply_value": -0.5190486192191961,
+        "policy_preference": -1.7998815774917603,
+        "selection_score": -0.6990367769683721,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='wait', actor='human_infantry_1', destination=12, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": -0.08020373181555537,
+        "reply_value": -0.42544001490816,
+        "policy_preference": -1.99980129301548,
+        "selection_score": -0.625420144209708,
+        "reply_rounds": 2
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "fixture": "finish_capture_0",
+    "passed": true,
+    "same_as_raw": true,
+    "actions": "(Action(kind='capture', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.105406,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "common_reply_rounds": 2,
+        "complete_bundles": 4,
+        "distinct_bundles": 4,
+        "nodes": 54,
+        "policy_steps": 49,
+        "production_expansions": 5,
+        "production_peak_frontier": 2,
+        "raw_baseline_retained": 1,
+        "raw_baseline_selected": 1,
+        "reply_bundles": 8,
+        "reply_checked_roots": 4,
+        "soft_targets": 0,
+        "value_evaluations": 12
+      }
+    },
+    "candidates": [
+      {
+        "source": "greedy policy",
+        "actions": "(Action(kind='capture', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": true,
+        "root_value": 0.2655343963952359,
+        "reply_value": -0.35184742066166724,
+        "policy_preference": -0.1763569638133049,
+        "selection_score": -0.36948311704299774,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='wait', actor='human_infantry_1', destination=7, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": -0.15241853733766847,
+        "reply_value": -0.502379515159356,
+        "policy_preference": -1.3433572053909302,
+        "selection_score": -0.636715235698449,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='human_infantry_1', destination=25, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.18957575898626716,
+        "reply_value": -0.4602653540524355,
+        "policy_preference": -1.7798561602830887,
+        "selection_score": -0.6382509700807444,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='human_infantry_1', destination=10, target='', build=''), Action(kind='build', actor='', destination=0, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.0892050836608735,
+        "reply_value": -0.47570256961907065,
+        "policy_preference": -1.9879214223474264,
+        "selection_score": -0.6744947118538133,
+        "reply_rounds": 2
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "fixture": "opening_1",
+    "passed": true,
+    "same_as_raw": true,
+    "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.110807,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "common_reply_rounds": 2,
+        "complete_bundles": 5,
+        "distinct_bundles": 5,
+        "nodes": 58,
+        "policy_steps": 52,
+        "production_expansions": 6,
+        "production_peak_frontier": 2,
+        "raw_baseline_retained": 1,
+        "raw_baseline_selected": 1,
+        "reply_bundles": 10,
+        "reply_checked_roots": 5,
+        "soft_targets": 0,
+        "value_evaluations": 15
+      }
+    },
+    "candidates": [
+      {
+        "source": "greedy policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": true,
+        "root_value": 0.5318928639070565,
+        "reply_value": 0.5039071661944572,
+        "policy_preference": -0.283909622579813,
+        "selection_score": 0.47551620393647587,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='wait', actor='ai_infantry_1', destination=29, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.48701804779699553,
+        "reply_value": 0.16701173021325702,
+        "policy_preference": -2.325117126107216,
+        "selection_score": -0.06549998239746457,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=28, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.5155998448507363,
+        "reply_value": 0.35370635218574437,
+        "policy_preference": -0.9784567058086395,
+        "selection_score": 0.2558606816048804,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.3565315687539452,
+        "reply_value": 0.44206458171118074,
+        "policy_preference": -1.3420785069465637,
+        "selection_score": 0.30785673101652433,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='wait', actor='ai_infantry_1', destination=27, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.46744897864988555,
+        "reply_value": 0.16575825943479175,
+        "policy_preference": -2.228041023015976,
+        "selection_score": -0.05704584286680586,
+        "reply_rounds": 2
+      }
+    ]
+  },
+  {
+    "version": 2,
+    "fixture": "finish_capture_1",
+    "passed": true,
+    "same_as_raw": true,
+    "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=28, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+    "metrics": {
+      "elapsed": 0.121336,
+      "exhausted": false,
+      "reason": "",
+      "counts": {
+        "common_reply_rounds": 2,
+        "complete_bundles": 6,
+        "distinct_bundles": 6,
+        "nodes": 62,
+        "policy_steps": 55,
+        "production_expansions": 7,
+        "production_peak_frontier": 2,
+        "raw_baseline_retained": 1,
+        "raw_baseline_selected": 1,
+        "reply_bundles": 12,
+        "reply_checked_roots": 6,
+        "soft_targets": 0,
+        "value_evaluations": 18
+      }
+    },
+    "candidates": [
+      {
+        "source": "greedy policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=28, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": true,
+        "root_value": 0.6199372196481554,
+        "reply_value": 0.45306366363365813,
+        "policy_preference": -0.4134414345026016,
+        "selection_score": 0.41171952018339797,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=10, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.521838633217054,
+        "reply_value": 0.3486921710486594,
+        "policy_preference": -1.6590868011116982,
+        "selection_score": 0.18278349093748958,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.5312145928518349,
+        "reply_value": 0.5113051158900443,
+        "policy_preference": -1.1133152581751347,
+        "selection_score": 0.39997359007253086,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=28, target='', build=''), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.5454241874123101,
+        "reply_value": 0.2178458731801917,
+        "policy_preference": -0.6824223101139069,
+        "selection_score": 0.149603642168801,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='wait', actor='ai_infantry_1', destination=27, target='', build=''), Action(kind='build', actor='', destination=35, target='', build='infantry'), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.46454930208852996,
+        "reply_value": 0.19081579877862567,
+        "policy_preference": -3.1936024129390717,
+        "selection_score": -0.1285444425152815,
+        "reply_rounds": 2
+      },
+      {
+        "source": "sampled policy",
+        "actions": "(Action(kind='capture', actor='ai_infantry_1', destination=17, target='', build=''), Action(kind='end', actor='', destination=-1, target='', build=''))",
+        "raw": false,
+        "root_value": 0.34670118330739674,
+        "reply_value": 0.45678323348272615,
+        "policy_preference": -2.1460429430007935,
+        "selection_score": 0.2421789391826468,
+        "reply_rounds": 2
+      }
+    ]
+  }
+]

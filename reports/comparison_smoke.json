@@ -1,0 +1,45 @@
+{
+  "search_wins": 2,
+  "policy_wins": 2,
+  "censored": 0,
+  "games": [
+    {
+      "game": 0,
+      "search_side": 0,
+      "winner": 0,
+      "termination": "victory",
+      "turns": 3
+    },
+    {
+      "game": 1,
+      "search_side": 1,
+      "winner": 0,
+      "termination": "victory",
+      "turns": 3
+    },
+    {
+      "game": 2,
+      "search_side": 0,
+      "winner": 0,
+      "termination": "victory",
+      "turns": 3
+    },
+    {
+      "game": 3,
+      "search_side": 1,
+      "winner": 0,
+      "termination": "victory",
+      "turns": 3
+    }
+  ],
+  "config": {
+    "seconds": 0.15,
+    "nodes": 4000,
+    "beam": 4,
+    "local_depth": 3,
+    "actors": 6,
+    "candidates": 4,
+    "replies": 2,
+    "continuation": true
+  }
+}

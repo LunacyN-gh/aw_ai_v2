@@ -1,0 +1,13 @@
+{
+  "format": "aw-v2-linear-value",
+  "version": 1,
+  "weights": {
+    "material": 1.144917475762565,
+    "funds": 0.9,
+    "properties": 1.0,
+    "capture": 1.0,
+    "terrain": 0.3039299654444084,
+    "mobility": 0.11719359881928747,
+    "income": 0.5
+  }
+}

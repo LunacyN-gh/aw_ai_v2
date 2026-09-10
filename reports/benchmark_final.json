@@ -1,0 +1,305 @@
+[
+  {
+    "size": 8,
+    "units_per_side": 4,
+    "contact": false,
+    "p50": 0.08457290000114881,
+    "p95": 0.09061629999996512,
+    "runs": [
+      {
+        "elapsed": 0.07864,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 92,
+          "movement_cache_hits": 406,
+          "movement_cache_misses": 64,
+          "nodes": 542,
+          "policy_steps": 36,
+          "production_expansions": 414,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "regions_searched": 1,
+          "replies_evaluated": 2,
+          "transpositions": 5,
+          "units": 8
+        }
+      },
+      {
+        "elapsed": 0.090616,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 92,
+          "movement_cache_hits": 402,
+          "movement_cache_misses": 68,
+          "nodes": 538,
+          "policy_steps": 36,
+          "production_expansions": 410,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "regions_searched": 1,
+          "replies_evaluated": 2,
+          "transpositions": 5,
+          "units": 8
+        }
+      },
+      {
+        "elapsed": 0.084573,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 92,
+          "movement_cache_hits": 400,
+          "movement_cache_misses": 70,
+          "nodes": 542,
+          "policy_steps": 36,
+          "production_expansions": 414,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "regions_searched": 1,
+          "replies_evaluated": 2,
+          "transpositions": 3,
+          "units": 8
+        }
+      }
+    ]
+  },
+  {
+    "size": 20,
+    "units_per_side": 12,
+    "contact": false,
+    "p50": 0.13584819999960018,
+    "p95": 0.14647449999938544,
+    "runs": [
+      {
+        "elapsed": 0.129831,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 950,
+          "movement_cache_misses": 51,
+          "nodes": 380,
+          "policy_steps": 63,
+          "production_expansions": 317,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "replies_evaluated": 1,
+          "units": 24
+        }
+      },
+      {
+        "elapsed": 0.135848,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 951,
+          "movement_cache_misses": 51,
+          "nodes": 376,
+          "policy_steps": 63,
+          "production_expansions": 313,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "replies_evaluated": 1,
+          "units": 24
+        }
+      },
+      {
+        "elapsed": 0.146474,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 952,
+          "movement_cache_misses": 51,
+          "nodes": 374,
+          "policy_steps": 63,
+          "production_expansions": 311,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "replies_evaluated": 1,
+          "units": 24
+        }
+      }
+    ]
+  },
+  {
+    "size": 20,
+    "units_per_side": 24,
+    "contact": true,
+    "p50": 1.0072640999987925,
+    "p95": 1.0078877000014472,
+    "runs": [
+      {
+        "elapsed": 1.007264,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 2,
+          "complete_candidates": 3,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "incomplete_replies": 1,
+          "local_expansions": 108,
+          "movement_cache_hits": 3726,
+          "movement_cache_misses": 734,
+          "nodes": 615,
+          "policy_steps": 170,
+          "production_expansions": 337,
+          "production_peak_frontier": 4,
+          "regions": 1,
+          "regions_searched": 1,
+          "replies_evaluated": 2,
+          "transpositions": 4,
+          "truncated_policy_turns": 5,
+          "units": 48
+        }
+      },
+      {
+        "elapsed": 1.006475,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 2,
+          "complete_candidates": 3,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "incomplete_replies": 1,
+          "local_expansions": 108,
+          "movement_cache_hits": 4484,
+          "movement_cache_misses": 767,
+          "nodes": 645,
+          "policy_steps": 197,
+          "production_expansions": 340,
+          "production_peak_frontier": 4,
+          "regions": 1,
+          "regions_searched": 1,
+          "replies_evaluated": 2,
+          "transpositions": 2,
+          "truncated_policy_turns": 4,
+          "units": 48
+        }
+      },
+      {
+        "elapsed": 1.007888,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 2,
+          "complete_candidates": 3,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "incomplete_replies": 1,
+          "local_expansions": 108,
+          "movement_cache_hits": 4351,
+          "movement_cache_misses": 866,
+          "nodes": 637,
+          "policy_steps": 195,
+          "production_expansions": 334,
+          "production_peak_frontier": 4,
+          "regions": 1,
+          "regions_searched": 1,
+          "replies_evaluated": 2,
+          "transpositions": 3,
+          "truncated_policy_turns": 5,
+          "units": 48
+        }
+      }
+    ]
+  },
+  {
+    "size": 24,
+    "units_per_side": 40,
+    "contact": true,
+    "p50": 1.0131278000008024,
+    "p95": 1.0155962000008003,
+    "runs": [
+      {
+        "elapsed": 1.015596,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 4233,
+          "movement_cache_misses": 1072,
+          "nodes": 252,
+          "policy_steps": 135,
+          "production_expansions": 117,
+          "production_peak_frontier": 4,
+          "regions": 1,
+          "replies_evaluated": 1,
+          "truncated_policy_turns": 3,
+          "units": 80
+        }
+      },
+      {
+        "elapsed": 1.013128,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 4193,
+          "movement_cache_misses": 1046,
+          "nodes": 260,
+          "policy_steps": 133,
+          "production_expansions": 127,
+          "production_peak_frontier": 4,
+          "regions": 1,
+          "replies_evaluated": 1,
+          "truncated_policy_turns": 3,
+          "units": 80
+        }
+      },
+      {
+        "elapsed": 1.008386,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 3796,
+          "movement_cache_misses": 995,
+          "nodes": 236,
+          "policy_steps": 124,
+          "production_expansions": 112,
+          "production_peak_frontier": 4,
+          "regions": 1,
+          "replies_evaluated": 1,
+          "truncated_policy_turns": 3,
+          "units": 80
+        }
+      }
+    ]
+  }
+]

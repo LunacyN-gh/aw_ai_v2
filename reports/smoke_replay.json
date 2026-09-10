@@ -1,0 +1,2346 @@
+{
+  "format": "aw-ai-v2-replay",
+  "version": 1,
+  "initial": {
+    "format": "aw-ai-v2-state",
+    "version": 2,
+    "profile": "deterministic-v2",
+    "width": 20,
+    "height": 20,
+    "player": 0,
+    "funds": [
+      12000,
+      12000
+    ],
+    "turn": 0,
+    "winner": null,
+    "next_id": 0,
+    "tiles": [
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "hq",
+      "factory",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "mountain",
+      "forest",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "city",
+      "plain",
+      "factory",
+      "forest",
+      "airport",
+      "mountain",
+      "plain",
+      "city",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "forest",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "factory",
+      "plain",
+      "tower",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "mountain",
+      "plain",
+      "plain",
+      "plain",
+      "road",
+      "road",
+      "road",
+      "road",
+      "city",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "city",
+      "road",
+      "road",
+      "road",
+      "road",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "forest",
+      "forest",
+      "plain",
+      "plain",
+      "city",
+      "city",
+      "plain",
+      "plain",
+      "forest",
+      "forest",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "road",
+      "road",
+      "road",
+      "road",
+      "city",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "road",
+      "city",
+      "road",
+      "road",
+      "road",
+      "road",
+      "plain",
+      "plain",
+      "plain",
+      "mountain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "tower",
+      "plain",
+      "factory",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "forest",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "city",
+      "plain",
+      "mountain",
+      "airport",
+      "forest",
+      "factory",
+      "plain",
+      "city",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "forest",
+      "mountain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "factory",
+      "hq",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "city",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "forest",
+      "plain",
+      "plain",
+      "plain",
+      "plain",
+      "plain"
+    ],
+    "owners": {
+      "21": 0,
+      "378": 1,
+      "41": 0,
+      "358": 1,
+      "22": 0,
+      "377": 1,
+      "81": 0,
+      "318": 1,
+      "43": 0,
+      "356": 1,
+      "83": 0,
+      "316": 1,
+      "46": 0,
+      "353": 1,
+      "60": 0,
+      "339": 1,
+      "66": 0,
+      "333": 1,
+      "63": 0,
+      "336": 1
+    },
+    "units": [
+      {
+        "id": "p0_initial_0",
+        "owner": 0,
+        "kind": "infantry",
+        "pos": 0,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_1",
+        "owner": 0,
+        "kind": "infantry",
+        "pos": 1,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_10",
+        "owner": 0,
+        "kind": "mech",
+        "pos": 4,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_11",
+        "owner": 0,
+        "kind": "md_tank",
+        "pos": 23,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_2",
+        "owner": 0,
+        "kind": "tank",
+        "pos": 20,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_3",
+        "owner": 0,
+        "kind": "infantry",
+        "pos": 2,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_4",
+        "owner": 0,
+        "kind": "artillery",
+        "pos": 21,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_5",
+        "owner": 0,
+        "kind": "tank",
+        "pos": 40,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_6",
+        "owner": 0,
+        "kind": "anti_air",
+        "pos": 3,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_7",
+        "owner": 0,
+        "kind": "infantry",
+        "pos": 22,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_8",
+        "owner": 0,
+        "kind": "b_copter",
+        "pos": 41,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p0_initial_9",
+        "owner": 0,
+        "kind": "recon",
+        "pos": 60,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_0",
+        "owner": 1,
+        "kind": "infantry",
+        "pos": 399,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_1",
+        "owner": 1,
+        "kind": "infantry",
+        "pos": 398,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_10",
+        "owner": 1,
+        "kind": "mech",
+        "pos": 395,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_11",
+        "owner": 1,
+        "kind": "md_tank",
+        "pos": 376,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_2",
+        "owner": 1,
+        "kind": "tank",
+        "pos": 379,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_3",
+        "owner": 1,
+        "kind": "infantry",
+        "pos": 397,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_4",
+        "owner": 1,
+        "kind": "artillery",
+        "pos": 378,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_5",
+        "owner": 1,
+        "kind": "tank",
+        "pos": 359,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_6",
+        "owner": 1,
+        "kind": "anti_air",
+        "pos": 396,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_7",
+        "owner": 1,
+        "kind": "infantry",
+        "pos": 377,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_8",
+        "owner": 1,
+        "kind": "b_copter",
+        "pos": 358,
+        "hp": 100,
+        "acted": false
+      },
+      {
+        "id": "p1_initial_9",
+        "owner": 1,
+        "kind": "recon",
+        "pos": 339,
+        "hp": 100,
+        "acted": false
+      }
+    ],
+    "captures": {}
+  },
+  "turns": [
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "actor": "p0_initial_9",
+          "destination": 140,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_6",
+          "destination": 66,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_8",
+          "destination": 47,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_5",
+          "destination": 65,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_3",
+          "destination": 5,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_2",
+          "destination": 83,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_0",
+          "destination": 60,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_7",
+          "destination": 25,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_11",
+          "destination": 85,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_4",
+          "destination": 26,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_10",
+          "destination": 44,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_1",
+          "destination": 4,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 22,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 41,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 81,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "781ffbdbbe170f0f90279e791d3566a22a01b5d7867e0d25a7ff4973116b0eec",
+      "metrics": {
+        "elapsed": 0.202282,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 1220,
+          "movement_cache_misses": 51,
+          "nodes": 380,
+          "policy_steps": 63,
+          "production_expansions": 317,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "replies_evaluated": 1,
+          "units": 24
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "actor": "p1_initial_9",
+          "destination": 259,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_6",
+          "destination": 333,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_8",
+          "destination": 238,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_5",
+          "destination": 258,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_1",
+          "destination": 357,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_2",
+          "destination": 316,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_0",
+          "destination": 339,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_3",
+          "destination": 337,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_7",
+          "destination": 374,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_11",
+          "destination": 295,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_4",
+          "destination": 297,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_10",
+          "destination": 393,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 318,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 358,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 377,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "d1fe5a66ec020fae3cbf02b042b6148998e13c621b53cf9ce9b52cb1ec7cf8b9",
+      "metrics": {
+        "elapsed": 0.270974,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 1465,
+          "movement_cache_misses": 55,
+          "nodes": 413,
+          "policy_steps": 69,
+          "production_expansions": 344,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "replies_evaluated": 1,
+          "units": 27
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "actor": "p0_initial_2",
+          "destination": 89,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_9",
+          "destination": 240,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_5",
+          "destination": 71,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_6",
+          "destination": 91,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_8",
+          "destination": 53,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_2",
+          "destination": 141,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_1",
+          "destination": 7,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_3",
+          "destination": 8,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_1",
+          "destination": 63,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_7",
+          "destination": 28,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_0",
+          "destination": 25,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_0",
+          "destination": 120,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_11",
+          "destination": 90,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_4",
+          "destination": 69,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_10",
+          "destination": 84,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 22,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 41,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 81,
+          "target": "",
+          "build": "anti_air"
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "c148bb963bf4c0e9f18e949658fa370cedf8ecfcb92abc2a77f73634d7636105",
+      "metrics": {
+        "elapsed": 0.312578,
+        "exhausted": true,
+        "reason": "time",
+        "counts": {
+          "candidates_verified": 1,
+          "complete_candidates": 1,
+          "horizon_turns": 2,
+          "incomplete_candidates": 0,
+          "movement_cache_hits": 1552,
+          "movement_cache_misses": 31,
+          "nodes": 338,
+          "policy_steps": 68,
+          "production_expansions": 270,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "replies_evaluated": 1,
+          "units": 30
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "actor": "p1_initial_2",
+          "destination": 234,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_9",
+          "destination": 159,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_5",
+          "destination": 157,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_6",
+          "destination": 213,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_8",
+          "destination": 118,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_3",
+          "destination": 258,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_1",
+          "destination": 316,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_4",
+          "destination": 336,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_3",
+          "destination": 298,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_7",
+          "destination": 371,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_5",
+          "destination": 374,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_0",
+          "destination": 279,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_11",
+          "destination": 233,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_4",
+          "destination": 254,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_10",
+          "destination": 391,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 318,
+          "target": "",
+          "build": "anti_air"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 358,
+          "target": "",
+          "build": "anti_air"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 377,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "e355cb22eb5a0be97b7d395ff804b653c234391a845110ccc8e9fd7bfac8db4f",
+      "metrics": {
+        "elapsed": 0.233119,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 0,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 1020,
+          "movement_cache_misses": 19,
+          "nodes": 173,
+          "policy_steps": 41,
+          "production_expansions": 132,
+          "production_peak_frontier": 4,
+          "regions": 0,
+          "units": 33
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "actor": "p0_initial_4",
+          "destination": 72,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_7",
+          "destination": 31,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_9",
+          "destination": 267,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_2",
+          "destination": 180,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_10",
+          "destination": 124,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_3",
+          "destination": 10,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_1",
+          "destination": 9,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_0",
+          "destination": 28,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_1",
+          "destination": 66,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_0",
+          "destination": 160,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_8",
+          "destination": 87,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_6",
+          "destination": 63,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_7",
+          "destination": 82,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "f3a40f9dbb9b1423bc9451457eec04870a36b28db022dfd3e23e5bb3e4f68dbf",
+      "metrics": {
+        "elapsed": 0.241517,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 499,
+          "movement_cache_misses": 17,
+          "nodes": 18,
+          "policy_steps": 18,
+          "regions": 1,
+          "units": 36
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "wait",
+          "actor": "p1_initial_11",
+          "destination": 250,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_7",
+          "destination": 368,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_10",
+          "destination": 389,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_1",
+          "destination": 275,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_9",
+          "destination": 156,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_3",
+          "destination": 255,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_4",
+          "destination": 333,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_5",
+          "destination": 371,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_0",
+          "destination": 219,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_3",
+          "destination": 259,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_9",
+          "destination": 293,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_10",
+          "destination": 295,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_11",
+          "destination": 336,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_2",
+          "destination": 270,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_4",
+          "destination": 251,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_5",
+          "destination": 175,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "e8e7a6fcd02a7bd5e071ac8a1e62bb832986168bf8e3d10a9c16ff702c852fe8",
+      "metrics": {
+        "elapsed": 0.234193,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 655,
+          "movement_cache_misses": 34,
+          "nodes": 25,
+          "policy_steps": 25,
+          "regions": 1,
+          "units": 36
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "capture",
+          "actor": "p0_initial_10",
+          "destination": 124,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_3",
+          "destination": 10,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_7",
+          "destination": 31,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_2",
+          "destination": 148,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_11",
+          "destination": 110,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_8",
+          "destination": 167,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_0",
+          "destination": 30,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_1",
+          "destination": 88,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_2",
+          "destination": 220,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_1",
+          "destination": 12,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "f477ab2300345fbdef50264e823ffe64424ff697b191e2a94d446268a6c04af2",
+      "metrics": {
+        "elapsed": 0.243381,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 472,
+          "movement_cache_misses": 28,
+          "nodes": 18,
+          "policy_steps": 18,
+          "regions": 1,
+          "units": 36
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "attack",
+          "actor": "p1_initial_11",
+          "destination": 287,
+          "target": "p0_initial_9",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_1",
+          "destination": 275,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_10",
+          "destination": 389,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_7",
+          "destination": 368,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_4",
+          "destination": 289,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_3",
+          "destination": 195,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_9",
+          "destination": 308,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_10",
+          "destination": 290,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_4",
+          "destination": 273,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_5",
+          "destination": 369,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_0",
+          "destination": 179,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_3",
+          "destination": 199,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_11",
+          "destination": 333,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_5",
+          "destination": 194,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "daba124abfc0642a86e1182232216a47e76ee6e395c10930814418b974baa8f5",
+      "metrics": {
+        "elapsed": 0.242709,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 560,
+          "movement_cache_misses": 22,
+          "nodes": 21,
+          "policy_steps": 21,
+          "regions": 1,
+          "units": 36
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "capture",
+          "actor": "p0_2",
+          "destination": 220,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_2",
+          "destination": 148,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_5",
+          "destination": 34,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_1",
+          "destination": 108,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_1",
+          "destination": 15,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_10",
+          "destination": 164,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_7",
+          "destination": 33,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_0",
+          "destination": 32,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_0",
+          "destination": 200,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_3",
+          "destination": 13,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_6",
+          "destination": 66,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_7",
+          "destination": 104,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_4",
+          "destination": 72,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "62a03b6504f62f82a14577bfad60237b35109766195c7613ac63595d51e921e1",
+      "metrics": {
+        "elapsed": 0.2445,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 554,
+          "movement_cache_misses": 27,
+          "nodes": 21,
+          "policy_steps": 21,
+          "regions": 1,
+          "units": 35
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "attack",
+          "actor": "p1_initial_11",
+          "destination": 187,
+          "target": "p0_8",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_0",
+          "destination": 179,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_3",
+          "destination": 199,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_9",
+          "destination": 287,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_4",
+          "destination": 307,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_10",
+          "destination": 251,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_3",
+          "destination": 135,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_4",
+          "destination": 233,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_7",
+          "destination": 386,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_5",
+          "destination": 367,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_1",
+          "destination": 272,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_10",
+          "destination": 368,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_11",
+          "destination": 292,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "6523c1f283132daea36eb784712200b8bff75e437b9fc0df3d7a637eb36f0e58",
+      "metrics": {
+        "elapsed": 0.23689,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 526,
+          "movement_cache_misses": 32,
+          "nodes": 20,
+          "policy_steps": 20,
+          "regions": 1,
+          "units": 35
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "capture",
+          "actor": "p0_initial_0",
+          "destination": 200,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_11",
+          "destination": 115,
+          "target": "p1_3",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_1",
+          "destination": 15,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_8",
+          "destination": 124,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_5",
+          "destination": 34,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_4",
+          "destination": 72,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_6",
+          "destination": 69,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_7",
+          "destination": 143,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_7",
+          "destination": 33,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_0",
+          "destination": 14,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_3",
+          "destination": 32,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_2",
+          "destination": 222,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_8",
+          "destination": 53,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "6998ce3a693c638be6735f6f697033db8f11664423522485639be9ad48d0bc58",
+      "metrics": {
+        "elapsed": 0.239583,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 564,
+          "movement_cache_misses": 30,
+          "nodes": 21,
+          "policy_steps": 21,
+          "regions": 1,
+          "units": 35
+        }
+      }
+    },
+    {
+      "actions": [
+        {
+          "kind": "attack",
+          "actor": "p1_initial_11",
+          "destination": 147,
+          "target": "p0_initial_2",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_3",
+          "destination": 135,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_0",
+          "destination": 119,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_4",
+          "destination": 193,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_9",
+          "destination": 243,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_6",
+          "destination": 196,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_3",
+          "destination": 158,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_4",
+          "destination": 284,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_1",
+          "destination": 269,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_11",
+          "destination": 232,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_10",
+          "destination": 366,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_5",
+          "destination": 365,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "hash": "2aae828a183f9037b13def0a2edd28ee475bf161c3dabbeec57a0582fe170cef",
+      "metrics": {
+        "elapsed": 0.244722,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 0,
+          "complete_candidates": 1,
+          "horizon_turns": 1,
+          "incomplete_candidates": 1,
+          "incomplete_replies": 1,
+          "movement_cache_hits": 559,
+          "movement_cache_misses": 34,
+          "nodes": 21,
+          "policy_steps": 21,
+          "regions": 1,
+          "units": 35
+        }
+      }
+    }
+  ],
+  "result": null,
+  "termination": "turn_limit",
+  "samples": [
+    {
+      "player": 0,
+      "features": {
+        "material": 0.0,
+        "funds": 0.0,
+        "properties": 0.0,
+        "capture": 0.0,
+        "terrain": 0.0,
+        "mobility": 0.0,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 1,
+      "features": {
+        "material": -0.34500000000000003,
+        "funds": 1.2,
+        "properties": 0.0,
+        "capture": 0.0,
+        "terrain": -0.13,
+        "mobility": -0.09,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 0,
+      "features": {
+        "material": 2.7755575615628914e-17,
+        "funds": 0.0,
+        "properties": 0.0,
+        "capture": 0.0,
+        "terrain": 0.03,
+        "mobility": 0.0,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 1,
+      "features": {
+        "material": -1.1500000000000001,
+        "funds": 1.9,
+        "properties": 0.0,
+        "capture": 0.0,
+        "terrain": 0.04000000000000001,
+        "mobility": -0.12,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 0,
+      "features": {
+        "material": -0.8049999999999999,
+        "funds": 0.7,
+        "properties": 0.0,
+        "capture": 0.0,
+        "terrain": -0.01999999999999999,
+        "mobility": -0.03,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 1,
+      "features": {
+        "material": 0.8049999999999999,
+        "funds": 0.2,
+        "properties": 0.0,
+        "capture": -0.21000000000000002,
+        "terrain": -0.009999999999999981,
+        "mobility": 0.03,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 0,
+      "features": {
+        "material": -0.8049999999999999,
+        "funds": 0.7,
+        "properties": 0.0,
+        "capture": 0.0,
+        "terrain": -0.01999999999999999,
+        "mobility": -0.03,
+        "income": 0.0
+      }
+    },
+    {
+      "player": 1,
+      "features": {
+        "material": 0.8049999999999999,
+        "funds": 0.2,
+        "properties": -1.2000000000000002,
+        "capture": 0.14,
+        "terrain": 0.0,
+        "mobility": 0.03,
+        "income": -0.30000000000000004
+      }
+    },
+    {
+      "player": 0,
+      "features": {
+        "material": -1.265,
+        "funds": 1.0,
+        "properties": 1.1102230246251565e-16,
+        "capture": -0.07,
+        "terrain": 0.009999999999999995,
+        "mobility": -0.11,
+        "income": 2.7755575615628914e-17
+      }
+    },
+    {
+      "player": 1,
+      "features": {
+        "material": 1.265,
+        "funds": 0.2,
+        "properties": -0.40000000000000013,
+        "capture": 0.0,
+        "terrain": -0.060000000000000026,
+        "mobility": 0.11,
+        "income": -0.10000000000000003
+      }
+    },
+    {
+      "player": 0,
+      "features": {
+        "material": -2.0010000000000003,
+        "funds": 1.1,
+        "properties": -0.3999999999999999,
+        "capture": 0.07,
+        "terrain": 0.051600000000000014,
+        "mobility": -0.16519999999999999,
+        "income": -0.09999999999999998
+      }
+    },
+    {
+      "player": 1,
+      "features": {
+        "material": 1.921,
+        "funds": 0.3,
+        "properties": -0.40000000000000013,
+        "capture": 0.07,
+        "terrain": -0.03640000000000001,
+        "mobility": 0.1412,
+        "income": -0.10000000000000003
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "format": "aw-ai-v2-state",
+  "version": 2,
+  "profile": "deterministic-v2",
+  "width": 6,
+  "height": 3,
+  "player": 0,
+  "funds": [
+    0,
+    0
+  ],
+  "turn": 0,
+  "winner": null,
+  "next_id": 0,
+  "tiles": [
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "city",
+    "plain",
+    "plain",
+    "factory",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain"
+  ],
+  "owners": {
+    "10": 1
+  },
+  "units": [
+    {
+      "id": "cap",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 7,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "chip",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 8,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "enemy",
+      "owner": 1,
+      "kind": "tank",
+      "pos": 16,
+      "hp": 100,
+      "acted": false
+    }
+  ],
+  "captures": {
+    "7": [
+      "cap",
+      10
+    ]
+  }
+}

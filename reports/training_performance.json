@@ -1,0 +1,73 @@
+{
+  "torch": "2.10.0+cu126",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "parameters": 835474,
+  "examples": 161,
+  "old_new_numerical_equivalence": true,
+  "fit": {
+    "old_scalar_cpu": [
+      3.8564077000000907,
+      4.003117900000234,
+      4.179174599999897
+    ],
+    "batched_cpu": [
+      1.1107090000000426,
+      1.1063640999996096,
+      1.1013060999998743
+    ],
+    "batched_cuda": [
+      0.548906800000168,
+      0.540889899999911,
+      0.49394489999986035
+    ]
+  },
+  "games": {
+    "serial_seconds": 92.14037839999992,
+    "pool_startup_seconds": 3.9124547000001257,
+    "parallel_seconds": 24.628637499999968,
+    "count": 8,
+    "turn_limit": 12,
+    "nodes": 300,
+    "seconds": 30,
+    "serial_decisions": [
+      50,
+      51,
+      41,
+      51,
+      51,
+      52,
+      51,
+      51
+    ],
+    "parallel_decisions": [
+      50,
+      51,
+      41,
+      51,
+      51,
+      52,
+      51,
+      51
+    ],
+    "serial_verified": [
+      28,
+      28,
+      31,
+      28,
+      28,
+      28,
+      28,
+      28
+    ],
+    "parallel_verified": [
+      28,
+      28,
+      31,
+      28,
+      28,
+      28,
+      28,
+      28
+    ]
+  }
+}

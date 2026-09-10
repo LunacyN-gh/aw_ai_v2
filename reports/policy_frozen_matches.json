@@ -1,0 +1,56 @@
+[
+  {
+    "opponent": "legacy",
+    "side": 0,
+    "result": "win",
+    "player_turns": 26,
+    "learner_turns": 14,
+    "common_reply_rounds": 28,
+    "raw_selected": 10
+  },
+  {
+    "opponent": "legacy",
+    "side": 1,
+    "result": "win",
+    "player_turns": 39,
+    "learner_turns": 20,
+    "common_reply_rounds": 37,
+    "raw_selected": 11
+  },
+  {
+    "opponent": "raw",
+    "side": 0,
+    "result": "win",
+    "player_turns": 46,
+    "learner_turns": 24,
+    "common_reply_rounds": 42,
+    "raw_selected": 17
+  },
+  {
+    "opponent": "raw",
+    "side": 1,
+    "result": "win",
+    "player_turns": 29,
+    "learner_turns": 15,
+    "common_reply_rounds": 30,
+    "raw_selected": 15
+  },
+  {
+    "opponent": "teacher",
+    "side": 0,
+    "result": "loss",
+    "player_turns": 39,
+    "learner_turns": 20,
+    "common_reply_rounds": 27,
+    "raw_selected": 16
+  },
+  {
+    "opponent": "teacher",
+    "side": 1,
+    "result": "win",
+    "player_turns": 29,
+    "learner_turns": 15,
+    "common_reply_rounds": 30,
+    "raw_selected": 15
+  }
+]

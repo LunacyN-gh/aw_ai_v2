@@ -1,0 +1,138 @@
+{
+  "format": "aw-ai-v2-state",
+  "version": 2,
+  "profile": "deterministic-v2",
+  "width": 5,
+  "height": 9,
+  "player": 1,
+  "funds": [
+    0,
+    0
+  ],
+  "turn": 0,
+  "winner": null,
+  "next_id": 0,
+  "tiles": [
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water"
+  ],
+  "owners": {},
+  "units": [
+    {
+      "id": "gun",
+      "owner": 1,
+      "kind": "artillery",
+      "pos": 12,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "prize",
+      "owner": 0,
+      "kind": "anti_air",
+      "pos": 32,
+      "hp": 55,
+      "acted": false
+    },
+    {
+      "id": "screen_0",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 23,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "screen_1",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 22,
+      "hp": 10,
+      "acted": false
+    },
+    {
+      "id": "screen_2",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 21,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "screen_3",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 33,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "screen_4",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 31,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "screen_5",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 37,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "striker",
+      "owner": 1,
+      "kind": "tank",
+      "pos": 7,
+      "hp": 100,
+      "acted": false
+    }
+  ],
+  "captures": {}
+}

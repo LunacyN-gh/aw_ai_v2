@@ -1,0 +1,55 @@
+{
+  "format": "aw-ai-v2-state",
+  "version": 2,
+  "profile": "deterministic-v2",
+  "width": 5,
+  "height": 2,
+  "player": 0,
+  "funds": [
+    0,
+    0
+  ],
+  "turn": 0,
+  "winner": null,
+  "next_id": 0,
+  "tiles": [
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "mountain",
+    "mountain",
+    "plain",
+    "mountain",
+    "mountain"
+  ],
+  "owners": {},
+  "units": [
+    {
+      "id": "enemy",
+      "owner": 1,
+      "kind": "artillery",
+      "pos": 3,
+      "hp": 40,
+      "acted": false
+    },
+    {
+      "id": "friend",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 2,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "tank",
+      "owner": 0,
+      "kind": "tank",
+      "pos": 0,
+      "hp": 100,
+      "acted": false
+    }
+  ],
+  "captures": {}
+}

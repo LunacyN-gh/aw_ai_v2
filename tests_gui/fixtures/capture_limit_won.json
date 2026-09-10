@@ -1,0 +1,154 @@
+{
+  "format": "aw-ai-v2-state",
+  "version": 2,
+  "profile": "deterministic-v2",
+  "width": 6,
+  "height": 6,
+  "player": 0,
+  "funds": [
+    9000,
+    8000
+  ],
+  "turn": 12,
+  "winner": 0,
+  "next_id": 11,
+  "income_capture_limit": 7,
+  "tiles": [
+    "factory",
+    "plain",
+    "plain",
+    "forest",
+    "forest",
+    "city",
+    "plain",
+    "city",
+    "plain",
+    "plain",
+    "city",
+    "mountain",
+    "plain",
+    "road",
+    "mountain",
+    "forest",
+    "road",
+    "city",
+    "city",
+    "road",
+    "forest",
+    "mountain",
+    "road",
+    "plain",
+    "mountain",
+    "city",
+    "plain",
+    "plain",
+    "city",
+    "plain",
+    "city",
+    "forest",
+    "forest",
+    "plain",
+    "plain",
+    "factory"
+  ],
+  "owners": {
+    "0": 0,
+    "35": 1,
+    "18": 0,
+    "28": 1,
+    "7": 0,
+    "30": 0,
+    "10": 0,
+    "5": 0,
+    "17": 1,
+    "25": 0
+  },
+  "units": [
+    {
+      "id": "human_infantry_1",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 25,
+      "hp": 55,
+      "acted": true
+    },
+    {
+      "id": "p0_0",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 20,
+      "hp": 57,
+      "acted": false
+    },
+    {
+      "id": "p0_10",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 6,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "p0_2",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 10,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "p0_4",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 32,
+      "hp": 22,
+      "acted": false
+    },
+    {
+      "id": "p0_6",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 13,
+      "hp": 95,
+      "acted": false
+    },
+    {
+      "id": "p0_8",
+      "owner": 0,
+      "kind": "tank",
+      "pos": 4,
+      "hp": 96,
+      "acted": true
+    },
+    {
+      "id": "p1_5",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 5,
+      "hp": 48,
+      "acted": true
+    },
+    {
+      "id": "p1_7",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 28,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "p1_9",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 33,
+      "hp": 86,
+      "acted": true
+    }
+  ],
+  "captures": {
+    "5": [
+      "p1_5",
+      10
+    ]
+  }
+}

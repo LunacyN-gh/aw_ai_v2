@@ -1,0 +1,108 @@
+{
+  "format": "aw-ai-v2-state",
+  "version": 2,
+  "profile": "deterministic-v2",
+  "width": 8,
+  "height": 5,
+  "player": 0,
+  "funds": [
+    0,
+    0
+  ],
+  "turn": 0,
+  "winner": null,
+  "next_id": 0,
+  "tiles": [
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "water",
+    "water",
+    "hq",
+    "plain",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "water",
+    "plain",
+    "plain",
+    "water",
+    "water",
+    "water",
+    "water",
+    "water"
+  ],
+  "owners": {
+    "18": 1
+  },
+  "units": [
+    {
+      "id": "capturer",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 18,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "gun",
+      "owner": 1,
+      "kind": "artillery",
+      "pos": 13,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "north",
+      "owner": 0,
+      "kind": "mech",
+      "pos": 33,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "tank",
+      "owner": 1,
+      "kind": "tank",
+      "pos": 29,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "west",
+      "owner": 0,
+      "kind": "mech",
+      "pos": 12,
+      "hp": 100,
+      "acted": false
+    }
+  ],
+  "captures": {
+    "18": [
+      "capturer",
+      20
+    ]
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "passed": 0,
+  "found": 4,
+  "total": 16,
+  "cases": [
+    {
+      "name": "breakthrough_artillery_r0_s0",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.8694715999990876,
+      "metrics": {
+        "elapsed": 0.869234,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 492,
+          "movement_cache_hits": 890,
+          "movement_cache_misses": 34,
+          "nodes": 607,
+          "policy_steps": 115,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 12,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_artillery_r1_s1",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.9078278000015416,
+      "metrics": {
+        "elapsed": 0.907585,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 479,
+          "movement_cache_hits": 669,
+          "movement_cache_misses": 45,
+          "nodes": 559,
+          "policy_steps": 80,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 10,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_artillery_r2_s0",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.9186764000005496,
+      "metrics": {
+        "elapsed": 0.918359,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 472,
+          "movement_cache_hits": 645,
+          "movement_cache_misses": 40,
+          "nodes": 544,
+          "policy_steps": 72,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 15,
+          "truncated_policy_turns": 1,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_artillery_r3_s1",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.919257599998673,
+      "metrics": {
+        "elapsed": 0.918944,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 462,
+          "movement_cache_hits": 700,
+          "movement_cache_misses": 37,
+          "nodes": 537,
+          "policy_steps": 75,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 16,
+          "truncated_policy_turns": 1,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_anti_air_r0_s0",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.903453000002628,
+      "metrics": {
+        "elapsed": 0.903146,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 446,
+          "movement_cache_hits": 752,
+          "movement_cache_misses": 34,
+          "nodes": 519,
+          "policy_steps": 73,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 12,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_anti_air_r1_s1",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.906655700000556,
+      "metrics": {
+        "elapsed": 0.906422,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 457,
+          "movement_cache_hits": 721,
+          "movement_cache_misses": 46,
+          "nodes": 530,
+          "policy_steps": 73,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 10,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_anti_air_r2_s0",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.9052014999979292,
+      "metrics": {
+        "elapsed": 0.904979,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 479,
+          "movement_cache_hits": 733,
+          "movement_cache_misses": 44,
+          "nodes": 552,
+          "policy_steps": 73,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 15,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_anti_air_r3_s1",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.9044718999975885,
+      "metrics": {
+        "elapsed": 0.90417,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 468,
+          "movement_cache_hits": 763,
+          "movement_cache_misses": 39,
+          "nodes": 541,
+          "policy_steps": 73,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 15,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_b_copter_r0_s0",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.7932996999988973,
+      "metrics": {
+        "elapsed": 0.792943,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 3,
+          "complete_candidates": 3,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 384,
+          "movement_cache_hits": 695,
+          "movement_cache_misses": 32,
+          "nodes": 470,
+          "policy_steps": 86,
+          "regions": 1,
+          "regions_searched": 4,
+          "replies_evaluated": 6,
+          "transpositions": 4,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_b_copter_r1_s1",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.9114358000006177,
+      "metrics": {
+        "elapsed": 0.911205,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 463,
+          "movement_cache_hits": 714,
+          "movement_cache_misses": 47,
+          "nodes": 534,
+          "policy_steps": 71,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 6,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_b_copter_r2_s0",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.9058183999986795,
+      "metrics": {
+        "elapsed": 0.905647,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 462,
+          "movement_cache_hits": 713,
+          "movement_cache_misses": 46,
+          "nodes": 533,
+          "policy_steps": 71,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 4,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "breakthrough_b_copter_r3_s1",
+      "family": "wall_breakthrough",
+      "passed": false,
+      "solution_in_candidates": false,
+      "elapsed": 0.7987597999999707,
+      "metrics": {
+        "elapsed": 0.798542,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 3,
+          "complete_candidates": 3,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 384,
+          "movement_cache_hits": 738,
+          "movement_cache_misses": 32,
+          "nodes": 479,
+          "policy_steps": 95,
+          "regions": 1,
+          "regions_searched": 4,
+          "replies_evaluated": 6,
+          "transpositions": 5,
+          "units": 9
+        }
+      }
+    },
+    {
+      "name": "hq_double_gate_r0_s0",
+      "family": "hq_screen",
+      "passed": false,
+      "solution_in_candidates": true,
+      "elapsed": 0.33091889999923296,
+      "metrics": {
+        "elapsed": 0.329456,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 175,
+          "movement_cache_hits": 202,
+          "movement_cache_misses": 26,
+          "nodes": 228,
+          "policy_steps": 53,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 14,
+          "units": 5
+        }
+      }
+    },
+    {
+      "name": "hq_double_gate_r1_s1",
+      "family": "hq_screen",
+      "passed": false,
+      "solution_in_candidates": true,
+      "elapsed": 0.33029029999670456,
+      "metrics": {
+        "elapsed": 0.328633,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 186,
+          "movement_cache_hits": 205,
+          "movement_cache_misses": 25,
+          "nodes": 241,
+          "policy_steps": 55,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 11,
+          "units": 5
+        }
+      }
+    },
+    {
+      "name": "hq_double_gate_r2_s0",
+      "family": "hq_screen",
+      "passed": false,
+      "solution_in_candidates": true,
+      "elapsed": 0.2745146000015666,
+      "metrics": {
+        "elapsed": 0.272668,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 3,
+          "complete_candidates": 3,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 153,
+          "movement_cache_hits": 163,
+          "movement_cache_misses": 21,
+          "nodes": 194,
+          "policy_steps": 41,
+          "regions": 1,
+          "regions_searched": 4,
+          "replies_evaluated": 6,
+          "transpositions": 6,
+          "units": 5
+        }
+      }
+    },
+    {
+      "name": "hq_double_gate_r3_s1",
+      "family": "hq_screen",
+      "passed": false,
+      "solution_in_candidates": true,
+      "elapsed": 0.3399080999988655,
+      "metrics": {
+        "elapsed": 0.338582,
+        "exhausted": false,
+        "reason": "",
+        "counts": {
+          "candidates_verified": 4,
+          "complete_candidates": 4,
+          "horizon_turns": 3,
+          "incomplete_candidates": 0,
+          "local_expansions": 193,
+          "movement_cache_hits": 194,
+          "movement_cache_misses": 27,
+          "nodes": 244,
+          "policy_steps": 51,
+          "regions": 1,
+          "regions_searched": 5,
+          "replies_evaluated": 8,
+          "transpositions": 14,
+          "units": 5
+        }
+      }
+    }
+  ]
+}

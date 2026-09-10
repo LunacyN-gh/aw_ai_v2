@@ -1,0 +1,121 @@
+{
+  "format": "aw-ai-v2-state",
+  "version": 2,
+  "profile": "deterministic-v2",
+  "width": 6,
+  "height": 6,
+  "player": 0,
+  "funds": [
+    2000,
+    2000
+  ],
+  "turn": 4,
+  "winner": null,
+  "next_id": 4,
+  "income_capture_limit": 7,
+  "tiles": [
+    "factory",
+    "plain",
+    "plain",
+    "forest",
+    "forest",
+    "city",
+    "plain",
+    "city",
+    "plain",
+    "plain",
+    "city",
+    "mountain",
+    "plain",
+    "road",
+    "mountain",
+    "forest",
+    "road",
+    "city",
+    "city",
+    "road",
+    "forest",
+    "mountain",
+    "road",
+    "plain",
+    "mountain",
+    "city",
+    "plain",
+    "plain",
+    "city",
+    "plain",
+    "city",
+    "forest",
+    "forest",
+    "plain",
+    "plain",
+    "factory"
+  ],
+  "owners": {
+    "0": 0,
+    "35": 1,
+    "18": 0,
+    "28": 1,
+    "7": 0
+  },
+  "units": [
+    {
+      "id": "ai_infantry_1",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 28,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "human_infantry_1",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 25,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "p0_0",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 7,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "p0_2",
+      "owner": 0,
+      "kind": "infantry",
+      "pos": 0,
+      "hp": 100,
+      "acted": false
+    },
+    {
+      "id": "p1_1",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 17,
+      "hp": 100,
+      "acted": true
+    },
+    {
+      "id": "p1_3",
+      "owner": 1,
+      "kind": "infantry",
+      "pos": 35,
+      "hp": 100,
+      "acted": true
+    }
+  ],
+  "captures": {
+    "17": [
+      "p1_1",
+      10
+    ],
+    "25": [
+      "human_infantry_1",
+      10
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "seed": 0,
+  "size": 8,
+  "training_sizes": [
+    8
+  ],
+  "units": 3,
+  "turn_limit": 30,
+  "runs": [
+    {
+      "phase": "bootstrap",
+      "seed": 0,
+      "board_size": 8,
+      "decisions": 338,
+      "loss": 4.38569812849164
+    },
+    {
+      "phase": "bootstrap",
+      "seed": 1,
+      "board_size": 8,
+      "decisions": 244,
+      "loss": 4.26238629501313
+    },
+    {
+      "phase": "self_play",
+      "seed": 2,
+      "board_size": 8,
+      "opponent": "self",
+      "winner": null,
+      "censored": true,
+      "decisions": 415,
+      "loss": null
+    },
+    {
+      "phase": "self_play",
+      "seed": 3,
+      "board_size": 8,
+      "opponent": "snapshot",
+      "winner": null,
+      "censored": true,
+      "decisions": 220,
+      "loss": null
+    },
+    {
+      "phase": "self_play",
+      "seed": 4,
+      "board_size": 8,
+      "opponent": "teacher",
+      "winner": 1,
+      "censored": false,
+      "decisions": 54,
+      "loss": -1.9651805195543501
+    }
+  ],
+  "validation": [
+    {
+      "seed": 1000000,
+      "board_size": 8,
+      "learner_side": 0,
+      "winner": null,
+      "censored": true
+    },
+    {
+      "seed": 1000001,
+      "board_size": 8,
+      "learner_side": 1,
+      "winner": 0,
+      "censored": false
+    }
+  ],
+  "income_capture_fraction": 0.6666666666666666,
+  "training": "search-policy bootstrap; terminal-only on-policy actor-critic",
+  "tactical_families_used_for_training": false,
+  "parameters": 28882
+}

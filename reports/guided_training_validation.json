@@ -1,0 +1,262 @@
+{
+  "smokes": [
+    {
+      "name": "guided_final_smoke",
+      "config": {
+        "train_seconds": 0.1,
+        "train_nodes": 500,
+        "eval_seconds": 0.2,
+        "eval_every": 4,
+        "eval_games": 2,
+        "checkpoint_every": 4,
+        "updates_per_game": 2,
+        "batch_size": 64,
+        "replay_size": 8192,
+        "workers": 4,
+        "device": "cuda",
+        "worker_device": "cpu",
+        "worker_threads": 1,
+        "policy_lag_games_max": 3,
+        "teacher_fraction": 0.5,
+        "teacher_every": 2,
+        "teacher_replay_size": 8192,
+        "neural_value_weight": 0.0,
+        "promotion_win_rate": 0.55
+      },
+      "total_elapsed_seconds": 65.823,
+      "turns": 40,
+      "games": 10,
+      "terminal_games": 6,
+      "terminal_value_labels": 700,
+      "initial_anchors": 147,
+      "final_anchors": 338,
+      "corrections": 334,
+      "evaluations": [
+        {
+          "after_game": 2,
+          "summary": {
+            "policy": {
+              "win": 1,
+              "loss": 0,
+              "censored": 1
+            },
+            "beam": {
+              "win": 0,
+              "loss": 1,
+              "censored": 1
+            }
+          },
+          "openings": {
+            "policy": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            },
+            "beam": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            }
+          }
+        },
+        {
+          "after_game": 6,
+          "summary": {
+            "policy": {
+              "win": 0,
+              "loss": 1,
+              "censored": 1
+            },
+            "beam": {
+              "win": 1,
+              "loss": 1,
+              "censored": 0
+            },
+            "gate": {
+              "win": 2,
+              "loss": 0,
+              "censored": 0
+            }
+          },
+          "openings": {
+            "policy": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            },
+            "beam": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            }
+          }
+        },
+        {
+          "after_game": 10,
+          "summary": {
+            "policy": {
+              "win": 1,
+              "loss": 1,
+              "censored": 0
+            },
+            "beam": {
+              "win": 1,
+              "loss": 0,
+              "censored": 1
+            },
+            "gate": {
+              "win": 0,
+              "loss": 1,
+              "censored": 1
+            }
+          },
+          "openings": {
+            "policy": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            },
+            "beam": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            }
+          }
+        }
+      ],
+      "promotions": [
+        {
+          "after_game": 2,
+          "accepted": true,
+          "reason": "initialized frozen reference"
+        },
+        {
+          "after_game": 6,
+          "accepted": false,
+          "reason": "policy regressed against the teacher"
+        },
+        {
+          "after_game": 10,
+          "accepted": false,
+          "reason": "insufficient wins against the incumbent"
+        }
+      ]
+    },
+    {
+      "name": "guided_resume_smoke",
+      "config": {
+        "train_seconds": 0.05,
+        "train_nodes": 150,
+        "eval_seconds": 0.05,
+        "eval_every": 2,
+        "eval_games": 2,
+        "checkpoint_every": 10,
+        "updates_per_game": 1,
+        "batch_size": 16,
+        "replay_size": 8192,
+        "workers": 2,
+        "device": "cuda",
+        "worker_device": "cpu",
+        "worker_threads": 1,
+        "policy_lag_games_max": 1,
+        "teacher_fraction": 0.5,
+        "teacher_every": 1,
+        "teacher_replay_size": 8192,
+        "neural_value_weight": 0.0,
+        "promotion_win_rate": 0.55
+      },
+      "total_elapsed_seconds": 11.012,
+      "turns": 8,
+      "games": 1,
+      "terminal_games": 0,
+      "terminal_value_labels": 0,
+      "initial_anchors": 0,
+      "final_anchors": 0,
+      "corrections": 22,
+      "evaluations": [
+        {
+          "after_game": 0,
+          "summary": {
+            "policy": {
+              "win": 0,
+              "loss": 0,
+              "censored": 2
+            },
+            "beam": {
+              "win": 0,
+              "loss": 0,
+              "censored": 2
+            }
+          },
+          "openings": {
+            "policy": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            },
+            "beam": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            }
+          }
+        },
+        {
+          "after_game": 1,
+          "summary": {
+            "policy": {
+              "win": 0,
+              "loss": 0,
+              "censored": 2
+            },
+            "beam": {
+              "win": 0,
+              "loss": 0,
+              "censored": 2
+            },
+            "gate": {
+              "win": 0,
+              "loss": 0,
+              "censored": 2
+            }
+          },
+          "openings": {
+            "policy": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            },
+            "beam": {
+              "opening_0": true,
+              "finish_capture_0": true,
+              "opening_1": true,
+              "finish_capture_1": true
+            }
+          }
+        }
+      ],
+      "promotions": [
+        {
+          "after_game": 0,
+          "accepted": true,
+          "reason": "initialized frozen reference"
+        },
+        {
+          "after_game": 1,
+          "accepted": false,
+          "reason": "insufficient wins against the incumbent"
+        }
+      ]
+    }
+  ],
+  "existing_models_loaded": 4
+}

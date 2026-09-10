@@ -1,0 +1,14 @@
+{
+  "format": "advance-wars-ai-map",
+  "version": 1,
+  "width": 4,
+  "height": 2,
+  "current_player": 1,
+  "funds": {"0": 0, "1": 0},
+  "terrain": [{"x": 1, "y": 0, "type": "city"}],
+  "units": [
+    {"id": "capturer", "owner": 1, "type": "infantry", "hp": 100, "x": 1, "y": 0},
+    {"id": "target", "owner": 0, "type": "infantry", "hp": 20, "x": 3, "y": 0}
+  ],
+  "captures": [{"x": 1, "y": 0, "unit_id": "capturer", "remaining": 10}]
+}

@@ -1,0 +1,1168 @@
+{
+  "actions": [
+    {
+      "kind": "attack",
+      "actor": "p0_initial_30",
+      "destination": 368,
+      "target": "p1_initial_32",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_28",
+      "destination": 206,
+      "target": "p1_initial_11",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_38",
+      "destination": 345,
+      "target": "p1_initial_28",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_32",
+      "destination": 230,
+      "target": "p1_initial_38",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_22",
+      "destination": 253,
+      "target": "p1_initial_30",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_25",
+      "destination": 207,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_13",
+      "destination": 387,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_26",
+      "destination": 276,
+      "target": "p1_initial_30",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_2",
+      "destination": 277,
+      "target": "p1_initial_6",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_1",
+      "destination": 179,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_36",
+      "destination": 162,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_4",
+      "destination": 274,
+      "target": "p1_initial_26",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_15",
+      "destination": 413,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_6",
+      "destination": 299,
+      "target": "p1_initial_22",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_34",
+      "destination": 323,
+      "target": "p1_initial_2",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_7",
+      "destination": 321,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_3",
+      "destination": 185,
+      "target": "p1_initial_13",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_12",
+      "destination": 18,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_14",
+      "destination": 116,
+      "target": "p1_initial_18",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_0",
+      "destination": 228,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_17",
+      "destination": 530,
+      "target": "p1_initial_16",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_18",
+      "destination": 461,
+      "target": "p1_initial_8",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_19",
+      "destination": 553,
+      "target": "p1_initial_16",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_20",
+      "destination": 507,
+      "target": "p1_initial_14",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_21",
+      "destination": 251,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_23",
+      "destination": 208,
+      "target": "p1_initial_11",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_24",
+      "destination": 249,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_27",
+      "destination": 155,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_5",
+      "destination": 233,
+      "target": "p1_initial_9",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_31",
+      "destination": 135,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_29",
+      "destination": 250,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_37",
+      "destination": 247,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_8",
+      "destination": 184,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "attack",
+      "actor": "p0_initial_35",
+      "destination": 139,
+      "target": "p1_initial_17",
+      "build": ""
+    },
+    {
+      "kind": "capture",
+      "actor": "p0_initial_39",
+      "destination": 17,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_33",
+      "destination": 319,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_11",
+      "destination": 318,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_9",
+      "destination": 272,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_10",
+      "destination": 88,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "wait",
+      "actor": "p0_initial_16",
+      "destination": 41,
+      "target": "",
+      "build": ""
+    },
+    {
+      "kind": "build",
+      "actor": "",
+      "destination": 26,
+      "target": "",
+      "build": "infantry"
+    },
+    {
+      "kind": "build",
+      "actor": "",
+      "destination": 49,
+      "target": "",
+      "build": "infantry"
+    },
+    {
+      "kind": "build",
+      "actor": "",
+      "destination": 97,
+      "target": "",
+      "build": "infantry"
+    },
+    {
+      "kind": "end",
+      "actor": "",
+      "destination": -1,
+      "target": "",
+      "build": ""
+    }
+  ],
+  "score": 43289.60000000001,
+  "metrics": {
+    "elapsed": 1.009397,
+    "exhausted": true,
+    "reason": "time",
+    "counts": {
+      "candidates_verified": 1,
+      "complete_candidates": 1,
+      "horizon_turns": 2,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 4013,
+      "movement_cache_misses": 827,
+      "nodes": 232,
+      "policy_steps": 106,
+      "production_expansions": 126,
+      "production_peak_frontier": 4,
+      "regions": 1,
+      "replies_evaluated": 1,
+      "truncated_policy_turns": 3,
+      "units": 80
+    }
+  },
+  "objectives": {
+    "p0_initial_31": {
+      "kind": "capture",
+      "destination": 135,
+      "importance": 1333.3333333333333,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_0": {
+      "kind": "capture",
+      "destination": 204,
+      "importance": 1000.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_13": {
+      "kind": "capture",
+      "destination": 387,
+      "importance": 1000.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_19": {
+      "kind": "capture",
+      "destination": 504,
+      "importance": 1000.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_24": {
+      "kind": "capture",
+      "destination": 249,
+      "importance": 1000.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_39": {
+      "kind": "capture",
+      "destination": 17,
+      "importance": 1000.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_34": {
+      "kind": "capture",
+      "destination": 321,
+      "importance": 866.6666666666666,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_1": {
+      "kind": "capture",
+      "destination": 177,
+      "importance": 800.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_12": {
+      "kind": "capture",
+      "destination": 15,
+      "importance": 800.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_15": {
+      "kind": "capture",
+      "destination": 339,
+      "importance": 800.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_37": {
+      "kind": "capture",
+      "destination": 199,
+      "importance": 800.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_27": {
+      "kind": "capture",
+      "destination": 82,
+      "importance": 666.6666666666666,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_10": {
+      "kind": "capture",
+      "destination": 91,
+      "importance": 650.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_22": {
+      "kind": "capture",
+      "destination": 254,
+      "importance": 650.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_25": {
+      "kind": "capture",
+      "destination": 207,
+      "importance": 650.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_36": {
+      "kind": "capture",
+      "destination": 162,
+      "importance": 650.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_7": {
+      "kind": "capture",
+      "destination": 368,
+      "importance": 650.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_3": {
+      "kind": "capture",
+      "destination": 188,
+      "importance": 520.0,
+      "reason": "secure property and future income"
+    },
+    "p0_initial_11": {
+      "kind": "front",
+      "destination": 369,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_14": {
+      "kind": "front",
+      "destination": 140,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_16": {
+      "kind": "front",
+      "destination": 117,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_17": {
+      "kind": "front",
+      "destination": 485,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_18": {
+      "kind": "front",
+      "destination": 485,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_2": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_20": {
+      "kind": "front",
+      "destination": 508,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_21": {
+      "kind": "front",
+      "destination": 300,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_23": {
+      "kind": "front",
+      "destination": 277,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_26": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_28": {
+      "kind": "front",
+      "destination": 254,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_29": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_30": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_32": {
+      "kind": "front",
+      "destination": 231,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_33": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_35": {
+      "kind": "front",
+      "destination": 209,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_38": {
+      "kind": "front",
+      "destination": 346,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_4": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_5": {
+      "kind": "front",
+      "destination": 231,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_6": {
+      "kind": "front",
+      "destination": 323,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_8": {
+      "kind": "front",
+      "destination": 209,
+      "importance": 1500,
+      "reason": "support contested front"
+    },
+    "p0_initial_9": {
+      "kind": "front",
+      "destination": 346,
+      "importance": 1500,
+      "reason": "support contested front"
+    }
+  },
+  "alternatives": [
+    {
+      "actions": [
+        {
+          "kind": "attack",
+          "actor": "p0_initial_30",
+          "destination": 368,
+          "target": "p1_initial_32",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_28",
+          "destination": 206,
+          "target": "p1_initial_11",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_38",
+          "destination": 345,
+          "target": "p1_initial_28",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_32",
+          "destination": 230,
+          "target": "p1_initial_38",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_22",
+          "destination": 253,
+          "target": "p1_initial_30",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_25",
+          "destination": 207,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_13",
+          "destination": 387,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_26",
+          "destination": 276,
+          "target": "p1_initial_30",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_2",
+          "destination": 277,
+          "target": "p1_initial_6",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_1",
+          "destination": 179,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_36",
+          "destination": 162,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_4",
+          "destination": 274,
+          "target": "p1_initial_26",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_15",
+          "destination": 413,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_6",
+          "destination": 299,
+          "target": "p1_initial_22",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_34",
+          "destination": 323,
+          "target": "p1_initial_2",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_7",
+          "destination": 321,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_3",
+          "destination": 185,
+          "target": "p1_initial_13",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_12",
+          "destination": 18,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_14",
+          "destination": 116,
+          "target": "p1_initial_18",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_0",
+          "destination": 228,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_17",
+          "destination": 530,
+          "target": "p1_initial_16",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_18",
+          "destination": 461,
+          "target": "p1_initial_8",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_19",
+          "destination": 553,
+          "target": "p1_initial_16",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_20",
+          "destination": 507,
+          "target": "p1_initial_14",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_21",
+          "destination": 251,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_23",
+          "destination": 208,
+          "target": "p1_initial_11",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_24",
+          "destination": 249,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_27",
+          "destination": 155,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_5",
+          "destination": 233,
+          "target": "p1_initial_9",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_31",
+          "destination": 135,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_29",
+          "destination": 250,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_37",
+          "destination": 247,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_8",
+          "destination": 184,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p0_initial_35",
+          "destination": 139,
+          "target": "p1_initial_17",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p0_initial_39",
+          "destination": 17,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_33",
+          "destination": 319,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_11",
+          "destination": 318,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_9",
+          "destination": 272,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_10",
+          "destination": 88,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p0_initial_16",
+          "destination": 41,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 26,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 49,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 97,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "score": 43289.60000000001,
+      "reply": [
+        {
+          "kind": "attack",
+          "actor": "p1_initial_10",
+          "destination": 485,
+          "target": "p0_initial_18",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_15",
+          "destination": 163,
+          "target": "p0_initial_36",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_13",
+          "destination": 186,
+          "target": "p0_initial_36",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_0",
+          "destination": 347,
+          "target": "p0_initial_34",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_2",
+          "destination": 324,
+          "target": "p0_initial_34",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_25",
+          "destination": 322,
+          "target": "p0_initial_7",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_14",
+          "destination": 462,
+          "target": "p0_initial_18",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_28",
+          "destination": 369,
+          "target": "p0_initial_7",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_26",
+          "destination": 297,
+          "target": "p0_initial_7",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_12",
+          "destination": 460,
+          "target": "p0_initial_18",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_4",
+          "destination": 301,
+          "target": "p0_initial_6",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_38",
+          "destination": 300,
+          "target": "p0_initial_6",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_6",
+          "destination": 231,
+          "target": "p0_initial_32",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_34",
+          "destination": 278,
+          "target": "p0_initial_2",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_29",
+          "destination": 273,
+          "target": "p0_initial_4",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_1",
+          "destination": 396,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_33",
+          "destination": 254,
+          "target": "p0_initial_22",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_36",
+          "destination": 414,
+          "target": "p0_initial_15",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_37",
+          "destination": 326,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_3",
+          "destination": 395,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_18",
+          "destination": 166,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_19",
+          "destination": 91,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_21",
+          "destination": 275,
+          "target": "p0_initial_4",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_23",
+          "destination": 346,
+          "target": "p0_initial_38",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_24",
+          "destination": 371,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_5",
+          "destination": 372,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "capture",
+          "actor": "p1_initial_31",
+          "destination": 440,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_35",
+          "destination": 392,
+          "target": "p0_initial_30",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_39",
+          "destination": 437,
+          "target": "p0_initial_15",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_20",
+          "destination": 92,
+          "target": "p0_initial_14",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_27",
+          "destination": 393,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_9",
+          "destination": 281,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "attack",
+          "actor": "p1_initial_7",
+          "destination": 229,
+          "target": "p0_initial_32",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_16",
+          "destination": 558,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "wait",
+          "actor": "p1_initial_17",
+          "destination": 261,
+          "target": "",
+          "build": ""
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 478,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 526,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "build",
+          "actor": "",
+          "destination": 549,
+          "target": "",
+          "build": "infantry"
+        },
+        {
+          "kind": "end",
+          "actor": "",
+          "destination": -1,
+          "target": "",
+          "build": ""
+        }
+      ],
+      "reason": "policy turn",
+      "verified": true
+    }
+  ]
+}
