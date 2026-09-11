@@ -94,6 +94,7 @@ class App:
                                ("AI vs AI", self.start_auto), ("Pause after turn", self.pause)):
             ttk.Button(side, text=label, command=command).pack(fill="x", pady=2)
         ttk.Checkbutton(side, text="Human Blue / automatic Red", variable=self.human).pack(anchor="w", pady=5)
+        ttk.Button(side, text="Flip sides", command=self.flip_sides).pack(fill="x", pady=2)
         moves = ttk.Frame(side)
         moves.pack(fill="x", pady=5)
         ttk.Button(moves, text="Wait / move", command=lambda: self.commit("wait")).pack(side="left")
@@ -298,6 +299,41 @@ class App:
             self.apply_action(END)
             if self.human.get() and self.state.player == 1 and self.rules.outcome(self.state) is None:
                 self.start(True)
+
+    def flip_sides(self):
+        """Relabel the live position; let Red's AI finish this same turn.
+
+        No END/start_turn: income, repairs and action availability were already
+        applied. Ownership-linked capture records keep their existing unit IDs.
+        """
+        if self.busy:
+            return
+        if self.rules.outcome(self.state) is not None:
+            self.status.set("Restart or load a position before flipping sides.")
+            return
+        if self.state.player != 0:
+            self.status.set("Flip sides is available on Blue's turn.")
+            return
+        try:
+            Config(seconds=float(self.seconds.get()))
+        except ValueError:
+            self.status.set("Enter a nonnegative thinking time in seconds.")
+            return
+        flipped = self.state.clone()
+        flipped.units = {uid: replace(unit, owner=1-unit.owner) for uid, unit in flipped.units.items()}
+        flipped.owners = {pos: 1-owner for pos, owner in flipped.owners.items()}
+        flipped.funds = list(reversed(flipped.funds))
+        flipped.player = 1-flipped.player
+        flipped.validate()
+        self.state = flipped
+        self.auto = False
+        self.human.set(True)
+        self.editing.set(False)
+        self.invalidate()
+        self.alternatives.delete(0, "end")
+        self.write("Sides flipped, including properties and funds. Red AI continues the current turn; no extra income.")
+        self.draw()
+        self.start(True)
 
     def apply_action(self, action):
         self.action_menu.unpost()

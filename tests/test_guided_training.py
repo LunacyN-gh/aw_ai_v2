@@ -65,19 +65,18 @@ class PromotionTests(unittest.TestCase):
         reference={'summary':{m:{'win':2,'loss':2,'censored':0} for m in ('policy','beam')},
                    'openings':{m:{'a':True,'b':True} for m in ('policy','beam')}}
         candidate=copy.deepcopy(reference)
+        candidate['summary']['incumbent']=copy.deepcopy(reference['summary']['beam'])
         candidate['summary']['gate']={'win':3,'loss':1,'censored':0}
         return reference,candidate
 
-    def test_gate_accepts_only_without_regressions(self):
+    def test_weighted_gate_allows_local_regressions(self):
         reference,candidate=self.reports()
+        candidate['openings']['beam']['a']=False
+        candidate['summary']['policy']={'win':0,'loss':4,'censored':0}
+        candidate['summary']['beam']={'win':1,'loss':3,'censored':0}
         self.assertTrue(promotion_decision(candidate,reference)[0])
-        for field in ('head_to_head','policy','beam','opening','raw_opening'):
-            _,bad=self.reports()
-            if field=='head_to_head': bad['summary']['gate']={'win':1,'loss':0,'censored':3}
-            elif field in ('policy','beam'): bad['summary'][field]['loss']=3
-            elif field=='opening': bad['openings']['beam']['a']=False
-            else: bad['openings']['policy']['a']=False
-            self.assertFalse(promotion_decision(bad,reference)[0],field)
+        candidate['summary']['gate']={'win':0,'loss':0,'censored':4}
+        self.assertFalse(promotion_decision(candidate,reference)[0])
 
 
 try:
@@ -222,6 +221,7 @@ class ExpertReplayTests(unittest.TestCase):
             if len(measured)>1:
                 wins=3 if len(measured)==2 else 0
                 result['summary']['gate']={'win':wins,'loss':4-wins,'censored':0}
+                result['summary']['incumbent']={'win':2,'loss':2,'censored':0}
             return result
         with tempfile.TemporaryDirectory() as d, patch('aw_ai.search_training.search_turn',side_effect=turn), patch('aw_ai.search_training.evaluate',side_effect=evaluate):
             output=Path(d)/'test.pt'

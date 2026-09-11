@@ -24,7 +24,7 @@ from .rules import Rules
 from .scenarios import load, digest
 from .guidance import deployment_agent
 from .teacher_replay import TeacherReplay, training_batch
-from .promotion import promotion_decision
+from .promotion import promotion_decision, promotion_scores
 
 ITA = ('infantry', 'tank', 'artillery')
 
@@ -315,7 +315,10 @@ def evaluate(network, initial, config, games=4):
             for mode in ('policy','beam') for game in range(games)]
     modes = ['policy','beam']
     if config.get('reference'):
-        modes.append('gate')
+        modes.extend(('gate','incumbent'))
+        jobs.extend(dict(network=config['reference'],state=initial(1000000+game//2),seed=1000000+game//2,
+                         player=game%2,mode='incumbent',turns=config['turns'],search=config['search'])
+                    for game in range(games))
         jobs.extend(dict(network=payload,opponent=config['reference'],state=initial(1000000+game//2),
                          seed=1000000+game//2,player=game%2,mode='gate',turns=config['turns'],search=config['search'])
                     for game in range(games))
@@ -348,17 +351,17 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
         opponent_checkpoint=None, train_seconds=.5, train_nodes=4000, eval_seconds=1.,
         eval_every=25, eval_games=4, checkpoint_every=10, updates_per_game=4, batch_size=64,
         replay_size=8192, workers=1, device='cpu', executor=None, teacher_fraction=.5,
-        teacher_every=2, teacher_replay_size=8192, neural_value_weight=.5, promotion_win_rate=.55,
+        teacher_every=2, teacher_replay_size=8192, neural_value_weight=.5, promotion_win_rate=None,
         search_mode="bundle", bundle_candidates=6, target_temperature=.15,
         exploration_fraction=.25, execution_exploration=.1, heuristic_scale=20000.,
         value_loss_weight=.5, entropy_weight=.01, bundle_version=2,
-        proposal_temperature=.7, policy_prior_weight=.1, eval_maps=None, train_maps=None):
+        proposal_temperature=.7, policy_prior_weight=.1, eval_maps=None, train_maps=None, promotion_margin=.05, promotion_teacher_weight=.5):
     if (min(games,turns,train_nodes,eval_every,eval_games,checkpoint_every,updates_per_game,batch_size,replay_size) < 1
             or batch_size < 2 or eval_games % 2 or bootstrap < 0 or seed < 0 or seed+games+bootstrap >= 1000000
             or (map_path is None and not train_maps and (not 8 <= size <= 64 or units < 1))):
         raise ValueError('invalid run parameters; evaluation games must be positive and even')
     if (not 0 <= teacher_fraction <= 1 or teacher_every < 0 or teacher_replay_size < 2
-            or not 0 <= neural_value_weight <= 1 or not .5 < promotion_win_rate <= 1):
+            or not 0 <= neural_value_weight <= 1 or (promotion_win_rate is not None and not .5 < promotion_win_rate <= 1)):
         raise ValueError('invalid teacher replay, value blend, or promotion settings')
     if (search_mode not in ("bundle","beam") or bundle_candidates < 2
             or not all(math.isfinite(x) for x in (target_temperature,heuristic_scale,value_loss_weight,entropy_weight,exploration_fraction,execution_exploration))
@@ -368,6 +371,9 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
     if (bundle_version not in (1,2) or not math.isfinite(proposal_temperature) or proposal_temperature<=0
             or not math.isfinite(policy_prior_weight) or policy_prior_weight<0):
         raise ValueError("invalid policy bundle settings")
+    if promotion_win_rate is not None:promotion_margin=promotion_win_rate-.5
+    if not math.isfinite(promotion_margin) or not 0<=promotion_margin<=1 or not math.isfinite(promotion_teacher_weight) or not 0<=promotion_teacher_weight<=1:
+        raise ValueError("invalid promotion margin or teacher weight")
     run_started = perf_counter()
     torch.set_num_threads(1); torch.manual_seed(seed)
     rng = random.Random(seed)
@@ -450,7 +456,8 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
                             workers=workers,device=device,worker_device='cpu',worker_threads=1,
                             policy_lag_games_max=workers-1,teacher_fraction=teacher_fraction,teacher_every=teacher_every,
                             teacher_replay_size=teacher_replay_size,neural_value_weight=neural_value_weight,
-                            promotion_win_rate=promotion_win_rate,search_settings=network.search_settings,
+                            promotion_margin=promotion_margin,promotion_teacher_weight=promotion_teacher_weight,
+                            promotion_censored_score=.5,search_settings=network.search_settings,
                             value_loss_weight=value_loss_weight,entropy_weight=entropy_weight),
               'promotions':[], 'complete':False}
     def save(path=output, model=None):
@@ -484,9 +491,11 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
             save(output.with_name(output.stem+'.best.pt'))
         else:
             promotion_started = perf_counter()
-            accepted,reason = promotion_decision(result,reference_evaluation,promotion_win_rate)
-            report['promotions'].append({'after_game':game,'accepted':accepted,'reason':reason})
-            print(json.dumps({'phase':'promotion','after_game':game,'accepted':accepted,'reason':reason,
+            accepted,reason = promotion_decision(result,margin=promotion_margin,teacher_weight=promotion_teacher_weight)
+            details = promotion_scores(result,promotion_teacher_weight) if all(k in result["summary"] for k in ("beam","incumbent","gate")) else {}
+            details["margin"] = promotion_margin
+            report['promotions'].append({'after_game':game,'accepted':accepted,'reason':reason,**details})
+            print(json.dumps({'phase':'promotion','after_game':game,'accepted':accepted,'reason':reason,**details,
                               'elapsed_seconds':round(perf_counter()-promotion_started,3),
                               'run_elapsed_seconds':round(perf_counter()-run_started,3)}),flush=True)
             if accepted:

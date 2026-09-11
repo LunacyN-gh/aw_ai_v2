@@ -1,0 +1,524 @@
+{
+  "training": "value-guided bundle distillation + terminal value regression",
+  "seed": 0,
+  "map_path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI\\.v2_promotion\\maps\\test_cities_6x6_ita.json",
+  "initial_state_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+  "training_sizes": [
+    6
+  ],
+  "allowed_builds": [
+    "infantry",
+    "mech",
+    "recon",
+    "tank",
+    "md_tank",
+    "artillery",
+    "rocket",
+    "anti_air",
+    "b_copter",
+    "fighter",
+    "bomber"
+  ],
+  "income_capture_fraction": 0.6666666666666666,
+  "income_capture_limit": 7,
+  "turn_limit": 2,
+  "runs": [
+    {
+      "phase": "bootstrap",
+      "game": 1,
+      "seed": 0,
+      "training_map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+      "learner_side": null,
+      "opponent": "teacher",
+      "winner": null,
+      "censored": true,
+      "decisions": 4,
+      "production_decisions": 2,
+      "new_value_labels": 0,
+      "teacher_decisions": 4,
+      "correction_decisions": 0,
+      "teacher_replay": 4,
+      "bootstrap_anchors": 4,
+      "search_replay": 0,
+      "played_turns": 2,
+      "termination": "turn_limit",
+      "final_income": [
+        1000,
+        1000
+      ],
+      "search_counts": {
+        "regions": 0,
+        "units": 5,
+        "nodes": 110,
+        "policy_steps": 30,
+        "production_expansions": 28,
+        "production_peak_frontier": 4,
+        "replies_evaluated": 8,
+        "horizon_turns": 6,
+        "complete_candidates": 4,
+        "candidates_verified": 4,
+        "incomplete_candidates": 0,
+        "movement_cache_hits": 151,
+        "movement_cache_misses": 5,
+        "soft_targets": 0,
+        "local_expansions": 52,
+        "transpositions": 6,
+        "regions_searched": 2
+      },
+      "teacher_query_seconds": 0.0,
+      "verified_candidates": 4,
+      "partial_turns": 0,
+      "losses": {
+        "policy_loss": 3.2152557373046875,
+        "production_loss": 0.6518194675445557,
+        "value_mse": null,
+        "entropy": 1.572064757347107,
+        "total_loss": 1.9178168773651123,
+        "teacher_ce": 1.933537483215332,
+        "search_ce": null,
+        "policy_samples": 32,
+        "production_samples": 32,
+        "value_samples": 0,
+        "samples": 64,
+        "teacher_samples": 64,
+        "search_samples": 0,
+        "correction_samples": 0,
+        "updates": 1
+      },
+      "elapsed_seconds": 2.094,
+      "play_seconds": 0.031,
+      "training_seconds": 2.063,
+      "policy_after_game": 0,
+      "policy_lag_games": 0,
+      "run_elapsed_seconds": 6.978
+    },
+    {
+      "phase": "self_play",
+      "game": 2,
+      "seed": 1,
+      "training_map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+      "learner_side": 0,
+      "opponent": "self",
+      "winner": null,
+      "censored": true,
+      "decisions": 4,
+      "production_decisions": 2,
+      "new_value_labels": 0,
+      "teacher_decisions": 4,
+      "correction_decisions": 4,
+      "teacher_replay": 8,
+      "bootstrap_anchors": 4,
+      "search_replay": 4,
+      "played_turns": 2,
+      "termination": "turn_limit",
+      "final_income": [
+        1000,
+        1000
+      ],
+      "search_counts": {
+        "raw_baseline_retained": 2,
+        "nodes": 63,
+        "policy_steps": 55,
+        "production_expansions": 8,
+        "production_peak_frontier": 4,
+        "complete_bundles": 12,
+        "distinct_bundles": 12,
+        "value_evaluations": 30,
+        "reply_bundles": 18,
+        "common_reply_rounds": 3,
+        "reply_checked_roots": 12,
+        "raw_baseline_selected": 0,
+        "soft_targets": 3,
+        "discarded_reply_rounds": 1
+      },
+      "teacher_query_seconds": 0.03203239999993457,
+      "verified_candidates": 12,
+      "partial_turns": 0,
+      "losses": {
+        "policy_loss": 2.9933083852132163,
+        "production_loss": 0.6315963533189561,
+        "value_mse": null,
+        "entropy": 1.5762054655287001,
+        "total_loss": 1.796690411037869,
+        "teacher_ce": 1.837411642074585,
+        "search_ce": 1.6127794981002808,
+        "policy_samples": 18,
+        "production_samples": 18,
+        "value_samples": 0,
+        "samples": 36,
+        "teacher_samples": 32,
+        "search_samples": 4,
+        "correction_samples": 16,
+        "updates": 1
+      },
+      "elapsed_seconds": 0.203,
+      "play_seconds": 0.144,
+      "training_seconds": 0.058,
+      "policy_after_game": 1,
+      "policy_lag_games": 0,
+      "run_elapsed_seconds": 7.763
+    },
+    {
+      "phase": "self_play",
+      "game": 3,
+      "seed": 2,
+      "training_map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+      "learner_side": 1,
+      "opponent": "self",
+      "winner": null,
+      "censored": true,
+      "decisions": 4,
+      "production_decisions": 2,
+      "new_value_labels": 0,
+      "teacher_decisions": 4,
+      "correction_decisions": 4,
+      "teacher_replay": 12,
+      "bootstrap_anchors": 4,
+      "search_replay": 8,
+      "played_turns": 2,
+      "termination": "turn_limit",
+      "final_income": [
+        1000,
+        1000
+      ],
+      "search_counts": {
+        "raw_baseline_retained": 2,
+        "nodes": 56,
+        "policy_steps": 48,
+        "production_expansions": 8,
+        "production_peak_frontier": 4,
+        "complete_bundles": 12,
+        "distinct_bundles": 12,
+        "value_evaluations": 30,
+        "reply_bundles": 18,
+        "discarded_reply_rounds": 1,
+        "common_reply_rounds": 3,
+        "reply_checked_roots": 12,
+        "raw_baseline_selected": 1,
+        "soft_targets": 2
+      },
+      "teacher_query_seconds": 0.029278299999987212,
+      "verified_candidates": 12,
+      "partial_turns": 0,
+      "losses": {
+        "policy_loss": 2.863815116882324,
+        "production_loss": 0.6534307956695556,
+        "value_mse": null,
+        "entropy": 1.5792436599731445,
+        "total_loss": 1.742830467224121,
+        "teacher_ce": 1.7952314615249634,
+        "search_ce": 1.6121891736984253,
+        "policy_samples": 20,
+        "production_samples": 20,
+        "value_samples": 0,
+        "samples": 40,
+        "teacher_samples": 32,
+        "search_samples": 8,
+        "correction_samples": 16,
+        "updates": 1
+      },
+      "elapsed_seconds": 0.173,
+      "play_seconds": 0.132,
+      "training_seconds": 0.041,
+      "policy_after_game": 1,
+      "policy_lag_games": 1,
+      "run_elapsed_seconds": 7.88
+    }
+  ],
+  "evaluations": [
+    {
+      "summary": {
+        "policy": {
+          "win": 0,
+          "loss": 0,
+          "censored": 2
+        },
+        "beam": {
+          "win": 0,
+          "loss": 0,
+          "censored": 2
+        }
+      },
+      "games": [
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 0,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 1,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 0,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 1,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        }
+      ],
+      "openings": {
+        "policy": {
+          "opening_0": false,
+          "finish_capture_0": false,
+          "opening_1": false,
+          "finish_capture_1": false
+        },
+        "beam": {
+          "opening_0": false,
+          "finish_capture_0": true,
+          "opening_1": false,
+          "finish_capture_1": true
+        }
+      },
+      "elapsed_seconds": 0.522,
+      "run_elapsed_seconds": 7.513,
+      "after_game": 1
+    },
+    {
+      "summary": {
+        "policy": {
+          "win": 0,
+          "loss": 0,
+          "censored": 2
+        },
+        "beam": {
+          "win": 0,
+          "loss": 0,
+          "censored": 2
+        },
+        "gate": {
+          "win": 0,
+          "loss": 0,
+          "censored": 2
+        },
+        "incumbent": {
+          "win": 0,
+          "loss": 0,
+          "censored": 2
+        }
+      },
+      "games": [
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 0,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 1,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 0,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 1,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "incumbent",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 0,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "incumbent",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 1,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "gate",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 0,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        },
+        {
+          "mode": "gate",
+          "seed": 1000000,
+          "map_hash": "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3",
+          "learner_side": 1,
+          "winner": null,
+          "result": "censored",
+          "partial_candidates": 0,
+          "verified_candidates": 6,
+          "played_turns": 2,
+          "termination": "turn_limit"
+        }
+      ],
+      "openings": {
+        "policy": {
+          "opening_0": false,
+          "finish_capture_0": false,
+          "opening_1": false,
+          "finish_capture_1": false
+        },
+        "beam": {
+          "opening_0": false,
+          "finish_capture_0": true,
+          "opening_1": true,
+          "finish_capture_1": true
+        }
+      },
+      "elapsed_seconds": 0.895,
+      "run_elapsed_seconds": 8.775,
+      "after_game": 3
+    }
+  ],
+  "validation_scope": "explicit evaluation maps, alternating learner sides",
+  "opponent_checkpoint": null,
+  "tactical_families_used_for_training": false,
+  "evaluation_maps": [
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI\\.v2_promotion\\maps\\test_cities_6x6_ita.json"
+  ],
+  "training_maps": [
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI\\.v2_promotion\\maps\\test_cities_6x6_ita.json"
+  ],
+  "training_map_hashes": [
+    "b7b459cfadc1297fbb8a7683e7d461c5b77d83cd0610eddb2e1957091157cea3"
+  ],
+  "parameters": 28882,
+  "config": {
+    "train_seconds": 0.05,
+    "train_nodes": 4000,
+    "eval_seconds": 0.05,
+    "eval_every": 2,
+    "eval_games": 2,
+    "checkpoint_every": 10,
+    "updates_per_game": 1,
+    "batch_size": 64,
+    "replay_size": 8192,
+    "workers": 2,
+    "device": "cpu",
+    "worker_device": "cpu",
+    "worker_threads": 1,
+    "policy_lag_games_max": 1,
+    "teacher_fraction": 0.5,
+    "teacher_every": 2,
+    "teacher_replay_size": 8192,
+    "neural_value_weight": 0.5,
+    "promotion_margin": 0.05,
+    "promotion_teacher_weight": 0.5,
+    "promotion_censored_score": 0.5,
+    "search_settings": {
+      "mode": "guided",
+      "neural_value_weight": 0.5,
+      "planner": "bundle",
+      "bundle_candidates": 6,
+      "target_temperature": 0.15,
+      "exploration_fraction": 0.25,
+      "execution_exploration": 0.1,
+      "heuristic_scale": 20000.0,
+      "bundle_version": 2,
+      "proposal_temperature": 0.7,
+      "policy_prior_weight": 0.1
+    },
+    "value_loss_weight": 0.5,
+    "entropy_weight": 0.01
+  },
+  "promotions": [
+    {
+      "after_game": 1,
+      "accepted": true,
+      "reason": "initialized frozen reference"
+    },
+    {
+      "after_game": 3,
+      "accepted": false,
+      "reason": "combined score delta 0.0000 does not exceed margin 0.0500",
+      "challenger_teacher_score": 0.5,
+      "incumbent_teacher_score": 0.5,
+      "challenger_head_to_head_score": 0.5,
+      "incumbent_head_to_head_score": 0.5,
+      "teacher_weight": 0.5,
+      "combined_delta": 0.0,
+      "margin": 0.05
+    }
+  ],
+  "complete": true,
+  "reference_game": 1,
+  "best_measured_game": 1,
+  "total_elapsed_seconds": 8.785
+}

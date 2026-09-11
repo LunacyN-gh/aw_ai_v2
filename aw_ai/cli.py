@@ -57,7 +57,9 @@ def parser():
     p.add_argument("--heuristic-scale", type=float, default=20000.)
     p.add_argument("--value-loss-weight", type=float, default=.5)
     p.add_argument("--entropy-weight", type=float, default=.01)
-    p.add_argument("--promotion-win-rate", type=float, default=.55)
+    p.add_argument("--promotion-win-rate", type=float, default=None, help="deprecated: maps threshold to margin by subtracting .5")
+    p.add_argument("--promotion-margin", type=float, default=.05)
+    p.add_argument("--promotion-teacher-weight", type=float, default=.5)
     p.add_argument("--replay-size", type=int, default=8192)
     p.add_argument("--capture-fraction", type=float, default=2/3, help="neural training income-property win fraction; 0 disables")
     p.add_argument("--capture-limit", type=int, help="income-property win count for generated/loaded maps")
@@ -94,7 +96,8 @@ def main(argv=None):
             exploration_fraction=args.exploration_fraction,execution_exploration=args.execution_exploration,
             heuristic_scale=args.heuristic_scale,value_loss_weight=args.value_loss_weight,entropy_weight=args.entropy_weight,
             bundle_version=args.bundle_version,proposal_temperature=args.proposal_temperature,
-            policy_prior_weight=args.policy_prior_weight,eval_maps=args.eval_map,train_maps=args.train_map)
+            policy_prior_weight=args.policy_prior_weight,eval_maps=args.eval_map,train_maps=args.train_map,
+            promotion_margin=args.promotion_margin,promotion_teacher_weight=args.promotion_teacher_weight)
         return
     if args.command == "gui":
         from .gui import main as gui_main

@@ -1,0 +1,228 @@
+{
+  "format": "advance-wars-ai-map",
+  "version": 1,
+  "width": 6,
+  "height": 6,
+  "current_player": 0,
+  "funds": {
+    "0": 0,
+    "1": 4000
+  },
+  "terrain": [
+    {
+      "x": 0,
+      "y": 0,
+      "type": "factory",
+      "owner": 0
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "type": "forest"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "type": "forest"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "type": "city"
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "type": "city"
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "type": "road"
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "type": "city"
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "type": "mountain"
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "type": "city"
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "type": "city"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "type": "road"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "type": "forest"
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "type": "mountain"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "type": "forest"
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "type": "forest"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "type": "forest"
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "type": "mountain"
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "type": "forest"
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "type": "city"
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "type": "forest"
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "type": "city"
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "type": "forest"
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "type": "road"
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "type": "road"
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "type": "city"
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "type": "forest"
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "type": "city"
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "type": "factory",
+      "owner": 1
+    }
+  ],
+  "units": [
+    {
+      "id": "ai_artillery_2",
+      "owner": 1,
+      "type": "artillery",
+      "hp": 100,
+      "x": 4,
+      "y": 4
+    },
+    {
+      "id": "ai_infantry_1",
+      "owner": 1,
+      "type": "infantry",
+      "hp": 100,
+      "x": 4,
+      "y": 5
+    },
+    {
+      "id": "ai_infantry_2",
+      "owner": 1,
+      "type": "infantry",
+      "hp": 100,
+      "x": 5,
+      "y": 4
+    },
+    {
+      "id": "ai_tank_1",
+      "owner": 1,
+      "type": "tank",
+      "hp": 100,
+      "x": 5,
+      "y": 5
+    },
+    {
+      "id": "human_artillery_1",
+      "owner": 0,
+      "type": "artillery",
+      "hp": 100,
+      "x": 1,
+      "y": 1
+    },
+    {
+      "id": "human_infantry_1",
+      "owner": 0,
+      "type": "infantry",
+      "hp": 100,
+      "x": 0,
+      "y": 1
+    },
+    {
+      "id": "human_infantry_2",
+      "owner": 0,
+      "type": "infantry",
+      "hp": 100,
+      "x": 1,
+      "y": 0
+    },
+    {
+      "id": "human_tank_1",
+      "owner": 0,
+      "type": "tank",
+      "hp": 100,
+      "x": 0,
+      "y": 0
+    }
+  ],
+  "captures": [],
+  "allowed_builds": [
+    "infantry",
+    "tank",
+    "artillery"
+  ],
+  "income_capture_limit": 8
+}
