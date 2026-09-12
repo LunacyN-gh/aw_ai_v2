@@ -83,7 +83,7 @@ Deliberate remaining differences:
 - Enemy units of every domain conservatively block transit. Air/ground transit interactions are not asserted to match AWBW.
 - Towers give attack bonuses and no income or repairs. Income-producing properties grant 1,000 per turn.
 - Capturing an enemy-owned HQ wins immediately. An army with no units remains alive while it owns a base or airport. This production-aware elimination convention is a sandbox rule.
-- There is no hard unit cap or game-specific draw rule. An optional income-property capture limit ends the game immediately; towers do not count. Arena turn limits are censored outcomes, not training draws.
+- There is no hard unit cap. An optional income-property capture limit ends the game immediately; towers do not count. A state `turn_limit` ends the game after that many player turns: higher income wins, equal income draws. Arena execution limits without a game deadline remain censored.
 
 V1 maps import as states under the **v2** rules profile; importing a map does not preserve all v1 combat/evaluation semantics. A second game's adapter needs its own rules, tactical proposals and training; changing a label is insufficient.
 
@@ -110,7 +110,7 @@ Search controls include `--nodes`, `--beam`, `--depth` (local primitive actions)
 
 Complete-turn policy rollouts compare two candidate actors at a time; local sequence search considers up to six. These are separate budgets: cheap rollouts complete the army's turn while detailed search explores more action ordering in contested regions. Both can be configured through `Config` in Python.
 
-The linear learner fits terminal game outcomes and refuses to train when every game reaches the turn limit. The separate `neural-train` command learns policy targets from searched turns and value targets from completed games, including bootstrap games. It defaults to a two-thirds income-property capture limit. `models/smoke.pt` demonstrates the earlier pipeline, not the current trainer's strength. There is no human-replay dataset or established playing-strength result.
+The linear learner fits terminal game outcomes and refuses to train when every game reaches the turn limit. The separate `neural-train` command learns policy targets from searched turns and value targets from completed games, including bootstrap games. It defaults to a two-thirds income-property capture limit. Neural training also uses `--turns` as an income deadline; equal-income draws train the value head toward zero. See [clock-aware training](TRAIN_CLOCK_ITA.md) for migration and the 36-player-turn run command. `models/smoke.pt` demonstrates the earlier pipeline, not the current trainer's strength. There is no human-replay dataset or established playing-strength result.
 
 Reports from implementation checks are in `reports/`; small timing samples are diagnostic, not a strength benchmark. `compare` currently compares against the v2 policy-only ablation, **not the original v1 agent**. A reliable v1-versus-v2 strength comparison requires a common rules profile and a controlled time budget for v1.
 

@@ -5,7 +5,7 @@ import math
 from pathlib import Path
 from typing import Protocol
 
-from .model import DEFENSE, INCOME_TILES, PROPERTY_VALUE, material
+from .model import DEFENSE, INCOME_TILES, PROPERTY_VALUE, material, outcome_value
 
 
 class ValueModel(Protocol):
@@ -44,7 +44,7 @@ class HeuristicValue:
     def evaluate(self, state, perspective, rules):
         winner = rules.outcome(state)
         if winner is not None:
-            return 1e9 if winner == perspective else -1e9
+            return 1e9*outcome_value(winner,perspective)
         return 10000 * sum(self.weights[k]*v for k, v in features(state, perspective, rules).items())
 
 

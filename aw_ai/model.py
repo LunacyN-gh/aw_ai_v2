@@ -128,6 +128,12 @@ class Action:
     build: str = ""
 
 
+DRAW = -1  # Distinct from None (ongoing / truncated).
+
+def outcome_value(winner, player):
+    return 0. if winner == DRAW else 1. if winner == player else -1.
+
+
 END = Action("end")
 
 
@@ -145,6 +151,7 @@ class State:
     profile: str = PROFILE
     income_capture_limit: int | None = None
     allowed_builds: tuple[str, ...] | None = None
+    turn_limit: int | None = None  # Absolute number of completed player turns.
     occupancy: dict[int, str] = field(init=False, repr=False)
 
     def __post_init__(self):
@@ -153,7 +160,7 @@ class State:
     def clone(self):
         return State(self.board, self.units.copy(), self.player, self.funds.copy(),
                      self.owners.copy(), self.captures.copy(), self.turn, self.winner,
-                     self.next_id, self.profile, self.income_capture_limit, self.allowed_builds)
+                     self.next_id, self.profile, self.income_capture_limit, self.allowed_builds, self.turn_limit)
 
     def update(self, uid, **changes):
         old = self.units[uid]
@@ -178,7 +185,8 @@ class State:
 
     def key(self):
         return (self.profile, self.board, self.player, tuple(self.funds), self.winner,
-                self.next_id, self.income_capture_limit, self.allowed_builds, tuple(sorted(self.owners.items())), tuple(sorted(self.captures.items())),
+                self.next_id, self.income_capture_limit, self.allowed_builds,
+                *((self.turn_limit, self.turn) if self.turn_limit is not None else ()), tuple(sorted(self.owners.items())), tuple(sorted(self.captures.items())),
                 tuple(sorted((u.id, u.owner, u.kind, u.pos, u.hp, u.acted) for u in self.units.values())))
 
     def validate(self):
@@ -186,8 +194,10 @@ class State:
             raise ValueError("unsupported rules profile")
         if self.player not in (0, 1) or len(self.funds) != 2 or min(self.funds) < 0:
             raise ValueError("invalid player or funds")
-        if self.winner not in (None, 0, 1) or self.turn < 0 or self.next_id < 0:
+        if self.winner not in (None, DRAW, 0, 1) or self.turn < 0 or self.next_id < 0:
             raise ValueError("invalid turn or outcome")
+        if self.turn_limit is not None and (type(self.turn_limit) is not int or self.turn_limit < 1):
+            raise ValueError("turn limit must be a positive integer or null")
         if self.allowed_builds is not None:
             if (not isinstance(self.allowed_builds, tuple) or not self.allowed_builds
                     or any(k not in SPECS for k in self.allowed_builds)
@@ -219,3 +229,8 @@ class State:
 
 def material(unit):
     return unit.spec.cost * (unit.hp / 100 + .15)
+
+
+def displayed_army_value(state, player):
+    """Purchase cost scaled by displayed HP, as shown on the board."""
+    return sum(u.spec.cost*u.displayed_hp//10 for u in state.army(player))

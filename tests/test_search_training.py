@@ -109,6 +109,7 @@ class SearchTrainingTests(unittest.TestCase):
         from aw_ai.scenarios import load,digest
         path=Path(__file__).resolve().parents[1]/'maps/v1/test_cities_6x6.json'
         expected=load(path)
+        expected.turn_limit=1
         observed=[]
         def turn(planner,state,rng,explore=False):
             if not observed: self.assertEqual(digest(state),digest(expected))

@@ -2,10 +2,10 @@
 import math
 
 def match_score(counts):
-    values=[counts.get(k,0) for k in ('win','loss','censored')]
+    values=[counts.get(k,0) for k in ('win','loss','censored','draw')]
     if any(not isinstance(v,int) or v<0 for v in values) or not sum(values):
         raise ValueError('invalid match counts')
-    return (values[0]+.5*values[2])/sum(values)
+    return (values[0]+.5*(values[2]+values[3]))/sum(values)
 
 def promotion_scores(candidate, teacher_weight=.5):
     if not math.isfinite(teacher_weight) or not 0<=teacher_weight<=1:

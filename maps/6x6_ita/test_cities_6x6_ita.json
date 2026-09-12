@@ -156,5 +156,6 @@
     "infantry",
     "tank",
     "artillery"
-  ]
+  ],
+  "turn_limit": 36
 }

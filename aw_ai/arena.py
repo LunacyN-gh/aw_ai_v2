@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from .evaluation import features
-from .model import Action
+from .model import Action, DRAW, outcome_value
 from .rules import Rules
 from .scenarios import digest, from_data, to_data
 
@@ -21,7 +21,7 @@ def play(initial, planners, max_turns=100):
     for _ in range(max_turns):
         winner = rules.outcome(state)
         if winner is not None:
-            record["result"], record["termination"] = winner, "victory"
+            record["result"], record["termination"] = winner, "draw" if winner == DRAW else "victory"
             break
         signature = state.key()
         seen[signature] = seen.get(signature, 0)+1
@@ -37,7 +37,7 @@ def play(initial, planners, max_turns=100):
                                 "hash": digest(state), "metrics": analysis.metrics.as_dict()})
     winner = rules.outcome(state)
     if winner is not None:
-        record["result"], record["termination"] = winner, "victory"
+        record["result"], record["termination"] = winner, "draw" if winner == DRAW else "victory"
     return record, state
 
 
@@ -62,8 +62,8 @@ def terminal_samples(records):
     samples = []
     for record in records:
         # A time/turn limit is censored data, not a draw or loss label.
-        if record["termination"] != "victory":
+        if record["termination"] not in ("victory", "draw"):
             continue
         for sample in record["samples"]:
-            samples.append((sample["features"], 1. if sample["player"] == record["result"] else -1.))
+            samples.append((sample["features"], outcome_value(record["result"],sample["player"])))
     return samples

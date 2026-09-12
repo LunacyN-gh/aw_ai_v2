@@ -14,6 +14,7 @@ def to_data(state):
     return {"format": "aw-ai-v2-state", "version": 2, "profile": state.profile,
             "width": state.board.width, "height": state.board.height,
             "player": state.player, "funds": state.funds, "turn": state.turn,
+            **({"turn_limit": state.turn_limit} if state.turn_limit is not None else {}),
             "winner": state.winner, "next_id": state.next_id,
             **({"allowed_builds": list(state.allowed_builds)} if state.allowed_builds is not None else {}),
             **({"income_capture_limit": state.income_capture_limit} if state.income_capture_limit is not None else {}),
@@ -57,6 +58,7 @@ def from_data(data):
         raise ValueError("unsupported map/state format")
     if "allowed_builds" in data:
         state.allowed_builds = tuple(data["allowed_builds"])
+    state.turn_limit = data.get("turn_limit")
     state.validate()
     if any(movement_cost(u.spec.mode, board.tiles[u.pos]) is None for u in state.units.values()):
         raise ValueError("unit on impassable terrain")

@@ -21,6 +21,7 @@ class GuiTests(unittest.TestCase):
         cls.root.destroy()
 
     def setUp(self):
+        self.app.animation_speed.set("Instant")
         self.app.reset(tactical("blocker"))
         self.app.human.set(False)
 

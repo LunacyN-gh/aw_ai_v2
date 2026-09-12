@@ -5,7 +5,7 @@ from collections import OrderedDict
 from dataclasses import replace
 
 from .model import (Action, BASE_DAMAGE, DEFENSE, END, INCOME_TILES, PROFILE,
-                    SPECS, State, Unit)
+                    SPECS, State, Unit, DRAW)
 
 
 def movement_cost(mode, tile):
@@ -213,7 +213,11 @@ class Rules:
         if action.kind == "end":
             state.player = 1-state.player
             state.turn += 1
-            self.start_turn(state)
+            winner = self.outcome(state)
+            if winner is not None:
+                state.winner = winner
+            else:
+                self.start_turn(state)
             return
         if action.kind == "build":
             uid = f"p{state.player}_{state.next_id}"
@@ -289,6 +293,9 @@ class Rules:
                        for q, o in state.owners.items()) for p in (0, 1)]
         if present[0] != present[1]:
             return 0 if present[0] else 1
+        if state.turn_limit is not None and state.turn >= state.turn_limit:
+            blue, red = (self.income(state, p) for p in (0, 1))
+            return DRAW if blue == red else 0 if blue > red else 1
         return None
 
     def observe(self, state, player):

@@ -14,7 +14,7 @@ from .scenarios import action_text, league_scale, load, save, tactical
 
 def parser():
     p = argparse.ArgumentParser(description="Advance Wars AI v2 — deterministic research profile")
-    p.add_argument("command", choices=("analyze", "play", "compare", "benchmark", "generate", "replay", "train", "gui", "neural-train", "tactical-eval"))
+    p.add_argument("command", choices=("analyze", "play", "compare", "benchmark", "generate", "replay", "train", "gui", "neural-train", "neural-migrate", "tactical-eval"))
     p.add_argument("--map", type=Path)
     p.add_argument("--train-map", type=Path, action="append", help="repeat for each neural training map; also used for evaluation by default")
     p.add_argument("--scenario", choices=("screen", "blocker", "capture"))
@@ -24,7 +24,8 @@ def parser():
     p.add_argument("--contact", action="store_true")
     p.add_argument("--seconds", type=float, default=1.0)
     p.add_argument("--nodes", type=int, default=4000)
-    p.add_argument("--turns", type=int, default=100)
+    p.add_argument("--turns", type=int, default=100, help="player turns; neural training sets an income deadline (36 = 18 turns each)")
+    p.add_argument("--turn-limit", type=int, help="absolute player-turn income deadline for loaded/generated states")
     p.add_argument("--output", type=Path)
     p.add_argument("--model", type=Path)
     p.add_argument("--checkpoint", type=Path, help="shared neural policy/value checkpoint")
@@ -79,6 +80,17 @@ def parser():
 
 def main(argv=None):
     args = parser().parse_args(argv)
+    if args.command == "neural-migrate":
+        from .neural import migrate_checkpoint
+        if not args.checkpoint or not args.output:
+            raise SystemExit("neural-migrate requires --checkpoint and a new --output path")
+        migrate_checkpoint(args.checkpoint,args.output)
+        print(f"Saved clock-aware checkpoint: {args.output.resolve()}")
+        return
+    if args.turn_limit is not None and args.turn_limit < 1:
+        raise SystemExit("--turn-limit must be positive")
+    if args.command == "neural-train" and args.turn_limit is not None:
+        raise SystemExit("For neural-train use --turns to set the player-turn income deadline")
     if args.command == "train" and args.checkpoint:
         raise SystemExit("Use neural-train for neural checkpoints; train fits the legacy linear value model")
     if args.command == "neural-train":
@@ -101,7 +113,7 @@ def main(argv=None):
         return
     if args.command == "gui":
         from .gui import main as gui_main
-        gui_main()
+        gui_main(turn_limit=args.turn_limit)
         return
     if args.command == "replay":
         if not args.map:
@@ -132,6 +144,9 @@ def main(argv=None):
         return
     state = load(args.map) if args.map else tactical(args.scenario) if args.scenario else league_scale(
         args.size, args.units, args.seed, args.contact)
+    if args.turn_limit is not None:
+        state.turn_limit = args.turn_limit
+        state.validate()
     if args.capture_limit is not None:
         state.income_capture_limit = args.capture_limit
         state.validate()
@@ -189,6 +204,8 @@ def main(argv=None):
         rows = []
         for game in range(args.games):
             initial = state if args.map or args.scenario else league_scale(args.size, args.units, args.seed+game//2, args.contact)
+            if args.turn_limit is not None:
+                initial.turn_limit = args.turn_limit
             if args.capture_limit is not None:
                 initial.income_capture_limit = args.capture_limit
                 initial.validate()
@@ -204,7 +221,8 @@ def main(argv=None):
             print(json.dumps(row), flush=True)
         result = {"search_wins": sum(r["termination"] == "victory" and r["winner"] == r["search_side"] for r in rows),
                   "policy_wins": sum(r["termination"] == "victory" and r["winner"] != r["search_side"] for r in rows),
-                  "censored": sum(r["termination"] != "victory" for r in rows), "games": rows,
+                  "draws": sum(r["termination"] == "draw" for r in rows),
+                  "censored": sum(r["termination"] not in ("victory","draw") for r in rows), "games": rows,
                   "config": asdict(config)}
         if args.output:
             args.output.write_text(json.dumps(result, indent=2)+"\n", encoding="utf-8")
@@ -212,6 +230,8 @@ def main(argv=None):
         records = []
         for game in range(args.games):
             initial = state if args.map or args.scenario else league_scale(args.size, args.units, args.seed+game, args.contact)
+            if args.turn_limit is not None:
+                initial.turn_limit = args.turn_limit
             if args.capture_limit is not None:
                 initial.income_capture_limit = args.capture_limit
                 initial.validate()

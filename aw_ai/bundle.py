@@ -5,6 +5,7 @@ This is candidate evaluation, not MCTS: targets are score softmaxes, not visits.
 import hashlib
 import math
 import random
+from .model import outcome_value
 from time import perf_counter
 
 from .budget import Budget
@@ -45,7 +46,7 @@ def analyze(planner, state):
         budget.metrics.counts['value_evaluations'] += 1
         winner = planner.rules.outcome(position)
         if winner is not None:
-            return 1. if winner == player else -1.
+            return outcome_value(winner,player)
         h = math.tanh(heuristic.evaluate(position,player,planner.rules)/scale)
         n = neural.evaluate(position,player,planner.rules)/20000 if weight else 0.
         return (1-weight)*h+weight*n

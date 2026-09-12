@@ -156,5 +156,6 @@
     "tank",
     "artillery"
   ],
-  "income_capture_limit": 7
+  "income_capture_limit": 7,
+  "turn_limit": 36
 }

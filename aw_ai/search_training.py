@@ -16,6 +16,7 @@ from time import perf_counter
 import torch
 
 from .model import Action, END, INCOME_TILES
+from .model import DRAW, outcome_value
 from .neural import Network, NetworkConfig, KINDS
 from .neural_training import training_map, learned_turn
 from .planner import Planner, Config
@@ -117,7 +118,7 @@ def search_turn(planner, state, rng, explore=False):
 
 
 def label_result(examples, winner):
-    return [replace(e, result=None if winner is None else (1. if e.state.player == winner else -1.)) for e in examples]
+    return [replace(e, result=None if winner is None else outcome_value(winner,e.state.player)) for e in examples]
 
 
 def fit(network, optimizer, replay, rules, rng, updates=4, batch_size=64, teacher_replay=None, teacher_fraction=.5, value_loss_weight=.5, entropy_weight=.01):
@@ -265,6 +266,8 @@ def play_job(job):
 def termination_reason(state, rules, initial_owners):
     winner = rules.outcome(state)
     if winner is None: return 'turn_limit'
+    if winner == DRAW: return 'deadline_draw'
+    if state.turn_limit is not None and state.turn >= state.turn_limit: return 'deadline_income'
     if state.income_capture_limit and rules.income(state,winner)//1000 >= state.income_capture_limit:
         return 'income_capture_limit'
     if any(state.board.tiles[p]=='hq' and owner == 1-winner and state.owners.get(p)==winner
@@ -302,7 +305,7 @@ def evaluation_job(job):
         played += 1
     winner = rules.outcome(state)
     return {'mode': mode, 'seed': seed, 'map_hash':digest(job['state']), 'learner_side': player, 'winner': winner,
-            'result': 'censored' if winner is None else 'win' if winner == player else 'loss',
+            'result': 'censored' if winner is None else 'draw' if winner == DRAW else 'win' if winner == player else 'loss',
             'partial_candidates': partial, 'verified_candidates': verified,
             'played_turns':played, 'termination':termination_reason(state,rules,initial_owners)}
 
@@ -325,7 +328,7 @@ def evaluate(network, initial, config, games=4):
     executor = config.get('executor')
     rows = list(executor.map(evaluation_job, jobs) if executor else map(evaluation_job, jobs))
     summary = {mode: {result: sum(r['mode'] == mode and r['result'] == result for r in rows)
-                      for result in ('win','loss','censored')} for mode in modes}
+                      for result in ('win','loss','draw','censored')} for mode in modes}
     from .opening_suite import opening_checks
     cpu_network = restore_model(payload)
     return {'summary': summary, 'games': rows, 'openings':opening_checks(cpu_network)}
@@ -393,6 +396,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
     training_paths=list(train_maps or ([map_path] if map_path else []))
     fixed = load(map_path) if map_path else None
     def configure(state):
+        state.turn_limit = state.turn + turns
         if capture_limit is not None:
             state.income_capture_limit = capture_limit
         elif capture_fraction:
@@ -442,7 +446,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
               'initial_state_hash':digest(fixed) if fixed else None, 'training_sizes':sizes,
               'allowed_builds':list(allowed),'income_capture_fraction':capture_fraction,
               'income_capture_limit':fixed.income_capture_limit if fixed else capture_limit,
-              'turn_limit':turns,'runs':[],'evaluations':[], 'validation_scope':
+              'turn_limit':turns,'deadline_rule':'higher_income_else_draw','clock_features_version':1,'runs':[],'evaluations':[], 'validation_scope':
               'explicit evaluation maps, alternating learner sides' if evaluation_states else 'same fixed map, alternating learner sides' if fixed else 'fixed held-out synthetic seeds',
               'opponent_checkpoint':str(opponent_checkpoint) if opponent_checkpoint else None,
               'tactical_families_used_for_training':False,
@@ -547,7 +551,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
             row = {'phase':'bootstrap' if boot else 'self_play','game':game+1,'seed':seed+game,
                    'training_map_hash':digest(job['state']),
                    'learner_side':None if boot else job['side'],'opponent':job['opponent'],'winner':winner,
-                   'censored':winner is None,'decisions':len(labeled),'production_decisions':sum(e.site is not None for e in labeled),
+                   'censored':winner is None,'draw':winner == DRAW,'decisions':len(labeled),'production_decisions':sum(e.site is not None for e in labeled),
                    'new_value_labels':sum(e.result is not None for e in labeled),
                    'teacher_decisions':len(experts),'correction_decisions':len(corrections),
                    'teacher_replay':len(teacher_replay),'bootstrap_anchors':len(teacher_replay.anchors),

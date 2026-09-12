@@ -5,6 +5,7 @@ This backend is prior-regularized candidate search, not PUCT/MCTS.
 import hashlib
 import math
 import random
+from .model import outcome_value
 from time import perf_counter
 import torch
 
@@ -88,7 +89,7 @@ def analyze(planner,state):
         for s in states:
             budget.metrics.counts['value_evaluations']+=1
             winner=rules.outcome(s)
-            result.append((1. if winner==player else -1.) if winner is not None else
+            result.append((outcome_value(winner,player)) if winner is not None else
                 (1-weight)*math.tanh(heuristic.evaluate(s,player,rules)/scale)+weight*(neural.evaluate(s,player,rules)/20000 if weight else 0.))
         return result
     if rules.outcome(state) is not None:
@@ -146,7 +147,7 @@ def analyze(planner,state):
         c.score=qs[i]+strength*c.policy_preference
         c.reply=reply_actions[i];c.verified=bool(rounds)
         winner=rules.outcome(c.state)
-        if winner is not None:c.score=1e9 if winner==player else -1e9;c.verified=True
+        if winner is not None:c.score=1e9*outcome_value(winner,player);c.verified=True
         diagnostics.append(dict(source=c.reason,actions=repr(c.actions),raw=i==0,root_value=root_values[i],
             reply_value=qs[i],policy_preference=c.policy_preference,selection_score=c.score,reply_rounds=rounds))
     # With no common reply coverage, do not override a sound policy using a

@@ -9,7 +9,7 @@ import math
 import numpy as np
 import torch
 from torch import nn
-from .model import DEFENSE, SPECS, PROFILE
+from .model import DEFENSE, SPECS, PROFILE, outcome_value
 from .production import production_features, KINDS
 from .policy import Proposal, action_key
 
@@ -48,7 +48,7 @@ class Network(nn.Module):
         self.spatial = nn.Sequential(nn.Conv2d(CHANNELS,c,3,padding=1), nn.ReLU(),
                                     *[Residual(c) for _ in range(self.config.blocks)])
         self.entity = nn.Linear(ENTITY+c,h)
-        self.global_token = nn.Linear(c+7,h)
+        self.global_token = nn.Linear(c+10,h)
         layer = nn.TransformerEncoderLayer(h,self.config.heads,h*2,dropout=0.,batch_first=True)
         self.transformer = nn.TransformerEncoder(layer,self.config.layers,enable_nested_tensor=False)
         self.tile = nn.Linear(c,h)
@@ -93,7 +93,10 @@ class Network(nn.Module):
                               rules.income(state,player)/10000,rules.income(state,1-player)/10000,
                               float(state.income_capture_limit is not None),
                               rules.income(state,player)/(1000*state.income_capture_limit) if state.income_capture_limit else 0.,
-                              rules.income(state,1-player)/(1000*state.income_capture_limit) if state.income_capture_limit else 0.],dtype=torch.float32)
+                              rules.income(state,1-player)/(1000*state.income_capture_limit) if state.income_capture_limit else 0.,
+                              float(state.turn_limit is not None),
+                              max(0,state.turn_limit-state.turn)/100 if state.turn_limit else 0.,
+                              state.turn_limit/100 if state.turn_limit else 0.],dtype=torch.float32)
         return torch.from_numpy(grid), ids, positions, torch.tensor(features, dtype=torch.float32).reshape(-1, ENTITY), economy
 
     def encode(self, state, rules):
@@ -204,16 +207,23 @@ class Network(nn.Module):
         return self.production(torch.cat((global_token,entities[('site',site)],front)))
 
     def save(self,path,metadata=None):
-        torch.save({'version':2,'profile':PROFILE,'kinds':KINDS,'terrains':TERRAINS,
+        torch.save({'version':3,'profile':PROFILE,'kinds':KINDS,'terrains':TERRAINS,
                     'config':asdict(self.config),'weights':self.state_dict(),'metadata':metadata or {},
                     'allowed_builds':tuple(self.allowed_builds), 'search_settings':self.search_settings},path)
 
     @classmethod
     def load(cls,path):
         data=torch.load(path,map_location='cpu',weights_only=True)
-        if (data['version'],data['profile'],tuple(data['kinds']),tuple(data['terrains']))!=(2,PROFILE,KINDS,TERRAINS):
+        if data['version'] not in (2,3) or (data['profile'],tuple(data['kinds']),tuple(data['terrains']))!=(PROFILE,KINDS,TERRAINS):
             raise ValueError('incompatible neural checkpoint schema/profile')
-        model=cls(NetworkConfig(**data['config'])); model.load_state_dict(data['weights']); model.eval()
+        model=cls(NetworkConfig(**data['config']))
+        weights=dict(data['weights'])
+        if data['version']==2:
+            old=weights['global_token.weight']
+            expected=(model.config.hidden,model.config.channels+7)
+            if tuple(old.shape)!=expected: raise ValueError('invalid legacy global feature shape')
+            weights['global_token.weight']=torch.cat((old,old.new_zeros((old.shape[0],3))),dim=1)
+        model.load_state_dict(weights); model.eval()
         allowed = tuple(data.get('allowed_builds', KINDS))
         if not allowed or any(k not in KINDS for k in allowed):
             raise ValueError('invalid checkpoint production roster')
@@ -245,6 +255,21 @@ class Network(nn.Module):
                 if not isinstance(x,int) or x<2:
                     raise ValueError('invalid bundle count')
         return model
+
+
+def migrate_checkpoint(source, destination):
+    """Preserve metadata/weights and write the current schema to a new file."""
+    from pathlib import Path
+    source, destination = Path(source), Path(destination)
+    if destination.exists() or source.resolve() == destination.resolve():
+        raise ValueError('migration output must be a new file; source is never overwritten')
+    data = torch.load(source,map_location='cpu',weights_only=True)
+    network = Network.load(source)
+    metadata = dict(data.get('metadata') or {})
+    metadata['clock_migration'] = {'source':str(source.resolve()),'source_version':data['version'],
+                                 'clock_columns_initialized_to_zero':data['version']==2}
+    destination.parent.mkdir(parents=True,exist_ok=True)
+    network.save(destination,metadata)
 
 
 class NeuralAgent:
@@ -284,6 +309,6 @@ class NeuralAgent:
 
     def evaluate(self,state,player,rules):
         outcome=rules.outcome(state)
-        if outcome is not None: return 1e9 if outcome==player else -1e9
+        if outcome is not None: return 1e9*outcome_value(outcome,player)
         with torch.no_grad(): value=self.network.value(self.encoded(state,rules)[0]).item()
         return value*20000*(1 if player==state.player else -1)

@@ -9,6 +9,7 @@ import random
 from pathlib import Path
 import torch
 from .model import Action, END, SPECS, INCOME_TILES
+from .model import outcome_value
 from .neural import Network, NetworkConfig, KINDS
 from .planner import Planner, Config
 from .rules import Rules
@@ -110,7 +111,7 @@ def update(network,optimizer,examples,rules,rng,mode,winner=None,max_samples=64)
         if mode=='bootstrap':
             loss=-logits.log_softmax(0)[index]
         else:
-            target=torch.tensor(1. if winner==state.player else -1.)
+            target=torch.tensor(outcome_value(winner,state.player))
             advantage=target-value.detach()
             loss=-probs[index].log()*advantage+.5*(value-target).square()
             loss+=.01*(probs*probs.log()).sum()
