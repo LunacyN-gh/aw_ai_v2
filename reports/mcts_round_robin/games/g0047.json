@@ -1,0 +1,95 @@
+{
+  "id": "g0047",
+  "pair": [
+    "Neural old",
+    "Teacher MCTS"
+  ],
+  "map_index": 7,
+  "swap": 0,
+  "blue": "Neural old",
+  "red": "Teacher MCTS",
+  "map": "two_mixed_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 17,
+  "turns_by_side": [
+    9,
+    8
+  ],
+  "final_income": [
+    8000,
+    3000
+  ],
+  "final_state_sha256": "3c4ed49e966680aec34764027ad5de1578da4a1671b4f42ead44e027ec30263b",
+  "search_seconds": [
+    3.472569600001407,
+    14.671607700000095
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 9,
+      "nodes": 1060,
+      "policy_steps": 922,
+      "production_expansions": 138,
+      "production_peak_frontier": 31,
+      "complete_bundles": 47,
+      "distinct_bundles": 47,
+      "value_evaluations": 141,
+      "reply_bundles": 82,
+      "common_reply_rounds": 18,
+      "reply_checked_roots": 47,
+      "raw_baseline_selected": 4,
+      "soft_targets": 0
+    },
+    {
+      "nodes": 9373,
+      "mcts_simulations": 648,
+      "order_rollout_steps": 1203,
+      "mcts_duplicates": 428,
+      "heuristic_mcts_steps": 5935,
+      "mcts_expansions": 555,
+      "mcts_value_evaluations": 648,
+      "mcts_completed_simulations": 648,
+      "mcts_depth_sum": 1619,
+      "mcts_max_depth": 6,
+      "mcts_order_proposals": 8,
+      "mcts_root_children": 81,
+      "mcts_root_visits": 648,
+      "mcts_greedy_selected": 3,
+      "mcts_fallback": 0
+    }
+  ],
+  "effective_settings": {
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    },
+    "Teacher MCTS": {
+      "type": "heuristic",
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    }
+  },
+  "elapsed_seconds": 18.36,
+  "replay": "replays/g0047.awpgn"
+}

@@ -1,0 +1,1170 @@
+{
+  "training": "bundle MCTS visit distillation + terminal value regression",
+  "seed": 0,
+  "map_path": null,
+  "initial_state_hash": null,
+  "training_sizes": [
+    6
+  ],
+  "allowed_builds": [
+    "infantry",
+    "tank",
+    "artillery"
+  ],
+  "income_capture_fraction": 0.6666666666666666,
+  "income_capture_limit": null,
+  "turn_limit": 40,
+  "deadline_rule": "higher_income_else_draw",
+  "clock_features_version": 1,
+  "runs": [],
+  "evaluations": [
+    {
+      "summary": {
+        "policy": {
+          "win": 5,
+          "loss": 11,
+          "draw": 0,
+          "censored": 0
+        },
+        "beam": {
+          "win": 9,
+          "loss": 6,
+          "draw": 1,
+          "censored": 0
+        }
+      },
+      "games": [
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 5743,
+              "order_expansions": 1354,
+              "order_rollout_steps": 4389,
+              "order_checked_roots": 102,
+              "order_complete_candidates": 530,
+              "order_baseline_selected": 7,
+              "order_transpositions": 176
+            }
+          ],
+          "played_turns": 28,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 9634,
+              "order_expansions": 2047,
+              "order_rollout_steps": 7587,
+              "order_checked_roots": 134,
+              "order_complete_candidates": 871,
+              "order_baseline_selected": 5,
+              "order_transpositions": 229
+            },
+            {}
+          ],
+          "played_turns": 35,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 13338,
+              "order_expansions": 2169,
+              "order_rollout_steps": 11169,
+              "order_transpositions": 250,
+              "order_checked_roots": 120,
+              "order_complete_candidates": 721,
+              "order_baseline_selected": 3
+            }
+          ],
+          "played_turns": 32,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 11914,
+              "order_expansions": 2389,
+              "order_rollout_steps": 9525,
+              "order_transpositions": 279,
+              "order_checked_roots": 160,
+              "order_complete_candidates": 862,
+              "order_baseline_selected": 8
+            },
+            {}
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 6983,
+              "order_expansions": 1369,
+              "order_rollout_steps": 5614,
+              "order_transpositions": 161,
+              "order_checked_roots": 88,
+              "order_complete_candidates": 510,
+              "order_baseline_selected": 5
+            }
+          ],
+          "played_turns": 24,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 12968,
+              "order_expansions": 2445,
+              "order_rollout_steps": 10523,
+              "order_transpositions": 376,
+              "order_checked_roots": 160,
+              "order_complete_candidates": 615,
+              "order_baseline_selected": 5
+            },
+            {}
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 6780,
+              "order_expansions": 1380,
+              "order_rollout_steps": 5400,
+              "order_checked_roots": 102,
+              "order_complete_candidates": 461,
+              "order_baseline_selected": 5,
+              "order_transpositions": 174
+            }
+          ],
+          "played_turns": 28,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 5004,
+              "order_expansions": 1181,
+              "order_rollout_steps": 3823,
+              "order_checked_roots": 102,
+              "order_complete_candidates": 538,
+              "order_baseline_selected": 4,
+              "order_transpositions": 118
+            },
+            {}
+          ],
+          "played_turns": 27,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 11832,
+              "order_expansions": 2307,
+              "order_rollout_steps": 9525,
+              "order_checked_roots": 150,
+              "order_complete_candidates": 631,
+              "order_baseline_selected": 5,
+              "order_transpositions": 345
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 10837,
+              "order_expansions": 1973,
+              "order_rollout_steps": 8864,
+              "order_checked_roots": 142,
+              "order_complete_candidates": 626,
+              "order_baseline_selected": 3,
+              "order_transpositions": 267
+            },
+            {}
+          ],
+          "played_turns": 37,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 4866,
+              "order_expansions": 1184,
+              "order_rollout_steps": 3682,
+              "order_checked_roots": 150,
+              "order_complete_candidates": 500,
+              "order_baseline_selected": 3,
+              "order_transpositions": 134
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 5282,
+              "order_expansions": 1238,
+              "order_rollout_steps": 4044,
+              "order_checked_roots": 86,
+              "order_complete_candidates": 418,
+              "order_baseline_selected": 3,
+              "order_transpositions": 182
+            },
+            {}
+          ],
+          "played_turns": 23,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 7127,
+              "order_expansions": 1177,
+              "order_rollout_steps": 5950,
+              "order_transpositions": 133,
+              "order_checked_roots": 80,
+              "order_complete_candidates": 426,
+              "order_baseline_selected": 3
+            }
+          ],
+          "played_turns": 21,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 6376,
+              "order_expansions": 1048,
+              "order_rollout_steps": 5328,
+              "order_checked_roots": 96,
+              "order_complete_candidates": 408,
+              "order_baseline_selected": 3,
+              "order_transpositions": 112
+            },
+            {}
+          ],
+          "played_turns": 24,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {},
+            {
+              "nodes": 12549,
+              "order_expansions": 1952,
+              "order_rollout_steps": 10597,
+              "order_transpositions": 185,
+              "order_checked_roots": 144,
+              "order_complete_candidates": 785,
+              "order_baseline_selected": 4
+            }
+          ],
+          "played_turns": 38,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "search_counts": [
+            {
+              "nodes": 6102,
+              "order_expansions": 1285,
+              "order_rollout_steps": 4817,
+              "order_checked_roots": 127,
+              "order_complete_candidates": 482,
+              "order_baseline_selected": 10,
+              "order_transpositions": 147
+            },
+            {}
+          ],
+          "played_turns": 36,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 133,
+          "search_counts": [
+            {
+              "nodes": 6136,
+              "mcts_simulations": 795,
+              "order_rollout_steps": 752,
+              "mcts_duplicates": 398,
+              "policy_steps": 3929,
+              "mcts_expansions": 634,
+              "mcts_value_evaluations": 795,
+              "mcts_completed_simulations": 795,
+              "mcts_depth_sum": 1911,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 13,
+              "mcts_root_children": 133,
+              "mcts_root_visits": 795,
+              "mcts_greedy_selected": 7,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 3523,
+              "order_expansions": 839,
+              "order_rollout_steps": 2684,
+              "order_checked_roots": 94,
+              "order_complete_candidates": 350,
+              "order_baseline_selected": 5,
+              "order_transpositions": 96
+            }
+          ],
+          "played_turns": 25,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 209,
+          "search_counts": [
+            {
+              "nodes": 9504,
+              "order_expansions": 1786,
+              "order_rollout_steps": 7718,
+              "order_checked_roots": 158,
+              "order_complete_candidates": 730,
+              "order_baseline_selected": 3,
+              "order_transpositions": 190
+            },
+            {
+              "nodes": 8314,
+              "mcts_simulations": 995,
+              "order_rollout_steps": 1190,
+              "mcts_duplicates": 368,
+              "policy_steps": 5071,
+              "mcts_expansions": 848,
+              "mcts_value_evaluations": 995,
+              "mcts_completed_simulations": 995,
+              "mcts_depth_sum": 2087,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 20,
+              "mcts_root_children": 209,
+              "mcts_root_visits": 995,
+              "mcts_greedy_selected": 8,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 246,
+          "search_counts": [
+            {
+              "nodes": 8405,
+              "mcts_simulations": 880,
+              "order_rollout_steps": 1318,
+              "mcts_expansions": 837,
+              "mcts_value_evaluations": 880,
+              "mcts_completed_simulations": 880,
+              "mcts_depth_sum": 1580,
+              "mcts_max_depth": 4,
+              "mcts_order_proposals": 20,
+              "mcts_duplicates": 235,
+              "policy_steps": 5151,
+              "mcts_root_children": 246,
+              "mcts_root_visits": 880,
+              "mcts_greedy_selected": 2,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 13083,
+              "order_expansions": 2455,
+              "order_rollout_steps": 10628,
+              "order_transpositions": 264,
+              "order_checked_roots": 152,
+              "order_complete_candidates": 888,
+              "order_baseline_selected": 8
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 109,
+          "search_counts": [
+            {
+              "nodes": 7322,
+              "order_expansions": 1504,
+              "order_rollout_steps": 5818,
+              "order_transpositions": 201,
+              "order_checked_roots": 72,
+              "order_complete_candidates": 513,
+              "order_baseline_selected": 2
+            },
+            {
+              "nodes": 3721,
+              "mcts_simulations": 415,
+              "order_rollout_steps": 642,
+              "mcts_expansions": 370,
+              "mcts_value_evaluations": 415,
+              "mcts_completed_simulations": 415,
+              "mcts_depth_sum": 761,
+              "mcts_max_depth": 4,
+              "mcts_order_proposals": 9,
+              "mcts_duplicates": 151,
+              "policy_steps": 2200,
+              "mcts_root_children": 109,
+              "mcts_root_visits": 415,
+              "mcts_greedy_selected": 2,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 19,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 260,
+          "search_counts": [
+            {
+              "nodes": 8109,
+              "mcts_simulations": 832,
+              "order_rollout_steps": 982,
+              "mcts_duplicates": 168,
+              "policy_steps": 5273,
+              "mcts_expansions": 817,
+              "mcts_value_evaluations": 832,
+              "mcts_completed_simulations": 832,
+              "mcts_depth_sum": 1512,
+              "mcts_max_depth": 4,
+              "mcts_order_proposals": 20,
+              "mcts_root_children": 261,
+              "mcts_root_visits": 832,
+              "mcts_greedy_selected": 5,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 11002,
+              "order_expansions": 2308,
+              "order_rollout_steps": 8694,
+              "order_transpositions": 318,
+              "order_checked_roots": 152,
+              "order_complete_candidates": 743,
+              "order_baseline_selected": 5
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 247,
+          "search_counts": [
+            {
+              "nodes": 12539,
+              "order_expansions": 2326,
+              "order_rollout_steps": 10213,
+              "order_transpositions": 289,
+              "order_checked_roots": 160,
+              "order_complete_candidates": 847,
+              "order_baseline_selected": 7
+            },
+            {
+              "nodes": 7118,
+              "mcts_simulations": 818,
+              "order_rollout_steps": 1062,
+              "mcts_expansions": 695,
+              "mcts_value_evaluations": 818,
+              "mcts_completed_simulations": 818,
+              "mcts_depth_sum": 1320,
+              "mcts_max_depth": 3,
+              "mcts_order_proposals": 20,
+              "mcts_duplicates": 75,
+              "policy_steps": 4295,
+              "mcts_root_children": 250,
+              "mcts_root_visits": 818,
+              "mcts_greedy_selected": 7,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 258,
+          "search_counts": [
+            {
+              "nodes": 8956,
+              "mcts_simulations": 1021,
+              "order_rollout_steps": 1160,
+              "mcts_duplicates": 360,
+              "policy_steps": 5711,
+              "mcts_expansions": 1005,
+              "mcts_value_evaluations": 1021,
+              "mcts_completed_simulations": 1021,
+              "mcts_depth_sum": 2128,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 20,
+              "mcts_root_children": 258,
+              "mcts_root_visits": 1021,
+              "mcts_greedy_selected": 0,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 8949,
+              "order_expansions": 1983,
+              "order_rollout_steps": 6966,
+              "order_checked_roots": 150,
+              "order_complete_candidates": 606,
+              "order_baseline_selected": 8,
+              "order_transpositions": 281
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 156,
+          "search_counts": [
+            {
+              "nodes": 7676,
+              "order_expansions": 1756,
+              "order_rollout_steps": 5920,
+              "order_checked_roots": 126,
+              "order_complete_candidates": 592,
+              "order_baseline_selected": 5,
+              "order_transpositions": 256
+            },
+            {
+              "nodes": 6664,
+              "mcts_simulations": 916,
+              "order_rollout_steps": 1033,
+              "mcts_duplicates": 448,
+              "policy_steps": 3910,
+              "mcts_expansions": 714,
+              "mcts_value_evaluations": 916,
+              "mcts_completed_simulations": 916,
+              "mcts_depth_sum": 2165,
+              "mcts_max_depth": 5,
+              "mcts_order_proposals": 16,
+              "mcts_root_children": 156,
+              "mcts_root_visits": 916,
+              "mcts_greedy_selected": 7,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 33,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 0,
+          "winner": -1,
+          "result": "draw",
+          "partial_candidates": 0,
+          "verified_candidates": 241,
+          "search_counts": [
+            {
+              "nodes": 8982,
+              "mcts_simulations": 986,
+              "order_rollout_steps": 1271,
+              "mcts_duplicates": 413,
+              "policy_steps": 5704,
+              "mcts_expansions": 954,
+              "mcts_value_evaluations": 986,
+              "mcts_completed_simulations": 986,
+              "mcts_depth_sum": 2281,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 20,
+              "mcts_root_children": 241,
+              "mcts_root_visits": 986,
+              "mcts_greedy_selected": 5,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 7407,
+              "order_expansions": 1633,
+              "order_rollout_steps": 5774,
+              "order_checked_roots": 150,
+              "order_complete_candidates": 746,
+              "order_baseline_selected": 6,
+              "order_transpositions": 150
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_draw"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 204,
+          "search_counts": [
+            {
+              "nodes": 9957,
+              "order_expansions": 2210,
+              "order_rollout_steps": 7747,
+              "order_checked_roots": 150,
+              "order_complete_candidates": 799,
+              "order_baseline_selected": 3,
+              "order_transpositions": 286
+            },
+            {
+              "nodes": 8189,
+              "mcts_simulations": 992,
+              "order_rollout_steps": 1138,
+              "mcts_duplicates": 405,
+              "policy_steps": 5087,
+              "mcts_expansions": 855,
+              "mcts_value_evaluations": 992,
+              "mcts_completed_simulations": 992,
+              "mcts_depth_sum": 2178,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 19,
+              "mcts_root_children": 204,
+              "mcts_root_visits": 992,
+              "mcts_greedy_selected": 6,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 39,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 119,
+          "search_counts": [
+            {
+              "nodes": 5683,
+              "mcts_simulations": 714,
+              "order_rollout_steps": 836,
+              "mcts_duplicates": 397,
+              "policy_steps": 3535,
+              "mcts_expansions": 554,
+              "mcts_value_evaluations": 714,
+              "mcts_completed_simulations": 714,
+              "mcts_depth_sum": 1726,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 12,
+              "mcts_root_children": 121,
+              "mcts_root_visits": 714,
+              "mcts_greedy_selected": 6,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 2580,
+              "order_expansions": 640,
+              "order_rollout_steps": 1940,
+              "order_checked_roots": 86,
+              "order_complete_candidates": 225,
+              "order_baseline_selected": 3,
+              "order_transpositions": 95
+            }
+          ],
+          "played_turns": 23,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 172,
+          "search_counts": [
+            {
+              "nodes": 8598,
+              "order_expansions": 1795,
+              "order_rollout_steps": 6803,
+              "order_checked_roots": 126,
+              "order_complete_candidates": 683,
+              "order_baseline_selected": 3,
+              "order_transpositions": 217
+            },
+            {
+              "nodes": 7192,
+              "mcts_simulations": 838,
+              "order_rollout_steps": 985,
+              "mcts_duplicates": 357,
+              "policy_steps": 4487,
+              "mcts_expansions": 757,
+              "mcts_value_evaluations": 838,
+              "mcts_completed_simulations": 838,
+              "mcts_depth_sum": 1908,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 16,
+              "mcts_root_children": 172,
+              "mcts_root_visits": 838,
+              "mcts_greedy_selected": 4,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 33,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 198,
+          "search_counts": [
+            {
+              "nodes": 7103,
+              "mcts_simulations": 744,
+              "order_rollout_steps": 998,
+              "mcts_duplicates": 148,
+              "policy_steps": 4391,
+              "mcts_expansions": 606,
+              "mcts_value_evaluations": 744,
+              "mcts_completed_simulations": 744,
+              "mcts_depth_sum": 1315,
+              "mcts_max_depth": 6,
+              "mcts_order_proposals": 20,
+              "mcts_root_children": 200,
+              "mcts_root_visits": 744,
+              "mcts_greedy_selected": 9,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 12381,
+              "order_expansions": 2150,
+              "order_rollout_steps": 10231,
+              "order_transpositions": 249,
+              "order_checked_roots": 152,
+              "order_complete_candidates": 824,
+              "order_baseline_selected": 4
+            }
+          ],
+          "played_turns": 39,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 233,
+          "search_counts": [
+            {
+              "nodes": 13756,
+              "order_expansions": 2141,
+              "order_rollout_steps": 11615,
+              "order_checked_roots": 160,
+              "order_complete_candidates": 875,
+              "order_baseline_selected": 7,
+              "order_transpositions": 208
+            },
+            {
+              "nodes": 7280,
+              "mcts_simulations": 728,
+              "order_rollout_steps": 1089,
+              "mcts_expansions": 602,
+              "mcts_value_evaluations": 728,
+              "mcts_completed_simulations": 728,
+              "mcts_depth_sum": 1222,
+              "mcts_max_depth": 4,
+              "mcts_order_proposals": 20,
+              "policy_steps": 4434,
+              "mcts_duplicates": 107,
+              "mcts_root_children": 233,
+              "mcts_root_visits": 728,
+              "mcts_greedy_selected": 8,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 171,
+          "search_counts": [
+            {
+              "nodes": 5965,
+              "mcts_simulations": 659,
+              "order_rollout_steps": 839,
+              "mcts_expansions": 511,
+              "mcts_value_evaluations": 659,
+              "mcts_completed_simulations": 659,
+              "mcts_depth_sum": 1172,
+              "mcts_max_depth": 5,
+              "mcts_order_proposals": 16,
+              "policy_steps": 3666,
+              "mcts_duplicates": 198,
+              "mcts_root_children": 171,
+              "mcts_root_visits": 659,
+              "mcts_greedy_selected": 6,
+              "mcts_fallback": 0
+            },
+            {
+              "nodes": 9649,
+              "order_expansions": 1676,
+              "order_rollout_steps": 7973,
+              "order_transpositions": 193,
+              "order_checked_roots": 120,
+              "order_complete_candidates": 557,
+              "order_baseline_selected": 3
+            }
+          ],
+          "played_turns": 31,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 148,
+          "search_counts": [
+            {
+              "nodes": 6325,
+              "order_expansions": 1206,
+              "order_rollout_steps": 5119,
+              "order_checked_roots": 104,
+              "order_complete_candidates": 415,
+              "order_baseline_selected": 4,
+              "order_transpositions": 153
+            },
+            {
+              "nodes": 5097,
+              "mcts_simulations": 531,
+              "order_rollout_steps": 748,
+              "mcts_expansions": 478,
+              "mcts_value_evaluations": 531,
+              "mcts_completed_simulations": 531,
+              "mcts_depth_sum": 959,
+              "mcts_max_depth": 3,
+              "mcts_order_proposals": 13,
+              "policy_steps": 3167,
+              "mcts_duplicates": 133,
+              "mcts_root_children": 152,
+              "mcts_root_visits": 531,
+              "mcts_greedy_selected": 7,
+              "mcts_fallback": 0
+            }
+          ],
+          "played_turns": 26,
+          "termination": "income_capture_limit"
+        }
+      ],
+      "openings": {
+        "policy": {
+          "opening_0": true,
+          "finish_capture_0": true,
+          "opening_1": true,
+          "finish_capture_1": true
+        },
+        "beam": {
+          "opening_0": true,
+          "finish_capture_0": true,
+          "opening_1": true,
+          "finish_capture_1": true
+        }
+      },
+      "elapsed_seconds": 234.489,
+      "run_elapsed_seconds": 237.15,
+      "after_game": 0
+    }
+  ],
+  "validation_scope": "explicit evaluation maps, alternating learner sides",
+  "opponent_checkpoint": null,
+  "tactical_families_used_for_training": false,
+  "evaluation_maps": [
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\diag_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_diag_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\second_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\ten_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\test_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_base_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_mixed_6x6_ita.json"
+  ],
+  "training_maps": [
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\diag_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_diag_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\second_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\ten_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\test_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_base_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_mixed_6x6_ita.json"
+  ],
+  "training_map_hashes": [
+    "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+    "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+    "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+    "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+    "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+    "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+    "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+    "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35"
+  ],
+  "parameters": 835858,
+  "config": {
+    "teacher_search": "ordered",
+    "train_seconds": 2.0,
+    "train_nodes": 4000,
+    "eval_seconds": 2.0,
+    "eval_every": 25,
+    "eval_games": 16,
+    "checkpoint_every": 10,
+    "updates_per_game": 4,
+    "batch_size": 64,
+    "replay_size": 8192,
+    "workers": 4,
+    "device": "cuda",
+    "worker_device": "cpu",
+    "worker_threads": 1,
+    "policy_lag_games_max": 3,
+    "teacher_fraction": 0.5,
+    "teacher_every": 2,
+    "teacher_replay_size": 8192,
+    "neural_value_weight": 1.0,
+    "promotion_margin": 0.05,
+    "promotion_teacher_weight": 0.5,
+    "promotion_censored_score": 0.5,
+    "search_settings": {
+      "mode": "guided",
+      "neural_value_weight": 1.0,
+      "planner": "mcts",
+      "bundle_candidates": 6,
+      "target_temperature": 0.15,
+      "exploration_fraction": 0.25,
+      "execution_exploration": 0.1,
+      "heuristic_scale": 20000.0,
+      "bundle_version": 2,
+      "proposal_temperature": 0.7,
+      "policy_prior_weight": 0.1,
+      "mcts_simulations": 128,
+      "mcts_depth": 6,
+      "mcts_c_puct": 1.5,
+      "mcts_widening": 2.0,
+      "mcts_max_children": 16,
+      "mcts_visit_temperature": 1.0
+    },
+    "value_loss_weight": 0.5,
+    "entropy_weight": 0.01
+  },
+  "promotions": [
+    {
+      "after_game": 0,
+      "accepted": true,
+      "reason": "initialized frozen reference"
+    }
+  ],
+  "complete": false,
+  "reference_game": 0,
+  "best_measured_game": 0
+}

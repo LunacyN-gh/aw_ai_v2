@@ -1,0 +1,88 @@
+{
+  "id": "g0026",
+  "pair": [
+    "Heuristic old",
+    "Neural old"
+  ],
+  "map_index": 4,
+  "swap": 1,
+  "blue": "Neural old",
+  "red": "Heuristic old",
+  "map": "predeploy_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 19,
+  "turns_by_side": [
+    10,
+    9
+  ],
+  "final_income": [
+    7000,
+    2000
+  ],
+  "final_state_sha256": "94168ba7b9e3522abe175ceb946f94c2121530bc1b9731b45984d75be365c158",
+  "search_seconds": [
+    5.078764299999648,
+    3.154890900000055
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 10,
+      "nodes": 1134,
+      "policy_steps": 1048,
+      "production_expansions": 86,
+      "production_peak_frontier": 31,
+      "complete_bundles": 60,
+      "distinct_bundles": 60,
+      "value_evaluations": 180,
+      "reply_bundles": 110,
+      "common_reply_rounds": 20,
+      "reply_checked_roots": 60,
+      "raw_baseline_selected": 2,
+      "soft_targets": 0
+    },
+    {
+      "regions": 9,
+      "units": 107,
+      "nodes": 6632,
+      "policy_steps": 1360,
+      "production_expansions": 500,
+      "production_peak_frontier": 30,
+      "local_expansions": 4772,
+      "transpositions": 303,
+      "regions_searched": 45,
+      "replies_evaluated": 72,
+      "horizon_turns": 27,
+      "complete_candidates": 36,
+      "candidates_verified": 36,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 18043,
+      "movement_cache_misses": 1207
+    }
+  ],
+  "effective_settings": {
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    },
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    }
+  },
+  "elapsed_seconds": 8.478,
+  "replay": "replays/g0026.awpgn"
+}

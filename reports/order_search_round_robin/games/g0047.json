@@ -1,0 +1,82 @@
+{
+  "id": "g0047",
+  "pair": [
+    "Heuristic old",
+    "Neural ordered"
+  ],
+  "map_index": 7,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural ordered",
+  "map": "two_mixed_6x6_ita.json",
+  "winner": 1,
+  "termination": "income_capture_limit",
+  "played_turns": 26,
+  "turns_by_side": [
+    13,
+    13
+  ],
+  "final_income": [
+    2000,
+    8000
+  ],
+  "final_state_sha256": "0d9906061348b65287924afd9fb00ee6fb912118b8743a6cdb0e179dc887a639",
+  "search_seconds": [
+    5.648347799999556,
+    16.567633300000125
+  ],
+  "search_counts": [
+    {
+      "regions": 13,
+      "units": 161,
+      "nodes": 10799,
+      "policy_steps": 2247,
+      "production_expansions": 2624,
+      "production_peak_frontier": 48,
+      "local_expansions": 5928,
+      "regions_searched": 65,
+      "transpositions": 415,
+      "replies_evaluated": 104,
+      "horizon_turns": 39,
+      "complete_candidates": 52,
+      "candidates_verified": 52,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 36453,
+      "movement_cache_misses": 2816
+    },
+    {
+      "nodes": 3672,
+      "order_expansions": 454,
+      "order_rollout_steps": 3218,
+      "order_transpositions": 15,
+      "order_checked_roots": 96,
+      "order_complete_candidates": 270,
+      "order_baseline_selected": 1
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural ordered": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 22.468,
+  "replay": "replays/g0047.awpgn"
+}

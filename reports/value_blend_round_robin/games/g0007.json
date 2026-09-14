@@ -1,0 +1,86 @@
+{
+  "id": "g0007",
+  "pair": [
+    "Heuristic teacher",
+    "Neural 50%"
+  ],
+  "map_index": 3,
+  "swap": 0,
+  "blue": "Heuristic teacher",
+  "red": "Neural 50%",
+  "map": "ten_cities_6x6_ita.json",
+  "winner": 0,
+  "termination": "deadline_income",
+  "played_turns": 40,
+  "turns_by_side": [
+    20,
+    20
+  ],
+  "final_income": [
+    7000,
+    5000
+  ],
+  "final_state_sha256": "3a6034ad9cd69b1b192f89e2453c0c8e2178cd4c5ee13581822a9ec0f630985c",
+  "search_seconds": [
+    6.662222400002065,
+    9.264072300000407
+  ],
+  "search_counts": [
+    {
+      "regions": 19,
+      "units": 228,
+      "nodes": 13612,
+      "policy_steps": 3023,
+      "production_expansions": 1394,
+      "production_peak_frontier": 74,
+      "replies_evaluated": 156,
+      "horizon_turns": 60,
+      "complete_candidates": 78,
+      "candidates_verified": 78,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 49905,
+      "movement_cache_misses": 5238,
+      "local_expansions": 9195,
+      "transpositions": 552,
+      "regions_searched": 95
+    },
+    {
+      "raw_baseline_retained": 20,
+      "nodes": 2562,
+      "policy_steps": 2302,
+      "production_expansions": 260,
+      "production_peak_frontier": 70,
+      "complete_bundles": 107,
+      "distinct_bundles": 107,
+      "value_evaluations": 321,
+      "reply_bundles": 202,
+      "common_reply_rounds": 40,
+      "reply_checked_roots": 107,
+      "raw_baseline_selected": 8,
+      "soft_targets": 0
+    }
+  ],
+  "effective_settings": {
+    "Heuristic teacher": {
+      "type": "heuristic"
+    },
+    "Neural 50%": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 0.5,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      }
+    }
+  },
+  "elapsed_seconds": 16.632,
+  "replay": "replays/g0007.awpgn"
+}

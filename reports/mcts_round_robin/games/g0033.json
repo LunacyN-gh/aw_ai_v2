@@ -1,0 +1,95 @@
+{
+  "id": "g0033",
+  "pair": [
+    "Neural old",
+    "Teacher MCTS"
+  ],
+  "map_index": 0,
+  "swap": 0,
+  "blue": "Neural old",
+  "red": "Teacher MCTS",
+  "map": "test_cities_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 27,
+  "turns_by_side": [
+    14,
+    13
+  ],
+  "final_income": [
+    7000,
+    3000
+  ],
+  "final_state_sha256": "e9ba628a436652308a0ed73bf787a169cf5ea35f7533d8568b6e27dd601b971d",
+  "search_seconds": [
+    3.334546600000067,
+    14.996552600000541
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 14,
+      "nodes": 1050,
+      "policy_steps": 941,
+      "production_expansions": 109,
+      "production_peak_frontier": 44,
+      "complete_bundles": 68,
+      "distinct_bundles": 68,
+      "value_evaluations": 204,
+      "reply_bundles": 126,
+      "common_reply_rounds": 28,
+      "reply_checked_roots": 68,
+      "raw_baseline_selected": 9,
+      "soft_targets": 0
+    },
+    {
+      "nodes": 19179,
+      "mcts_simulations": 1664,
+      "order_rollout_steps": 2072,
+      "mcts_duplicates": 1478,
+      "heuristic_mcts_steps": 13597,
+      "mcts_expansions": 1522,
+      "mcts_value_evaluations": 1664,
+      "mcts_completed_simulations": 1664,
+      "mcts_depth_sum": 4911,
+      "mcts_max_depth": 6,
+      "mcts_order_proposals": 13,
+      "mcts_root_children": 89,
+      "mcts_root_visits": 1664,
+      "mcts_greedy_selected": 5,
+      "mcts_fallback": 0
+    }
+  ],
+  "effective_settings": {
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    },
+    "Teacher MCTS": {
+      "type": "heuristic",
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    }
+  },
+  "elapsed_seconds": 18.535,
+  "replay": "replays/g0033.awpgn"
+}

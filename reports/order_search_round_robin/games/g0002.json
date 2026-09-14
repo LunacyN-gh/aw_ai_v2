@@ -1,0 +1,69 @@
+{
+  "id": "g0002",
+  "pair": [
+    "Heuristic old",
+    "Heuristic ordered"
+  ],
+  "map_index": 0,
+  "swap": 1,
+  "blue": "Heuristic ordered",
+  "red": "Heuristic old",
+  "map": "test_cities_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 23,
+  "turns_by_side": [
+    12,
+    11
+  ],
+  "final_income": [
+    7000,
+    3000
+  ],
+  "final_state_sha256": "941ada05ac627dd5c413b0f452e9a61b0b507b51e8b64efc48696e627d2238d8",
+  "search_seconds": [
+    4.727465000000393,
+    2.917894499999875
+  ],
+  "search_counts": [
+    {
+      "nodes": 5706,
+      "order_expansions": 1281,
+      "order_rollout_steps": 4425,
+      "order_checked_roots": 86,
+      "order_complete_candidates": 526,
+      "order_baseline_selected": 4,
+      "order_transpositions": 149
+    },
+    {
+      "regions": 10,
+      "units": 92,
+      "nodes": 5936,
+      "policy_steps": 1076,
+      "production_expansions": 717,
+      "production_peak_frontier": 39,
+      "local_expansions": 4143,
+      "transpositions": 249,
+      "regions_searched": 55,
+      "replies_evaluated": 82,
+      "horizon_turns": 33,
+      "complete_candidates": 41,
+      "candidates_verified": 41,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 18840,
+      "movement_cache_misses": 1076
+    }
+  ],
+  "effective_settings": {
+    "Heuristic ordered": {
+      "type": "heuristic",
+      "search": "ordered"
+    },
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    }
+  },
+  "elapsed_seconds": 7.668,
+  "replay": "replays/g0002.awpgn"
+}

@@ -243,6 +243,10 @@ class Planner:
 
     def analyze(self, state, config=None):
         settings = getattr(getattr(self.policy, "network", None), "search_settings", None) or {}
+        if settings.get("planner") == "mcts":
+            from .bundle_mcts import analyze
+            active = Planner(self.rules,self.policy,self.value,config) if config is not None else self
+            return analyze(active,state)
         if settings.get("planner") == "bundle":
             from .bundle import analyze
             active = Planner(self.rules,self.policy,self.value,config) if config is not None else self

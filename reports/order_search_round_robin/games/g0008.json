@@ -1,0 +1,69 @@
+{
+  "id": "g0008",
+  "pair": [
+    "Heuristic old",
+    "Heuristic ordered"
+  ],
+  "map_index": 3,
+  "swap": 1,
+  "blue": "Heuristic ordered",
+  "red": "Heuristic old",
+  "map": "ten_cities_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 33,
+  "turns_by_side": [
+    17,
+    16
+  ],
+  "final_income": [
+    8000,
+    4000
+  ],
+  "final_state_sha256": "0983205b03a76afd36c656bab109feeda5b5fb0782714d39b06e5a80600cd9e7",
+  "search_seconds": [
+    6.15781780000043,
+    4.252679800000578
+  ],
+  "search_counts": [
+    {
+      "nodes": 8792,
+      "order_expansions": 1950,
+      "order_rollout_steps": 6842,
+      "order_checked_roots": 126,
+      "order_complete_candidates": 693,
+      "order_baseline_selected": 3,
+      "order_transpositions": 247
+    },
+    {
+      "regions": 15,
+      "units": 145,
+      "nodes": 9816,
+      "policy_steps": 1751,
+      "production_expansions": 1041,
+      "production_peak_frontier": 59,
+      "local_expansions": 7024,
+      "transpositions": 442,
+      "regions_searched": 76,
+      "replies_evaluated": 122,
+      "horizon_turns": 48,
+      "complete_candidates": 61,
+      "candidates_verified": 61,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 28510,
+      "movement_cache_misses": 2354
+    }
+  ],
+  "effective_settings": {
+    "Heuristic ordered": {
+      "type": "heuristic",
+      "search": "ordered"
+    },
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    }
+  },
+  "elapsed_seconds": 10.431,
+  "replay": "replays/g0008.awpgn"
+}

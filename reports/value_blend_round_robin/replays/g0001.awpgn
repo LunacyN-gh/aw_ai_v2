@@ -1,0 +1,29 @@
+[AWPGN 1]
+[InitialState {"format":"aw-ai-v2-state","version":2,"profile":"deterministic-v2","width":6,"height":6,"player":0,"funds":[1000,2000],"turn":0,"turn_limit":40,"winner":null,"next_id":0,"allowed_builds":["infantry","tank","artillery"],"income_capture_limit":7,"tiles":["factory","plain","plain","forest","forest","city","plain","city","plain","plain","city","mountain","plain","road","mountain","forest","road","city","city","road","forest","mountain","road","plain","mountain","city","plain","plain","city","plain","city","forest","forest","plain","plain","factory"],"owners":{"0":0,"35":1},"units":[{"id":"ai_infantry_1","owner":1,"kind":"infantry","pos":35,"hp":100,"acted":false},{"id":"human_infantry_1","owner":0,"kind":"infantry","pos":0,"hp":100,"acted":false}],"captures":{}}]
+[OpenTurn false]
+
+1. i: a6-b5x, a6+i
+2. i: f1-f4x, f1+i
+3. i: b5x, i: a6-a3x, a6+i
+4. i: f4x, i: f1-e2x, f1+i
+5. i: a3x, i: b5-b2x, i: a6-b5
+6. i: e2x, i: f4-f6x, i: f1-f4, f1+i
+7. i: b2x, i: a3-a1x, i: b5-e5x, a6+i
+8. i: f6x, i: e2-e4xe5, i: f4-f5xe5, i: f1-f4, f1+i
+9. i: a1x, i: b2-e2x, i: a6-b6, i: e5x, a6+t
+10. i: e4-e3xe2, i: f5-f2xe2, i: f6-f5xe5, i: f4-e5x, i: f1-e1xe2, f1+t
+11. i: b6-e6xe5, t: a6-d5xe5, i: a1-d1xe1, a6+a
+12. i: e5x, t: f1-d4xd5, i: f5-f6xe6, i: e1-e4, i: f2-d2xd1, i: e3-f4, f1+i
+13. i: d1-e2x, t: d5-b5, i: e6xe5, a: a6-a5, a6+i
+14. i: e4-e5x, i: f4-f2xe2, i: d2-e3xe2, i: f6xe6, t: d4-e1, i: f1-d1, f1+t
+15. t: b5-e6xe5, i: a6-b6, a: a5, a6+t
+16. i: e5x, i: d1-a1x, i: f6xe6, t: f1, i: e3-d1, i: f2-e2, t: e1
+17. t: e6xf6, i: b6-d5xe5, t: a6-c5, a: a5, a6+i
+18. i: a1x, t: f1-e5xe6, i: d1-b2x, i: f6, t: e1-b1, i: e2-c1, f1+t
+19. i: d5-f4x, t: e6-b5, t: c5-e6xe5, i: a6-c6, a: a5-b6, a6+t
+20. i: b2x, i: a1-a3x, t: f1-f3xf4, i: f6-f5xf4, t: b1-a5xb5, t: e5-b5xb6, i: c1-e2, f1+t
+21. a: b6xa5, t: a6xa5, t: e6-c5xb5, i: f4x, i: c6-f6x
+22. i: f5-e4xf4, t: b5xb6, i: a3x, i: b2x, t: f1-d5xc5, t: f3-e6xf6, i: e2-e5x
+23. a: b6xd5, t: a6-d6xd5, t: c5xd5, i: f6x, a6+i
+24. i: b2x
+0-1

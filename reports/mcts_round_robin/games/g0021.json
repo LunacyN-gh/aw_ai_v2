@@ -1,0 +1,108 @@
+{
+  "id": "g0021",
+  "pair": [
+    "Neural old",
+    "Neural MCTS"
+  ],
+  "map_index": 2,
+  "swap": 0,
+  "blue": "Neural old",
+  "red": "Neural MCTS",
+  "map": "diag_map_6x6_ita.json",
+  "winner": -1,
+  "termination": "deadline_draw",
+  "played_turns": 40,
+  "turns_by_side": [
+    20,
+    20
+  ],
+  "final_income": [
+    5000,
+    5000
+  ],
+  "final_state_sha256": "a868697faafd3988b3f3eae6956a28bdb3f4e722fb832d964bad119f77f3a436",
+  "search_seconds": [
+    8.303145600002608,
+    38.48633030000019
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 20,
+      "nodes": 2294,
+      "policy_steps": 2043,
+      "production_expansions": 251,
+      "production_peak_frontier": 73,
+      "complete_bundles": 110,
+      "distinct_bundles": 110,
+      "value_evaluations": 330,
+      "reply_bundles": 220,
+      "common_reply_rounds": 40,
+      "reply_checked_roots": 110,
+      "raw_baseline_selected": 7,
+      "soft_targets": 0
+    },
+    {
+      "nodes": 9681,
+      "mcts_simulations": 1162,
+      "order_rollout_steps": 1286,
+      "mcts_duplicates": 308,
+      "policy_steps": 6100,
+      "mcts_expansions": 1029,
+      "mcts_value_evaluations": 1162,
+      "mcts_completed_simulations": 1162,
+      "mcts_depth_sum": 2477,
+      "mcts_max_depth": 6,
+      "mcts_order_proposals": 20,
+      "mcts_root_children": 253,
+      "mcts_root_visits": 1162,
+      "mcts_greedy_selected": 5,
+      "mcts_fallback": 0
+    }
+  ],
+  "effective_settings": {
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    },
+    "Neural MCTS": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "mcts",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    }
+  },
+  "elapsed_seconds": 47.228,
+  "replay": "replays/g0021.awpgn"
+}

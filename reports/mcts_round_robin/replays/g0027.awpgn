@@ -1,0 +1,42 @@
+[AWPGN 1]
+[InitialState {"format":"aw-ai-v2-state","version":2,"profile":"deterministic-v2","width":6,"height":6,"player":0,"funds":[1000,4000],"turn":0,"turn_limit":40,"winner":null,"next_id":0,"allowed_builds":["infantry","tank","artillery"],"income_capture_limit":8,"tiles":["factory","plain","city","forest","plain","city","plain","road","road","forest","city","plain","forest","city","forest","mountain","forest","forest","forest","mountain","plain","forest","road","city","city","plain","mountain","city","road","plain","city","city","forest","forest","plain","factory"],"owners":{"0":0,"35":1},"units":[{"id":"ai_artillery_2","owner":1,"kind":"artillery","pos":28,"hp":100,"acted":false},{"id":"ai_infantry_1","owner":1,"kind":"infantry","pos":34,"hp":100,"acted":false},{"id":"ai_infantry_2","owner":1,"kind":"infantry","pos":29,"hp":100,"acted":false},{"id":"ai_tank_1","owner":1,"kind":"tank","pos":35,"hp":100,"acted":false},{"id":"human_artillery_1","owner":0,"kind":"artillery","pos":7,"hp":100,"acted":false},{"id":"human_infantry_1","owner":0,"kind":"infantry","pos":6,"hp":100,"acted":false},{"id":"human_infantry_2","owner":0,"kind":"infantry","pos":1,"hp":100,"acted":false},{"id":"human_tank_1","owner":0,"kind":"tank","pos":0,"hp":100,"acted":false}],"captures":{}}]
+[OpenTurn false]
+
+1. i: b6-c6x, i: a5-a2x, t: a6-a3, a: b5-d6, a6+i
+2. i: f2-f3x, i: e1-d2x, a: e2, t: f1-e1, f1+i
+3. i: c6x, i: a2x, i: a6-b4x, t: a3, a: d6-c5, a6+i
+4. i: d2-b1x, i: f3x, i: f1-d2x, t: e1-d1, a: e2-c1, f1+i
+5. i: b4x, i: a2-c2xd2, t: a3-a1xb1, i: c6-e5x, i: a6-b5, a: c5-a4, a6+i
+6. a: c1xa1, t: d1-a2xa1, i: f3-f5xe5, i: d2x, i: b1x, i: f1-f4, f1+a
+7. a: a4xa2, i: b4-d3xd2, i: c2-b2xb1, i: e5x, t: a1xb1, i: a6-a3, i: b5-a5, a6+i
+8. t: a2xa1, i: f4-e4xe5, a: c1xb2, i: f5-e6xe5, i: d2x, i: b1x, a: f1-d1, f1+i
+9. a: a4xa2, i: d3xd2, i: a3-a1x, i: a6-a3, i: a5-d5, a6+t
+10. i: e4-d2x, a: d1xa1, a: c1xa1, i: b1x, i: e6-c6x, i: f1-f4, f1+i
+11. t: a6-b6xc6, i: d5-c5xc6, i: d3-c2xd2, a: a4-c6, i: a3-a1x, a6+i
+12. i: d2x, i: b1x, a: d1xa1, a: c1xa1, i: f1-e2, i: f4-f6x, f1+i
+13. t: b6-f5xf6, i: c5-d3xd2, a: c6xf6, i: c2-a1x, i: a6-b4, a6+t
+14. a: c1xa1, a: d1xd3, i: e2-e3xd3, i: d2x, i: b1x, i: f1-e2, f1+i
+15. i: a1xb1, i: b4-d3xd2, t: f5-f3xe3, t: a6-a5, a: c6-a4, a6+i
+16. i: e3-d2x, a: c1xd3, i: e2-e3xd3, a: d1xa1, i: f1-e2, f1+a
+17. t: f3-e4xe3, t: a5-a3, i: a6-b4, a: a4-a2, a6+t
+18. a: c1xa2, i: d2-b2xa2, i: e3-d2x, a: d1, i: e2, a: f1-e1, f1+i
+19. a: a2xc1, t: a3-b1xc1, i: b4-d3xd2, t: e4-d2xd1, t: a6-a3, a6+i
+20. a: e1xb1, a: d1xb1, i: e2-c1xb1, i: b2-b4x, i: f1-e3xd3, f1+i
+21. t: d2xd1, t: b1-a4xb4, a: a2xc1, i: d3-b3xb4, t: a3, i: a6-b4, a6+a
+22. a: e1xd2, i: c1-a1x, i: e3-e5x, i: f1-d1xd2, f1+i
+23. t: a4-b1xa1, i: b4-d5xe5, t: d2-e4xe5, i: b3-d2x, t: a3-c1xd1, a: a6-a3, a: a2, a6+i
+24. a: e1xe4, i: a1x, i: f1-e2xd2, i: d1xd2, f1+i
+25. t: b1xa1, i: d2x, i: d5-e5x, t: c1xd1, i: a6-d6, a: a3, a: a2, a6+a
+26. a: e1xb1, i: e2-e4xe5, i: f1-d1xd2, f1+i
+27. i: e5x, i: d6-d4xe4, a: a2, a: a6-e6, t: c1xd1, a: a3, a6+i
+28. a: e1xc1, i: d1-d2x, i: e4-f6x, i: f1-d1xc1, f1+t
+29. i: e5x, i: d4-e2xd2, a: a3, t: c1-a1, i: a6-a4, a: a2, a: e6-c6, a6+t
+30. i: d1-b2xa2, t: f1-b1xa1, i: f6x, a: e1-c1, f1+i
+31. a: a3xb1, a: a2xb1, i: e2-f3x, i: a4-a1x, i: e5-e6xf6, a: c6, t: a6-b6, a6+i
+32. a: c1xa2, i: b2-b4x, i: f1-d2x, f1+i
+33. i: f3x, i: a1x, a: c6xb4, a: a2xd2, a: a3xb4, i: e6-f6x, t: b6, i: a6-a4, a6+t
+34. a: c1xa2, i: d2x, i: f1-d1, f1+i
+35. i: f6x, a: a2xd2, i: f3-d3xd2, i: a1-b1x, a: a3-a1, a: c6, t: b6, t: a6-a3, i: a4
+36. a: c1xa1, i: f1-f3x, i: d1-d2x, f1+i
+37. i: b1x
+1-0

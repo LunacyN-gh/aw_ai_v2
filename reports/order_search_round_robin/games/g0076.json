@@ -1,0 +1,73 @@
+{
+  "id": "g0076",
+  "pair": [
+    "Heuristic ordered",
+    "Neural ordered"
+  ],
+  "map_index": 5,
+  "swap": 1,
+  "blue": "Neural ordered",
+  "red": "Heuristic ordered",
+  "map": "predeploy_diag_6x6_ita.json",
+  "winner": 1,
+  "termination": "deadline_income",
+  "played_turns": 40,
+  "turns_by_side": [
+    20,
+    20
+  ],
+  "final_income": [
+    5000,
+    6000
+  ],
+  "final_state_sha256": "cd5972a8bff6141f864657cb0fd9fffe5fac0b91d795fe4b1592094a54e53892",
+  "search_seconds": [
+    22.52806690000034,
+    11.777330299998994
+  ],
+  "search_counts": [
+    {
+      "nodes": 5884,
+      "order_expansions": 891,
+      "order_rollout_steps": 4993,
+      "order_transpositions": 60,
+      "order_checked_roots": 144,
+      "order_complete_candidates": 441,
+      "order_baseline_selected": 6
+    },
+    {
+      "nodes": 16322,
+      "order_expansions": 2991,
+      "order_rollout_steps": 13331,
+      "order_transpositions": 421,
+      "order_checked_roots": 152,
+      "order_complete_candidates": 854,
+      "order_baseline_selected": 7
+    }
+  ],
+  "effective_settings": {
+    "Neural ordered": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "ordered"
+    },
+    "Heuristic ordered": {
+      "type": "heuristic",
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 34.538,
+  "replay": "replays/g0076.awpgn"
+}

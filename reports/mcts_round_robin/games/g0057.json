@@ -1,0 +1,89 @@
+{
+  "id": "g0057",
+  "pair": [
+    "Ordered teacher",
+    "Neural MCTS"
+  ],
+  "map_index": 4,
+  "swap": 0,
+  "blue": "Ordered teacher",
+  "red": "Neural MCTS",
+  "map": "predeploy_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 33,
+  "turns_by_side": [
+    17,
+    16
+  ],
+  "final_income": [
+    7000,
+    1000
+  ],
+  "final_state_sha256": "1ff484a90ed7a2862abdd82540bca39d0e3a737375fd12c6bde141a035157874",
+  "search_seconds": [
+    6.989049900000282,
+    29.625720099997125
+  ],
+  "search_counts": [
+    {
+      "nodes": 13675,
+      "order_expansions": 2690,
+      "order_rollout_steps": 10985,
+      "order_transpositions": 437,
+      "order_checked_roots": 128,
+      "order_complete_candidates": 778,
+      "order_baseline_selected": 2
+    },
+    {
+      "nodes": 7656,
+      "mcts_simulations": 931,
+      "order_rollout_steps": 1240,
+      "mcts_expansions": 731,
+      "mcts_value_evaluations": 931,
+      "mcts_completed_simulations": 931,
+      "mcts_depth_sum": 2142,
+      "mcts_max_depth": 5,
+      "mcts_order_proposals": 16,
+      "policy_steps": 4556,
+      "mcts_duplicates": 417,
+      "mcts_root_children": 134,
+      "mcts_root_visits": 931,
+      "mcts_greedy_selected": 10,
+      "mcts_fallback": 0
+    }
+  ],
+  "effective_settings": {
+    "Ordered teacher": {
+      "type": "heuristic",
+      "search": "ordered"
+    },
+    "Neural MCTS": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "mcts",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    }
+  },
+  "elapsed_seconds": 36.912,
+  "replay": "replays/g0057.awpgn"
+}

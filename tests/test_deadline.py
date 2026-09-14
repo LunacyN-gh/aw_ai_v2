@@ -84,7 +84,7 @@ class DeadlineRulesTests(unittest.TestCase):
         self.assertEqual(len(paths),8)
         for path in paths:
             s=load(path)
-            self.assertEqual(s.turn_limit,36)
+            self.assertEqual(s.turn_limit,40)
             self.assertEqual(s.turn,0)
 
 

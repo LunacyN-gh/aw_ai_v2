@@ -1,0 +1,523 @@
+{
+  "training": "value-guided bundle distillation + terminal value regression",
+  "seed": 0,
+  "map_path": null,
+  "initial_state_hash": null,
+  "training_sizes": [
+    6
+  ],
+  "allowed_builds": [
+    "infantry",
+    "tank",
+    "artillery"
+  ],
+  "income_capture_fraction": 0.6666666666666666,
+  "income_capture_limit": null,
+  "turn_limit": 40,
+  "deadline_rule": "higher_income_else_draw",
+  "clock_features_version": 1,
+  "runs": [],
+  "evaluations": [
+    {
+      "summary": {
+        "policy": {
+          "win": 5,
+          "loss": 8,
+          "draw": 3,
+          "censored": 0
+        },
+        "beam": {
+          "win": 8,
+          "loss": 6,
+          "draw": 2,
+          "censored": 0
+        }
+      },
+      "games": [
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 34,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 0,
+          "winner": -1,
+          "result": "draw",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 40,
+          "termination": "deadline_draw"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 23,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 30,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 21,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 0,
+          "winner": -1,
+          "result": "draw",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 40,
+          "termination": "deadline_draw"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 31,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 29,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 38,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 30,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 0,
+          "winner": -1,
+          "result": "draw",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 40,
+          "termination": "deadline_draw"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 25,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "policy",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 0,
+          "played_turns": 28,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 61,
+          "played_turns": 25,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000000,
+          "map_hash": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 111,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 119,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000001,
+          "map_hash": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 120,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 114,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000002,
+          "map_hash": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 60,
+          "played_turns": 21,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 85,
+          "played_turns": 33,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000003,
+          "map_hash": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+          "learner_side": 1,
+          "winner": 0,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 109,
+          "played_turns": 40,
+          "termination": "deadline_income"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 97,
+          "played_turns": 39,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000004,
+          "map_hash": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+          "learner_side": 1,
+          "winner": -1,
+          "result": "draw",
+          "partial_candidates": 0,
+          "verified_candidates": 107,
+          "played_turns": 40,
+          "termination": "deadline_draw"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 0,
+          "winner": 1,
+          "result": "loss",
+          "partial_candidates": 0,
+          "verified_candidates": 72,
+          "played_turns": 30,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000005,
+          "map_hash": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+          "learner_side": 1,
+          "winner": -1,
+          "result": "draw",
+          "partial_candidates": 0,
+          "verified_candidates": 109,
+          "played_turns": 40,
+          "termination": "deadline_draw"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 46,
+          "played_turns": 17,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000006,
+          "map_hash": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 88,
+          "played_turns": 36,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 0,
+          "winner": 0,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 103,
+          "played_turns": 37,
+          "termination": "income_capture_limit"
+        },
+        {
+          "mode": "beam",
+          "seed": 1000007,
+          "map_hash": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35",
+          "learner_side": 1,
+          "winner": 1,
+          "result": "win",
+          "partial_candidates": 0,
+          "verified_candidates": 67,
+          "played_turns": 24,
+          "termination": "income_capture_limit"
+        }
+      ],
+      "openings": {
+        "policy": {
+          "opening_0": true,
+          "finish_capture_0": true,
+          "opening_1": true,
+          "finish_capture_1": true
+        },
+        "beam": {
+          "opening_0": true,
+          "finish_capture_0": true,
+          "opening_1": true,
+          "finish_capture_1": true
+        }
+      },
+      "elapsed_seconds": 105.19,
+      "run_elapsed_seconds": 109.43,
+      "after_game": 0
+    }
+  ],
+  "validation_scope": "explicit evaluation maps, alternating learner sides",
+  "opponent_checkpoint": null,
+  "tactical_families_used_for_training": false,
+  "evaluation_maps": [
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\diag_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_diag_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\second_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\ten_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\test_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_base_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_mixed_6x6_ita.json"
+  ],
+  "training_maps": [
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\diag_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_diag_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\second_map_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\ten_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\test_cities_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_base_6x6_ita.json",
+    "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_mixed_6x6_ita.json"
+  ],
+  "training_map_hashes": [
+    "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b",
+    "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3",
+    "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f",
+    "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad",
+    "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7",
+    "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833",
+    "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486",
+    "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35"
+  ],
+  "parameters": 835858,
+  "config": {
+    "train_seconds": 0.5,
+    "train_nodes": 4000,
+    "eval_seconds": 1.0,
+    "eval_every": 25,
+    "eval_games": 16,
+    "checkpoint_every": 10,
+    "updates_per_game": 4,
+    "batch_size": 64,
+    "replay_size": 8192,
+    "workers": 4,
+    "device": "cuda",
+    "worker_device": "cpu",
+    "worker_threads": 1,
+    "policy_lag_games_max": 3,
+    "teacher_fraction": 0.5,
+    "teacher_every": 2,
+    "teacher_replay_size": 8192,
+    "neural_value_weight": 1.0,
+    "promotion_margin": 0.05,
+    "promotion_teacher_weight": 0.5,
+    "promotion_censored_score": 0.5,
+    "search_settings": {
+      "mode": "guided",
+      "neural_value_weight": 1.0,
+      "planner": "bundle",
+      "bundle_candidates": 6,
+      "target_temperature": 0.15,
+      "exploration_fraction": 0.25,
+      "execution_exploration": 0.1,
+      "heuristic_scale": 20000.0,
+      "bundle_version": 2,
+      "proposal_temperature": 0.7,
+      "policy_prior_weight": 0.1
+    },
+    "value_loss_weight": 0.5,
+    "entropy_weight": 0.01
+  },
+  "promotions": [
+    {
+      "after_game": 0,
+      "accepted": true,
+      "reason": "initialized frozen reference"
+    }
+  ],
+  "complete": false,
+  "reference_game": 0,
+  "best_measured_game": 0
+}

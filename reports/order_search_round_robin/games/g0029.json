@@ -1,0 +1,88 @@
+{
+  "id": "g0029",
+  "pair": [
+    "Heuristic old",
+    "Neural old"
+  ],
+  "map_index": 6,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural old",
+  "map": "two_base_6x6_ita.json",
+  "winner": -1,
+  "termination": "deadline_draw",
+  "played_turns": 40,
+  "turns_by_side": [
+    20,
+    20
+  ],
+  "final_income": [
+    6000,
+    6000
+  ],
+  "final_state_sha256": "2b897f8be130555a987ce20ad59a9ff2fbe83be5a902c5072f311cd294073789",
+  "search_seconds": [
+    12.452901700000211,
+    14.197315399999525
+  ],
+  "search_counts": [
+    {
+      "regions": 19,
+      "units": 260,
+      "nodes": 20241,
+      "policy_steps": 3381,
+      "production_expansions": 6753,
+      "production_peak_frontier": 80,
+      "local_expansions": 10107,
+      "regions_searched": 99,
+      "replies_evaluated": 160,
+      "horizon_turns": 60,
+      "complete_candidates": 80,
+      "candidates_verified": 80,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 71785,
+      "movement_cache_misses": 6934,
+      "transpositions": 608
+    },
+    {
+      "raw_baseline_retained": 20,
+      "nodes": 3987,
+      "policy_steps": 2574,
+      "production_expansions": 1413,
+      "production_peak_frontier": 80,
+      "complete_bundles": 118,
+      "distinct_bundles": 118,
+      "value_evaluations": 354,
+      "reply_bundles": 224,
+      "common_reply_rounds": 40,
+      "reply_checked_roots": 118,
+      "raw_baseline_selected": 7,
+      "soft_targets": 0
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    }
+  },
+  "elapsed_seconds": 26.935,
+  "replay": "replays/g0029.awpgn"
+}

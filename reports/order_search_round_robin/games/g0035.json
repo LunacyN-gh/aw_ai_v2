@@ -1,0 +1,82 @@
+{
+  "id": "g0035",
+  "pair": [
+    "Heuristic old",
+    "Neural ordered"
+  ],
+  "map_index": 1,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural ordered",
+  "map": "second_map_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 35,
+  "turns_by_side": [
+    18,
+    17
+  ],
+  "final_income": [
+    7000,
+    3000
+  ],
+  "final_state_sha256": "fb95132b1c1f25fbb313fa45c82a8f621236b734684016e88d3a29de6c85a235",
+  "search_seconds": [
+    5.54305029999955,
+    20.053039299999682
+  ],
+  "search_counts": [
+    {
+      "regions": 17,
+      "units": 179,
+      "nodes": 10992,
+      "policy_steps": 2058,
+      "production_expansions": 1238,
+      "production_peak_frontier": 61,
+      "replies_evaluated": 128,
+      "horizon_turns": 53,
+      "complete_candidates": 68,
+      "candidates_verified": 68,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 32938,
+      "movement_cache_misses": 3000,
+      "local_expansions": 7696,
+      "transpositions": 471,
+      "regions_searched": 80
+    },
+    {
+      "nodes": 4949,
+      "order_expansions": 833,
+      "order_rollout_steps": 4116,
+      "order_checked_roots": 134,
+      "order_complete_candidates": 392,
+      "order_baseline_selected": 3,
+      "order_transpositions": 73
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural ordered": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 25.854,
+  "replay": "replays/g0035.awpgn"
+}

@@ -1,0 +1,30 @@
+[AWPGN 1]
+[InitialState {"format":"aw-ai-v2-state","version":2,"profile":"deterministic-v2","width":6,"height":6,"player":0,"funds":[1000,4000],"turn":0,"turn_limit":40,"winner":null,"next_id":0,"allowed_builds":["infantry","tank","artillery"],"income_capture_limit":7,"tiles":["factory","forest","forest","city","plain","city","plain","mountain","plain","city","plain","plain","forest","forest","plain","mountain","city","city","city","road","city","plain","plain","forest","plain","mountain","road","forest","mountain","forest","plain","plain","city","forest","plain","factory"],"owners":{"0":0,"35":1},"units":[{"id":"ai_infantry_1","owner":1,"kind":"infantry","pos":35,"hp":100,"acted":false},{"id":"human_infantry_1","owner":0,"kind":"infantry","pos":0,"hp":100,"acted":false}],"captures":{}}]
+[OpenTurn false]
+
+1. i: a6-d6x, a6+i
+2. i: f1-f4x, f1+i
+3. i: d6x, i: a6-a3x, a6+i
+4. i: f4x, i: f1-c1x, f1+i
+5. i: a3x, i: d6-f6x, i: a6-d6, a6+i
+6. i: c1x, i: f4-e6xf6, i: f1-e2, f1+i
+7. i: f6x, i: a3-c3x, i: d6-d5x, i: a6-d6xe6, a6+i
+8. i: e2-e5xd5, i: c1-c2xc3, i: e6-e4x, i: f1-c1, f1+i
+9. i: f6x, i: d5x, i: c3x, i: d6-f5xe5, i: a6-b5, a6+i
+10. i: e5-d6x, i: c1-d3xc3, i: e4x, i: f1-f4xf5, i: c2-b3xc3, f1+t
+11. i: f5-e6xd6, i: d5x, i: a6-a3xb3, i: b5-c3x, i: f6-e5xe4, a6+t
+12. i: d3-c4xc3, t: f1-d3xc3, i: f4-f6x, i: b3xc3, f1+i
+13. i: d5-f4x, i: e5-f5xf6, i: a3-b2xb3, i: e6-e4x, t: a6-e6xf6, a6+a
+14. t: d3-a5xa6, i: f1-e3xe4, i: f6x, i: c4-d6x, f1+t
+15. i: f4-d5xd6, i: f5-f4x, i: b2-c1x, t: e6-e4xe3, a: a6-b6, a6+i
+16. t: a5-b1xc1, t: f1-d1xc1, i: e3-c3x, i: f6x, i: d6x, f1+i
+17. i: f4x, i: d5-c4xc3, i: a6-c6xd6, t: e4-f5xf6, a: b6-f6, a6+t
+18. i: f1-c1, t: b1-e4xf4, t: d1-f4xf5, f1+i
+19. a: f6xf4, t: f5xf4, i: c6-c3x, i: c4-d5, t: a6-e6, a6+i
+20. t: e4-e5xf5, i: c1-d3xc3, t: f4-f5xf6, i: f1-f4, f1+a
+21. a: f6xe5, t: e6xe5, i: c3x, i: d5-e4x, i: a6-d6, a6+t
+22. t: f5xf6, a: f1-d1, i: f4-d5x, i: d3-d4xe4, f1+i
+23. i: e4x, t: e6-f4xf5, a: f6xd5, i: c3x, i: d6-e5xd5, t: a6-d5xd4, a6+i
+24. i: f1-e3xe4, a: d1-c1, f1+i
+25. i: e4x
+1-0

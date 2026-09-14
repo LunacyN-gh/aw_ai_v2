@@ -46,7 +46,14 @@ def parser():
     p.add_argument("--teacher-every", type=int, default=2, help="query teacher every N learner turns; 0 disables queries")
     p.add_argument("--teacher-replay-size", type=int, default=8192)
     p.add_argument("--neural-value-weight", type=float, default=.5, help="guided search value blend; 0 uses heuristic value")
-    p.add_argument("--search-mode", choices=("bundle","beam"), default="bundle", help="neural training candidate evaluator")
+    p.add_argument("--search-mode", choices=("bundle","beam","mcts"), default="bundle", help="neural training candidate evaluator")
+    p.add_argument("--teacher-search", choices=("old","ordered"), default="ordered")
+    p.add_argument("--mcts-simulations", type=int, default=128)
+    p.add_argument("--mcts-depth", type=int, default=6)
+    p.add_argument("--mcts-c-puct", type=float, default=1.5)
+    p.add_argument("--mcts-widening", type=float, default=2.)
+    p.add_argument("--mcts-max-children", type=int, default=16)
+    p.add_argument("--mcts-visit-temperature", type=float, default=1.)
     p.add_argument("--bundle-candidates", type=int, default=6)
     p.add_argument("--bundle-version", type=int, choices=(1,2), default=2)
     p.add_argument("--proposal-temperature", type=float, default=.7)
@@ -66,7 +73,7 @@ def parser():
     p.add_argument("--capture-limit", type=int, help="income-property win count for generated/loaded maps")
     p.add_argument("--tiny", action="store_true", help="small network for pipeline smoke tests")
     p.add_argument("--prove", action="store_true", help="exhaustively verify tactical fixture uniqueness")
-    p.add_argument("--search", choices=("beam", "tree"), default="beam")
+    p.add_argument("--search", choices=("beam", "tree", "mcts"), default="beam")
     p.add_argument("--games", type=int, default=4)
     p.add_argument("--repeats", type=int, default=3)
     p.add_argument("--epochs", type=int, default=30)
@@ -109,7 +116,10 @@ def main(argv=None):
             heuristic_scale=args.heuristic_scale,value_loss_weight=args.value_loss_weight,entropy_weight=args.entropy_weight,
             bundle_version=args.bundle_version,proposal_temperature=args.proposal_temperature,
             policy_prior_weight=args.policy_prior_weight,eval_maps=args.eval_map,train_maps=args.train_map,
-            promotion_margin=args.promotion_margin,promotion_teacher_weight=args.promotion_teacher_weight)
+            promotion_margin=args.promotion_margin,promotion_teacher_weight=args.promotion_teacher_weight,
+            teacher_search=args.teacher_search,mcts_simulations=args.mcts_simulations,mcts_depth=args.mcts_depth,
+            mcts_c_puct=args.mcts_c_puct,mcts_widening=args.mcts_widening,mcts_max_children=args.mcts_max_children,
+            mcts_visit_temperature=args.mcts_visit_temperature)
         return
     if args.command == "gui":
         from .gui import main as gui_main
@@ -131,7 +141,11 @@ def main(argv=None):
         policy = value = deployment_agent(Network.load(args.checkpoint))
     config = Config(seconds=args.seconds, nodes=args.nodes, beam=args.beam, local_depth=args.depth,
                     candidates=args.candidates, replies=args.replies, continuation=not args.no_continuation)
-    if args.search == "tree":
+    if args.search == "mcts":
+        if not args.checkpoint:raise SystemExit('--search mcts requires --checkpoint')
+        from .bundle_mcts import MCTSPlanner
+        planner_type = MCTSPlanner
+    elif args.search == "tree":
         from .tree import SampledPlanner
         planner_type = SampledPlanner
     else:
@@ -160,7 +174,8 @@ def main(argv=None):
         planner.execute(state, analysis)  # Validate returned ordered plan.
         for action in analysis.actions:
             print(action_text(action, state.board))
-        print(f"Score: {analysis.score:.3f} ({'bounded tree value' if args.search == 'tree' else 'heuristic units'}; not win probability)")
+        units='MCTS Q' if hasattr(analysis,'visit_weights') else 'bounded tree value' if args.search=='tree' else 'search score'
+        print(f"Score: {analysis.score:.3f} ({units}; not win probability)")
         print(json.dumps(analysis.metrics.as_dict(), indent=2))
         if args.output:
             data = {"actions": [asdict(a) for a in analysis.actions], "score": analysis.score,

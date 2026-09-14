@@ -1,0 +1,88 @@
+{
+  "id": "g0027",
+  "pair": [
+    "Heuristic old",
+    "Neural old"
+  ],
+  "map_index": 5,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural old",
+  "map": "predeploy_diag_6x6_ita.json",
+  "winner": 0,
+  "termination": "deadline_income",
+  "played_turns": 40,
+  "turns_by_side": [
+    20,
+    20
+  ],
+  "final_income": [
+    6000,
+    4000
+  ],
+  "final_state_sha256": "b3fb4e9d32d9dfc38c6d2678dbe2fd7725d8c71f71bfecbf58700fed265fb651",
+  "search_seconds": [
+    8.440035199999784,
+    11.44761060000019
+  ],
+  "search_counts": [
+    {
+      "regions": 20,
+      "units": 248,
+      "nodes": 15115,
+      "policy_steps": 3199,
+      "production_expansions": 1613,
+      "production_peak_frontier": 74,
+      "local_expansions": 10303,
+      "transpositions": 568,
+      "regions_searched": 99,
+      "replies_evaluated": 158,
+      "horizon_turns": 60,
+      "complete_candidates": 79,
+      "candidates_verified": 79,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 55087,
+      "movement_cache_misses": 4586
+    },
+    {
+      "raw_baseline_retained": 20,
+      "nodes": 2572,
+      "policy_steps": 2271,
+      "production_expansions": 301,
+      "production_peak_frontier": 68,
+      "complete_bundles": 120,
+      "distinct_bundles": 120,
+      "value_evaluations": 360,
+      "reply_bundles": 228,
+      "common_reply_rounds": 40,
+      "reply_checked_roots": 120,
+      "raw_baseline_selected": 5,
+      "soft_targets": 0
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    }
+  },
+  "elapsed_seconds": 20.161,
+  "replay": "replays/g0027.awpgn"
+}

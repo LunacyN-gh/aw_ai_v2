@@ -1,0 +1,92 @@
+{
+  "id": "g0091",
+  "pair": [
+    "Neural old",
+    "Neural ordered"
+  ],
+  "map_index": 5,
+  "swap": 0,
+  "blue": "Neural old",
+  "red": "Neural ordered",
+  "map": "predeploy_diag_6x6_ita.json",
+  "winner": 1,
+  "termination": "income_capture_limit",
+  "played_turns": 32,
+  "turns_by_side": [
+    16,
+    16
+  ],
+  "final_income": [
+    3000,
+    8000
+  ],
+  "final_state_sha256": "2d7f295557c81456c29c1b8090ba5fe5fc5ebab6de8369a22c32c84babeb487e",
+  "search_seconds": [
+    8.213978599999791,
+    21.166839299999992
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 16,
+      "nodes": 2244,
+      "policy_steps": 1999,
+      "production_expansions": 245,
+      "production_peak_frontier": 55,
+      "complete_bundles": 95,
+      "distinct_bundles": 95,
+      "value_evaluations": 285,
+      "reply_bundles": 190,
+      "common_reply_rounds": 32,
+      "reply_checked_roots": 95,
+      "raw_baseline_selected": 9,
+      "soft_targets": 0
+    },
+    {
+      "nodes": 5168,
+      "order_expansions": 704,
+      "order_rollout_steps": 4464,
+      "order_transpositions": 37,
+      "order_checked_roots": 120,
+      "order_complete_candidates": 403,
+      "order_baseline_selected": 4
+    }
+  ],
+  "effective_settings": {
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    },
+    "Neural ordered": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 29.81,
+  "replay": "replays/g0091.awpgn"
+}

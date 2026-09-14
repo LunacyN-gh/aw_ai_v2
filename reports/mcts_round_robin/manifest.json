@@ -1,0 +1,905 @@
+{
+  "format": "aw-ai-tournament",
+  "version": 1,
+  "config_path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\tournaments\\mcts_round_robin.json",
+  "seconds": 2.0,
+  "nodes": 4000,
+  "max_turns": 40,
+  "maps": [
+    {
+      "name": "test_cities_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\test_cities_6x6_ita.json",
+      "file_sha256": "2386ed7322efcb7bed3c309d44de5cf318bac38d37d8e933df7911f3f2aefb0e",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          1000,
+          2000
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 7,
+        "tiles": [
+          "factory",
+          "plain",
+          "plain",
+          "forest",
+          "forest",
+          "city",
+          "plain",
+          "city",
+          "plain",
+          "plain",
+          "city",
+          "mountain",
+          "plain",
+          "road",
+          "mountain",
+          "forest",
+          "road",
+          "city",
+          "city",
+          "road",
+          "forest",
+          "mountain",
+          "road",
+          "plain",
+          "mountain",
+          "city",
+          "plain",
+          "plain",
+          "city",
+          "plain",
+          "city",
+          "forest",
+          "forest",
+          "plain",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 0,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "0f421c5477823c57e26923a02b21413cc70f0d9dbe3ae2f13eb28b707a42a833"
+    },
+    {
+      "name": "second_map_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\second_map_6x6_ita.json",
+      "file_sha256": "ad00497be99658933d0664f3ab786af1bcc7e8f2ac9e16943f481f96e98b3f04",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          1000,
+          3000
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 7,
+        "tiles": [
+          "factory",
+          "plain",
+          "city",
+          "forest",
+          "plain",
+          "city",
+          "plain",
+          "forest",
+          "mountain",
+          "road",
+          "road",
+          "city",
+          "plain",
+          "plain",
+          "plain",
+          "city",
+          "mountain",
+          "forest",
+          "forest",
+          "mountain",
+          "city",
+          "plain",
+          "plain",
+          "plain",
+          "city",
+          "road",
+          "road",
+          "mountain",
+          "forest",
+          "plain",
+          "city",
+          "plain",
+          "forest",
+          "city",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 0,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "4dec2d7cf1d7a581e717ff0aa9c7eaf3b6c2997b70ce9253e001569a82f7f0ad"
+    },
+    {
+      "name": "diag_map_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\diag_map_6x6_ita.json",
+      "file_sha256": "7ceb921216a22f8720e2406d67ded3e31e345dfc7a5b5679d5b2e85f5c171540",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          1000,
+          4000
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 7,
+        "tiles": [
+          "factory",
+          "forest",
+          "forest",
+          "city",
+          "plain",
+          "city",
+          "plain",
+          "mountain",
+          "plain",
+          "city",
+          "plain",
+          "plain",
+          "forest",
+          "forest",
+          "plain",
+          "mountain",
+          "city",
+          "city",
+          "city",
+          "road",
+          "city",
+          "plain",
+          "plain",
+          "forest",
+          "plain",
+          "mountain",
+          "road",
+          "forest",
+          "mountain",
+          "forest",
+          "plain",
+          "plain",
+          "city",
+          "forest",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 0,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "af7e386834389e49abbc9e06deefd32fa3b9fc6a3095175a10c98176bdf97d8b"
+    },
+    {
+      "name": "ten_cities_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\ten_cities_6x6_ita.json",
+      "file_sha256": "a668a780e4ae7e475c7be5ca7d35bdb9a4d43b4b369d6c9e1ececb29bb6b6221",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          1000,
+          3000
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 8,
+        "tiles": [
+          "factory",
+          "plain",
+          "city",
+          "plain",
+          "plain",
+          "city",
+          "plain",
+          "road",
+          "road",
+          "city",
+          "forest",
+          "plain",
+          "mountain",
+          "city",
+          "forest",
+          "mountain",
+          "forest",
+          "city",
+          "city",
+          "forest",
+          "mountain",
+          "forest",
+          "city",
+          "mountain",
+          "plain",
+          "forest",
+          "city",
+          "road",
+          "road",
+          "plain",
+          "city",
+          "plain",
+          "plain",
+          "city",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 0,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "06cc32fa02407b223f55e6986a664f3578365a2ce62499b1d4f0c159a71b34b7"
+    },
+    {
+      "name": "predeploy_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_6x6_ita.json",
+      "file_sha256": "83c95031a0ce9d5ca2665618b9f4bb1d6577dc2af3de282105fc418040ce1375",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          1000,
+          5000
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 7,
+        "tiles": [
+          "factory",
+          "plain",
+          "city",
+          "mountain",
+          "city",
+          "plain",
+          "plain",
+          "plain",
+          "forest",
+          "forest",
+          "road",
+          "mountain",
+          "plain",
+          "mountain",
+          "city",
+          "forest",
+          "road",
+          "city",
+          "city",
+          "road",
+          "forest",
+          "city",
+          "mountain",
+          "plain",
+          "mountain",
+          "road",
+          "forest",
+          "forest",
+          "plain",
+          "plain",
+          "plain",
+          "city",
+          "mountain",
+          "city",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_artillery_2",
+            "owner": 1,
+            "kind": "artillery",
+            "pos": 28,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 34,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_infantry_2",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 29,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_tank_1",
+            "owner": 1,
+            "kind": "tank",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_artillery_1",
+            "owner": 0,
+            "kind": "artillery",
+            "pos": 7,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 6,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_2",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 1,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_tank_1",
+            "owner": 0,
+            "kind": "tank",
+            "pos": 0,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "373c3305902e3e10ebdf067baf82ccc386bf967bcc6a04e1582f63326b430ab3"
+    },
+    {
+      "name": "predeploy_diag_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\predeploy_diag_6x6_ita.json",
+      "file_sha256": "231b82e2b93a68532acb7c17474a9a9e0d0ea505a30e4a86140554c78ed71669",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          1000,
+          4000
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 8,
+        "tiles": [
+          "factory",
+          "plain",
+          "city",
+          "forest",
+          "plain",
+          "city",
+          "plain",
+          "road",
+          "road",
+          "forest",
+          "city",
+          "plain",
+          "forest",
+          "city",
+          "forest",
+          "mountain",
+          "forest",
+          "forest",
+          "forest",
+          "mountain",
+          "plain",
+          "forest",
+          "road",
+          "city",
+          "city",
+          "plain",
+          "mountain",
+          "city",
+          "road",
+          "plain",
+          "city",
+          "city",
+          "forest",
+          "forest",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_artillery_2",
+            "owner": 1,
+            "kind": "artillery",
+            "pos": 28,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 34,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_infantry_2",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 29,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_tank_1",
+            "owner": 1,
+            "kind": "tank",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_artillery_1",
+            "owner": 0,
+            "kind": "artillery",
+            "pos": 7,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 6,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_2",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 1,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_tank_1",
+            "owner": 0,
+            "kind": "tank",
+            "pos": 0,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "671d7077d277b6e61ba70222223a367c4b130cf3ba7f4fadfb1ca2e514656e8f"
+    },
+    {
+      "name": "two_base_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_base_6x6_ita.json",
+      "file_sha256": "9a8fb189498ddf68d8a1f13cc42cb63d5832ca4278278cd35826ca9cb45d64e4",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          2000,
+          0
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 8,
+        "tiles": [
+          "factory",
+          "plain",
+          "plain",
+          "factory",
+          "plain",
+          "city",
+          "plain",
+          "mountain",
+          "forest",
+          "forest",
+          "plain",
+          "city",
+          "road",
+          "city",
+          "city",
+          "forest",
+          "mountain",
+          "road",
+          "road",
+          "mountain",
+          "forest",
+          "city",
+          "city",
+          "road",
+          "city",
+          "plain",
+          "forest",
+          "forest",
+          "mountain",
+          "plain",
+          "city",
+          "plain",
+          "factory",
+          "plain",
+          "plain",
+          "factory"
+        ],
+        "owners": {
+          "0": 0,
+          "32": 1,
+          "3": 0,
+          "35": 1
+        },
+        "units": [
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 32,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_infantry_2",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 35,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 3,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "f17d2d9e5bf6abd3cde18860dfa76d426171d6dfd5723315bd6fdc8851945486"
+    },
+    {
+      "name": "two_mixed_6x6_ita.json",
+      "path": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\maps\\6x6_ita\\two_mixed_6x6_ita.json",
+      "file_sha256": "f3c88562780ed376016a09cb2d432622516be1bf93e20743d0afec153e8e4cca",
+      "state": {
+        "format": "aw-ai-v2-state",
+        "version": 2,
+        "profile": "deterministic-v2",
+        "width": 6,
+        "height": 6,
+        "player": 0,
+        "funds": [
+          2000,
+          0
+        ],
+        "turn": 0,
+        "turn_limit": 40,
+        "winner": null,
+        "next_id": 0,
+        "allowed_builds": [
+          "infantry",
+          "tank",
+          "artillery"
+        ],
+        "income_capture_limit": 8,
+        "tiles": [
+          "plain",
+          "plain",
+          "mountain",
+          "factory",
+          "city",
+          "plain",
+          "city",
+          "forest",
+          "forest",
+          "mountain",
+          "forest",
+          "plain",
+          "factory",
+          "mountain",
+          "city",
+          "city",
+          "forest",
+          "mountain",
+          "mountain",
+          "forest",
+          "city",
+          "city",
+          "mountain",
+          "factory",
+          "plain",
+          "forest",
+          "mountain",
+          "forest",
+          "forest",
+          "city",
+          "plain",
+          "city",
+          "factory",
+          "mountain",
+          "plain",
+          "plain"
+        ],
+        "owners": {
+          "12": 1,
+          "32": 0,
+          "3": 0,
+          "23": 1
+        },
+        "units": [
+          {
+            "id": "ai_infantry_1",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 23,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "ai_infantry_2",
+            "owner": 1,
+            "kind": "infantry",
+            "pos": 12,
+            "hp": 100,
+            "acted": false
+          },
+          {
+            "id": "human_infantry_1",
+            "owner": 0,
+            "kind": "infantry",
+            "pos": 3,
+            "hp": 100,
+            "acted": false
+          }
+        ],
+        "captures": {}
+      },
+      "state_sha256": "ad37f4ae96de7ee56ac7718fa2c3e8ac1074d6d3a0df80b3d722e033681ccd35"
+    }
+  ],
+  "entrants": [
+    {
+      "name": "Neural old",
+      "type": "neural",
+      "search": "old",
+      "checkpoint": "inputs/a83bd6f83e39302e430761ff67cfe7fffbdcdce85a5575e5994885448dea5d63.pt",
+      "neural_value_weight": 1.0,
+      "checkpoint_sha256": "a83bd6f83e39302e430761ff67cfe7fffbdcdce85a5575e5994885448dea5d63",
+      "source_checkpoint": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\models\\eight_maps_ita_clock40_neural100.best.pt"
+    },
+    {
+      "name": "Ordered teacher",
+      "type": "heuristic",
+      "search": "ordered"
+    },
+    {
+      "name": "Neural MCTS",
+      "type": "neural",
+      "search": "mcts",
+      "checkpoint": "inputs/a83bd6f83e39302e430761ff67cfe7fffbdcdce85a5575e5994885448dea5d63.pt",
+      "neural_value_weight": 1.0,
+      "checkpoint_sha256": "a83bd6f83e39302e430761ff67cfe7fffbdcdce85a5575e5994885448dea5d63",
+      "source_checkpoint": "C:\\Users\\apple\\OneDrive\\Desktop\\AW_AI_v2\\models\\eight_maps_ita_clock40_neural100.best.pt"
+    },
+    {
+      "name": "Teacher MCTS",
+      "type": "heuristic",
+      "search": "mcts"
+    }
+  ],
+  "code_sha256": {
+    "__init__.py": "05ba9a827a7d4b28c012214d8ac012149753dd04c84dd48ae65b464667f4084a",
+    "__main__.py": "f38fd2f2c920c29c828645e87ed64743d567aaaef7fba7a15d2c7d7f8094f91f",
+    "animation.py": "20db59305391e912b3d7b7ed45fce1d0abf9e0482c7f0d2642ba3c1505ef4591",
+    "arena.py": "9eb762145d557f75e7771445f6bbd36fd845c5c508c1ab09d1828d2e74966fbb",
+    "budget.py": "0a6c579b2ca60cac47fa5053c5aa9171dd78915dbd2b387221ebb8d4bdc51ccf",
+    "bundle.py": "19f384e4420ec8d08cd164f339a46f2246bcb22112170aa5e3c825a6dac4d0c2",
+    "bundle_mcts.py": "ff0c9486a8b71345f6a0c1658357af357fa7b09c0fb5b6926bca9067cde4113c",
+    "checkpoint_io.py": "8406141a0f0a9b7eff2e9694cccfa9c925a641f4d95bb4866d5604b4c5c4255e",
+    "cli.py": "3a4c7e8c02d561b8400023c9bb95aba4fcaf40e97e945ef91beb76573f3a7027",
+    "evaluation.py": "886e7d2eebcfc1d6bbb511b020a87e0ae3d000864639a1c7578dd2e4f4dacb02",
+    "gui.py": "1cf42ceda9cab84139a97c3c07aefbc709fcc26e12d5edb59c8c6bc3106ae966",
+    "gui_art.py": "99d6cd1de11f082e93a3e47a7e36509353df4f62738b1627fb8b9def55194f31",
+    "gui_model.py": "b8da0abae18be910af169eae0a4e9419701a39d053e76ed309a3adfa3c335b3f",
+    "guidance.py": "e6542384cc97e9769d62ccb27fdd6d6a0fa92049e5c8c77cfa82498682cc7d05",
+    "model.py": "fe806527afe6319b9b87569d0efe3b35b636bf4fb9ebc6f3a7f2e64671018d4f",
+    "neural.py": "94c5731574efa24def0c26dc63f126ec9a88f937b997748dd68870eb4dac117f",
+    "neural_training.py": "acda2221e64f5dab3ac33bb78f83abadba2a2cdeff4a44462f3aaddb990f24aa",
+    "notation.py": "0faea50364c4794519660f49182467f03211e635668404cb8f2cb3666a04a671",
+    "opening_suite.py": "39749a840b10bfef96fdee27f01d6f0d3484d4882bddfc28b681c42d1dd1dd6d",
+    "order_search.py": "4bc94bfd03f5fde5dd881395d46c86d8168c8d5abd52c1d9b74ebbdc18d14de6",
+    "planner.py": "9065ee7bcb5af44e45bc88a9ebfbeb4bdd7307e9569d64b0ef1f5eb3cadfa2ac",
+    "policy.py": "cf5a7462fc0cfd74c814e2cb3331d22b737ad6ebdf98e00cac5efe9dea43b2bc",
+    "policy_bundle.py": "e2145dd650001711fd9e1e9261f2037a6582026309f31e02c558fa5d24c460f6",
+    "production.py": "7850488ce6da56c9a004e713e26ffd0cd6ace176c69625b7ca2a44355bb37c8b",
+    "promotion.py": "46adf0a97e15f250983a5f12ed78aa6844e229a5038f04d5b0688ca6e641ef87",
+    "review.py": "29aeba581a991637ee2cd83d0cb3f536bb3d921edcfc027fb53146d297e42d38",
+    "review_ui.py": "31cc01ebedd1cc8a2fd9070a174f09f23b7b53c85d1587ee6073064c070d92d7",
+    "rules.py": "6de755632e1336b7b80a1feb990f42623c5f4f73c188f73f12f95930bc36def4",
+    "scenarios.py": "2880827a3f862d02dc540c7eebe8c6958e7a78f6f31b3cd39628c1584aa5d823",
+    "search_training.py": "a10120a645a8c7813e73f29cb90defd060c823e6418bdac23fd5efb02292bbfb",
+    "strategy.py": "1dd8fe403242feb02f6cdb23abd52ffe1d18c353de3831af6177717f15650adb",
+    "tactical_suite.py": "f4b396aef12e6bd9ee9cbbec10772bb63e94bd45c74899495bf5a2039eee7fba",
+    "teacher_replay.py": "c14bc89d21a3dd6112f66570caccdbe386b31cd360685d636989d724b1737f73",
+    "tournament.py": "a69d9a73235f7246ef4833b89982afcfb8bab012d651da29d5508c02deac89eb",
+    "tree.py": "728730c358e9f5aba4a2e3675202b8c8da6aec058b0564a752a434efe7467ec7"
+  }
+}

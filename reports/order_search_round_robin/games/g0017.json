@@ -1,0 +1,89 @@
+{
+  "id": "g0017",
+  "pair": [
+    "Heuristic old",
+    "Neural old"
+  ],
+  "map_index": 0,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural old",
+  "map": "test_cities_6x6_ita.json",
+  "winner": 1,
+  "termination": "income_capture_limit",
+  "played_turns": 24,
+  "turns_by_side": [
+    12,
+    12
+  ],
+  "final_income": [
+    3000,
+    7000
+  ],
+  "final_state_sha256": "51e45966a927c15c93e9c4d5bd84141d083e87a3f5f6ec0c90ecc172166223bf",
+  "search_seconds": [
+    3.490086900000506,
+    4.852315200000248
+  ],
+  "search_counts": [
+    {
+      "regions": 13,
+      "units": 105,
+      "nodes": 6532,
+      "policy_steps": 1190,
+      "production_expansions": 802,
+      "production_peak_frontier": 41,
+      "replies_evaluated": 92,
+      "horizon_turns": 36,
+      "complete_candidates": 46,
+      "candidates_verified": 46,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 21636,
+      "movement_cache_misses": 1379,
+      "local_expansions": 4540,
+      "transpositions": 287,
+      "regions_searched": 59,
+      "coordination_repairs": 2
+    },
+    {
+      "raw_baseline_retained": 12,
+      "nodes": 1148,
+      "policy_steps": 1007,
+      "production_expansions": 141,
+      "production_peak_frontier": 38,
+      "complete_bundles": 66,
+      "distinct_bundles": 66,
+      "value_evaluations": 198,
+      "reply_bundles": 122,
+      "common_reply_rounds": 24,
+      "reply_checked_roots": 66,
+      "raw_baseline_selected": 8,
+      "soft_targets": 0
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural old": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "old"
+    }
+  },
+  "elapsed_seconds": 8.606,
+  "replay": "replays/g0017.awpgn"
+}

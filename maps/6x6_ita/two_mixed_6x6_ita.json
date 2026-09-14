@@ -187,5 +187,5 @@
     "artillery"
   ],
   "income_capture_limit": 8,
-  "turn_limit": 36
+  "turn_limit": 40
 }

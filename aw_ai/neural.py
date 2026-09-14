@@ -234,7 +234,7 @@ class Network(nn.Module):
             if settings.get('mode') != 'guided' or not isinstance(weight,(int,float)) or not math.isfinite(weight) or not 0 <= weight <= 1:
                 raise ValueError('invalid checkpoint search settings')
             model.search_settings = dict(settings)
-            if settings.get('planner','beam') not in ('bundle','beam'):
+            if settings.get('planner','beam') not in ('bundle','beam','mcts'):
                 raise ValueError('invalid checkpoint planner')
             if settings.get('bundle_version',1) not in (1,2):
                 raise ValueError('invalid bundle version')
@@ -242,7 +242,10 @@ class Network(nn.Module):
                 x=settings.get(key,default)
                 if not isinstance(x,(int,float)) or not math.isfinite(x) or x<0 or (positive and x==0):
                     raise ValueError('invalid policy search setting')
-            if settings.get('planner') == 'bundle':
+            if settings.get('planner') == 'mcts':
+                from .bundle_mcts import validate
+                validate(settings)
+            if settings.get('planner') in ('bundle','mcts'):
                 for key,default in (('target_temperature',.15),('heuristic_scale',20000.)):
                     x=settings.get(key,default)
                     if not isinstance(x,(int,float)) or not math.isfinite(x) or x<=0:

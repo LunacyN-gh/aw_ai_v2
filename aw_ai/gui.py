@@ -51,6 +51,9 @@ class App:
         self.action_menu = tk.Menu(root, tearoff=False)
         self.planners = {}
         self.neural_agent = None
+        self.heuristic_backend = "ordered"
+        self.neural_weight = tk.StringVar(value="100")
+        self.applied_neural_weight = "100"
         self.generation = 0
         self.cell = 32
         self.offset = 25
@@ -103,7 +106,7 @@ class App:
         settings.pack(fill="x", pady=8)
         ttk.Label(settings, text="Seconds").pack(side="left")
         ttk.Entry(settings, textvariable=self.seconds, width=6).pack(side="left", padx=5)
-        ttk.Combobox(settings, textvariable=self.search, values=("beam", "tree"), state="readonly", width=8).pack(side="left")
+        ttk.Combobox(settings, textvariable=self.search, values=("beam", "tree", "mcts"), state="readonly", width=8).pack(side="left")
         playback = ttk.Frame(side)
         playback.pack(fill="x", pady=(0,6))
         ttk.Label(playback, text="Animation speed").pack(side="left")
@@ -111,7 +114,17 @@ class App:
         models = ttk.Frame(side)
         models.pack(fill="x")
         ttk.Button(models, text="Load neural model…", command=self.load_neural).pack(side="left")
-        ttk.Button(models, text="Use heuristic", command=self.clear_neural).pack(side="left")
+        teachers = ttk.Frame(side)
+        teachers.pack(fill="x", pady=3)
+        ttk.Button(teachers, text="Use heuristic (ordered)", command=self.clear_neural).pack(side="left")
+        ttk.Button(teachers, text="Old heuristic", command=lambda: self.clear_neural("old")).pack(side="left", padx=3)
+        weights = ttk.Frame(side)
+        weights.pack(fill="x", pady=4)
+        ttk.Label(weights, text="Neural value %").pack(side="left")
+        weight = ttk.Combobox(weights, textvariable=self.neural_weight,
+                              values=tuple(str(n) for n in range(101)), state="readonly", width=5)
+        weight.pack(side="left", padx=5)
+        weight.bind('<<ComboboxSelected>>', lambda e: self.change_neural_weight())
         for label, command in (("Analyze position", lambda: self.start(False)),
                                ("Play recommended turn", self.play_recommendation),
                                ("AI vs AI", self.start_auto), ("Pause after turn", self.pause)):
@@ -402,24 +415,51 @@ class App:
         try:
             from .neural import Network
             from .guidance import deployment_agent
-            self.neural_agent = deployment_agent(Network.load(path))
+            from .gui_model import set_value_weight
+            network = Network.load(path)
+            set_value_weight(network, float(self.neural_weight.get()) / 100)
+            self.neural_agent = deployment_agent(network)
+            self.applied_neural_weight = self.neural_weight.get()
             self.planners.clear()
             self.analysis = None
             settings = self.neural_agent.network.search_settings
-            mode = f"Guided model (neural value weight {settings['neural_value_weight']:g})" if settings else "Neural policy/value"
+            mode = f"Guided model (position value: {settings['neural_value_weight']:.0%} neural / {1-settings['neural_value_weight']:.0%} heuristic)" if settings else "Neural policy/value"
             self.status.set(f"{mode} loaded: {path}")
         except Exception as error:
             messagebox.showerror("Could not load model", str(error))
 
-    def clear_neural(self):
-        if self.busy: return
-        self.neural_agent = None
+    def change_neural_weight(self):
+        if self.busy:
+            self.neural_weight.set(self.applied_neural_weight)
+            self.status.set("Wait until the current AI turn finishes to change the neural value weight.")
+            return
+        if self.neural_agent is not None:
+            from .gui_model import set_value_weight
+            from .guidance import deployment_agent
+            network = self.neural_agent.network
+            set_value_weight(network, float(self.neural_weight.get()) / 100)
+            self.neural_agent = deployment_agent(network)
+        self.applied_neural_weight = self.neural_weight.get()
         self.planners.clear()
         self.analysis = None
-        self.status.set("Using heuristic policy/value.")
+        self.alternatives.delete(0, 'end')
+        self.status.set(f"Position value: {self.neural_weight.get()}% neural; applies to neural search.")
+
+    def clear_neural(self, backend="ordered"):
+        if self.busy: return
+        self.neural_agent = None
+        self.heuristic_backend = backend
+        self.search.set("beam")
+        self.planners.clear()
+        self.analysis = None
+        self.alternatives.delete(0, "end")
+        self.status.set("Using ordered heuristic teacher." if backend=="ordered" else "Using old heuristic teacher.")
 
     def start(self, execute):
         if self.busy or self.rules.outcome(self.state) is not None:
+            return
+        if self.search.get()=='mcts' and self.neural_agent is None:
+            self.status.set('Load a neural model before selecting MCTS.')
             return
         try:
             config = Config(seconds=float(self.seconds.get()))
@@ -436,7 +476,14 @@ class App:
         kind = self.search.get()
         key = (snapshot.player, kind, config)
         if key not in self.planners:
-            self.planners[key] = (SampledPlanner if kind == "tree" else Planner)(
+            backend=SampledPlanner if kind=='tree' else Planner
+            if kind=='beam' and self.neural_agent is None and self.heuristic_backend=='ordered':
+                from .order_search import OrderPlanner
+                backend=OrderPlanner
+            if kind=='mcts':
+                from .bundle_mcts import MCTSPlanner
+                backend=MCTSPlanner
+            self.planners[key] = backend(
                 config=config, policy=self.neural_agent, value=self.neural_agent)
         planner = self.planners[key]
 

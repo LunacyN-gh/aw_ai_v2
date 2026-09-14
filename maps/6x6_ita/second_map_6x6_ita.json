@@ -6,7 +6,7 @@
   "current_player": 0,
   "funds": {
     "0": 0,
-    "1": 2000
+    "1": 3000
   },
   "terrain": [
     {
@@ -151,11 +151,11 @@
     }
   ],
   "captures": [],
+  "turn_limit": 40,
   "allowed_builds": [
     "infantry",
     "tank",
     "artillery"
   ],
-  "income_capture_limit": 7,
-  "turn_limit": 36
+  "income_capture_limit": 7
 }

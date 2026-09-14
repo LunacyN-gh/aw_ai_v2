@@ -16,13 +16,27 @@ class ReviewWindow:
         self.record=record; self.index=0; self.version=0; self.closed=False
         self.model_path=None; self.jobs=queue.Queue(maxsize=1); self.results=queue.Queue()
         self.k=tk.StringVar(value='3'); self.status=tk.StringVar(value='Load a game file or paste notation below.')
+        self.mode=tk.StringVar(value='Full search')
+        self.seconds=tk.StringVar(value='1.0')
+        self.neural_weight=tk.StringVar(value='100')
+        self.explanation=tk.StringVar()
         self.model_label=tk.StringVar(value='No model loaded')
         bar=ttk.Frame(self.window,padding=8); bar.pack(fill='x')
-        for title,callback in [('Load game…',self.load),('Load model…',self.load_model),('Use pasted text',self.use_text)]:
+        for title,callback in [('Load gameâ€¦',self.load),('Load modelâ€¦',self.load_model),('Use pasted text',self.use_text)]:
             ttk.Button(bar,text=title,command=callback).pack(side='left',padx=2)
         ttk.Label(bar,text='Top actions').pack(side='left',padx=(15,4))
         selector=ttk.Combobox(bar,textvariable=self.k,values=('1','2','3','4','5'),width=3,state='readonly')
         selector.pack(side='left'); selector.bind('<<ComboboxSelected>>',lambda e:self.request_analysis())
+        options=ttk.Frame(self.window,padding=(8,0));options.pack(fill='x')
+        mode=ttk.Combobox(options,textvariable=self.mode,values=('Full search','MCTS','One-action value'),state='readonly',width=20)
+        mode.pack(side='left');mode.bind('<<ComboboxSelected>>',lambda e:self.request_analysis())
+        ttk.Label(options,text='Search seconds').pack(side='left',padx=6)
+        seconds=ttk.Entry(options,textvariable=self.seconds,width=6);seconds.pack(side='left')
+        seconds.bind('<Return>',lambda e:self.request_analysis())
+        ttk.Label(options,text='Search neural value %').pack(side='left',padx=6)
+        weight=ttk.Combobox(options,textvariable=self.neural_weight,values=tuple(str(n) for n in range(101)),state='readonly',width=5)
+        weight.pack(side='left');weight.bind('<<ComboboxSelected>>',lambda e:self.request_analysis())
+        ttk.Button(options,text='Analyze',command=self.request_analysis).pack(side='left',padx=6)
         middle=ttk.Frame(self.window,padding=8); middle.pack(fill='both',expand=True)
         self.canvas=tk.Canvas(middle,background='#f4f3ee',highlightthickness=0)
         self.canvas.pack(side='left',fill='both',expand=True)
@@ -31,7 +45,7 @@ class ReviewWindow:
         ttk.Label(right,textvariable=self.model_label,wraplength=320).pack(anchor='w')
         self.economy=tk.StringVar()
         ttk.Label(right,textvariable=self.economy,wraplength=330).pack(anchor='w',pady=8)
-        ttk.Label(right,text='One-action successor value, no search.\nPositive favors the player to move.\nScores are not win probabilities.',wraplength=320).pack(anchor='w',pady=8)
+        ttk.Label(right,textvariable=self.explanation,wraplength=320).pack(anchor='w',pady=8)
         self.ranking=tk.Text(right,width=42,height=14,wrap='word',state='disabled');self.ranking.pack(fill='both',expand=True)
         nav=ttk.Frame(self.window);nav.pack()
         for title,command in [('|<','start'),('<<','prev_turn'),('<','prev'),('>','next'),('>>','next_turn'),('>|','end')]:
@@ -94,14 +108,14 @@ class ReviewWindow:
         if self.record:
             state=self.record.states[self.index]
             rules=Rules()
-            self.economy.set(f'Army value: Blue ${displayed_army_value(state,0):,} · Red ${displayed_army_value(state,1):,}\n'
-                             f'Blue funds ${state.funds[0]:,} · income ${rules.income(state,0):,}\n'
-                             f'Red funds ${state.funds[1]:,} · income ${rules.income(state,1):,}\n'
+            self.economy.set(f'Army value: Blue ${displayed_army_value(state,0):,} Â· Red ${displayed_army_value(state,1):,}\n'
+                             f'Blue funds ${state.funds[0]:,} Â· income ${rules.income(state,0):,}\n'
+                             f'Red funds ${state.funds[1]:,} Â· income ${rules.income(state,1):,}\n'
                              +(f'{max(0,state.turn_limit-state.turn)} player turns remaining' if state.turn_limit else 'No turn deadline'))
             last='Start' if not self.index else action_text(self.record.states[self.index-1],self.record.actions[self.index-1])
             winner=Rules().outcome(state)
-            ending=' · Draw' if winner==DRAW else f' · {"Blue" if winner==0 else "Red"} wins' if winner is not None else ''
-            self.status.set(f'Action {self.index}/{len(self.record.actions)} · Ply {state.turn+1} · {"Blue" if state.player==0 else "Red"} · {last}{ending}')
+            ending=' Â· Draw' if winner==DRAW else f' Â· {"Blue" if winner==0 else "Red"} wins' if winner is not None else ''
+            self.status.set(f'Action {self.index}/{len(self.record.actions)} Â· Ply {state.turn+1} Â· {"Blue" if state.player==0 else "Red"} Â· {last}{ending}')
         self.request_analysis()
 
     def draw(self):
@@ -127,10 +141,16 @@ class ReviewWindow:
 
     def request_analysis(self):
         self.version+=1
+        self.explanation.set('Full AI search: first actions ranked by their best sampled turn continuation. Fewer than k may be found. Scores are not win probabilities.' if self.mode.get()!='One-action value' else 'Pure neural one-action successor value; search weight does not apply. Positive favors the player to move. Scores are not win probabilities.')
         if not self.record or not self.model_path:
             self.set_ranking('Load a model to evaluate legal actions.');return
-        self.set_ranking('Evaluating…')
-        job=(self.version,self.model_path,self.record.states[self.index].clone(),int(self.k.get()))
+        try:
+            from .planner import Config
+            seconds=float(self.seconds.get());Config(seconds=seconds)
+        except ValueError:
+            self.set_ranking('Enter a finite, nonnegative search time.');return
+        self.set_ranking('Evaluatingâ€¦')
+        job=(self.version,self.model_path,self.record.states[self.index].clone(),int(self.k.get()),self.mode.get(),seconds,float(self.neural_weight.get())/100)
         try:self.jobs.get_nowait()
         except queue.Empty:pass
         self.jobs.put_nowait(job)
@@ -140,15 +160,28 @@ class ReviewWindow:
         while True:
             job=self.jobs.get()
             if job is None:return
-            version,path,state,k=job
+            version,path,state,k,mode,seconds,weight=job
             try:
                 import torch
                 from .neural import Network
-                from .review import rank_actions
+                from .review import rank_actions,rank_search_actions
                 torch.set_num_threads(1)
                 if path!=loaded:network=Network.load(path);loaded=path
-                rows=rank_actions(network,state,k)
-                text='\n\n'.join(f'{i+1}. {r["text"]}\nValue {r["value"]:+.3f}'+(' · exact terminal result' if r['terminal'] else '') for i,r in enumerate(rows)) or 'Terminal position: no legal actions.'
+                from .gui_model import set_value_weight
+                set_value_weight(network,weight)
+                if mode in ('Full search','MCTS'):
+                    rows=rank_search_actions(network,state,k,seconds,backend='mcts' if mode=='MCTS' else None)
+                    lines=[]
+                    for i,r in enumerate(rows):
+                        score=f'Exact terminal value {r["terminal_value"]:+.0f}' if r['terminal'] else f'Search score {r["score"]:+.3f}'
+                        if r.get('visits') is not None:score=f'MCTS Q {r["score"]:+.3f} Â· {r["visits"]} visits'
+                        coverage='tree evaluated' if r.get('visits') is not None else 'reply checked' if r['verified'] else 'fallback / no common reply coverage'
+                        if not r['complete']:coverage+='; partial plan'
+                        lines.append(f'{i+1}. {r["text"]}'+(' Â· recommended' if r['recommended'] else '')+f'\n{score} Â· {coverage}\nPlan: {r["plan"]}')
+                    text='\n\n'.join(lines) or 'Terminal position or no candidate plans.'
+                else:
+                    rows=rank_actions(network,state,k)
+                    text='\n\n'.join(f'{i+1}. {r["text"]}\nValue {r["value"]:+.3f}'+(' Â· exact terminal result' if r['terminal'] else '') for i,r in enumerate(rows)) or 'Terminal position: no legal actions.'
                 self.results.put((version,text))
             except Exception as e:self.results.put((version,f'Analysis failed: {e}'))
 

@@ -1,0 +1,96 @@
+{
+  "id": "g0057",
+  "pair": [
+    "Neural 50%",
+    "Neural 75%"
+  ],
+  "map_index": 4,
+  "swap": 0,
+  "blue": "Neural 50%",
+  "red": "Neural 75%",
+  "map": "predeploy_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 27,
+  "turns_by_side": [
+    14,
+    13
+  ],
+  "final_income": [
+    7000,
+    2000
+  ],
+  "final_state_sha256": "1727c9723c7e64de7bb6ad302348f118cb26cc62dc481933865904085e64eefb",
+  "search_seconds": [
+    5.784679199987295,
+    5.5993960999985575
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 14,
+      "nodes": 1487,
+      "policy_steps": 1361,
+      "production_expansions": 126,
+      "production_peak_frontier": 45,
+      "complete_bundles": 76,
+      "distinct_bundles": 76,
+      "value_evaluations": 228,
+      "reply_bundles": 150,
+      "common_reply_rounds": 28,
+      "reply_checked_roots": 76,
+      "raw_baseline_selected": 10,
+      "soft_targets": 0
+    },
+    {
+      "raw_baseline_retained": 13,
+      "nodes": 1709,
+      "policy_steps": 1576,
+      "production_expansions": 133,
+      "production_peak_frontier": 38,
+      "complete_bundles": 73,
+      "distinct_bundles": 73,
+      "value_evaluations": 219,
+      "reply_bundles": 146,
+      "common_reply_rounds": 26,
+      "reply_checked_roots": 73,
+      "raw_baseline_selected": 7,
+      "soft_targets": 0
+    }
+  ],
+  "effective_settings": {
+    "Neural 50%": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 0.5,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      }
+    },
+    "Neural 75%": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 0.75,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      }
+    }
+  },
+  "elapsed_seconds": 12.705,
+  "replay": "replays/g0057.awpgn"
+}

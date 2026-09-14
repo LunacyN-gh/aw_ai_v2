@@ -1,0 +1,41 @@
+{
+  "seconds": 2.0,
+  "nodes": 4000,
+  "max_turns": 40,
+  "entrants": [
+    {
+      "name": "Heuristic old",
+      "type": "heuristic",
+      "search": "old"
+    },
+    {
+      "name": "Heuristic ordered",
+      "type": "heuristic",
+      "search": "ordered"
+    },
+    {
+      "name": "Neural old",
+      "type": "neural",
+      "search": "old",
+      "checkpoint": "../models/eight_maps_ita_clock40_neural100.best.pt",
+      "neural_value_weight": 1.0
+    },
+    {
+      "name": "Neural ordered",
+      "type": "neural",
+      "search": "ordered",
+      "checkpoint": "../models/eight_maps_ita_clock40_neural100.best.pt",
+      "neural_value_weight": 1.0
+    }
+  ],
+  "maps": [
+    "../maps/6x6_ita/test_cities_6x6_ita.json",
+    "../maps/6x6_ita/second_map_6x6_ita.json",
+    "../maps/6x6_ita/diag_map_6x6_ita.json",
+    "../maps/6x6_ita/ten_cities_6x6_ita.json",
+    "../maps/6x6_ita/predeploy_6x6_ita.json",
+    "../maps/6x6_ita/predeploy_diag_6x6_ita.json",
+    "../maps/6x6_ita/two_base_6x6_ita.json",
+    "../maps/6x6_ita/two_mixed_6x6_ita.json"
+  ]
+}

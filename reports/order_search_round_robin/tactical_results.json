@@ -1,0 +1,1550 @@
+{
+  "Heuristic old": {
+    "passed": 12,
+    "found": 16,
+    "total": 16,
+    "cases": [
+      {
+        "name": "breakthrough_artillery_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.13323189999982787,
+        "metrics": {
+          "elapsed": 0.132575,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 908,
+            "movement_cache_misses": 139,
+            "nodes": 588,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 16,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.13787030000003142,
+        "metrics": {
+          "elapsed": 0.137232,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 908,
+            "movement_cache_misses": 139,
+            "nodes": 588,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 16,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.141988400000173,
+        "metrics": {
+          "elapsed": 0.13908,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 908,
+            "movement_cache_misses": 139,
+            "nodes": 588,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 16,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.14218190000019604,
+        "metrics": {
+          "elapsed": 0.141796,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 913,
+            "movement_cache_misses": 135,
+            "nodes": 588,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 15,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.1415668999998161,
+        "metrics": {
+          "elapsed": 0.141041,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 458,
+            "movement_cache_hits": 992,
+            "movement_cache_misses": 143,
+            "nodes": 590,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 16,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.14721370000006573,
+        "metrics": {
+          "elapsed": 0.14647,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 458,
+            "movement_cache_hits": 992,
+            "movement_cache_misses": 143,
+            "nodes": 590,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 16,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.1466059999997924,
+        "metrics": {
+          "elapsed": 0.146027,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 458,
+            "movement_cache_hits": 992,
+            "movement_cache_misses": 143,
+            "nodes": 590,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 16,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.14188760000024558,
+        "metrics": {
+          "elapsed": 0.141354,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 458,
+            "movement_cache_hits": 998,
+            "movement_cache_misses": 137,
+            "nodes": 590,
+            "policy_steps": 132,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 15,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.13593919999993886,
+        "metrics": {
+          "elapsed": 0.134987,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 971,
+            "movement_cache_misses": 145,
+            "nodes": 586,
+            "policy_steps": 130,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 19,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.1415580999996564,
+        "metrics": {
+          "elapsed": 0.140976,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 970,
+            "movement_cache_misses": 146,
+            "nodes": 586,
+            "policy_steps": 130,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 19,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.1392562999999427,
+        "metrics": {
+          "elapsed": 0.138812,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 970,
+            "movement_cache_misses": 146,
+            "nodes": 586,
+            "policy_steps": 130,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 19,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.14260540000032051,
+        "metrics": {
+          "elapsed": 0.141893,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 456,
+            "movement_cache_hits": 973,
+            "movement_cache_misses": 145,
+            "nodes": 586,
+            "policy_steps": 130,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 19,
+            "units": 9
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r0_s0",
+        "family": "hq_screen",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.029865800000152376,
+        "metrics": {
+          "elapsed": 0.026999,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 112,
+            "movement_cache_hits": 306,
+            "movement_cache_misses": 36,
+            "nodes": 153,
+            "policy_steps": 41,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 14,
+            "units": 5
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r1_s1",
+        "family": "hq_screen",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.029423899999983405,
+        "metrics": {
+          "elapsed": 0.027047,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 112,
+            "movement_cache_hits": 306,
+            "movement_cache_misses": 36,
+            "nodes": 153,
+            "policy_steps": 41,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 14,
+            "units": 5
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r2_s0",
+        "family": "hq_screen",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.02843880000000354,
+        "metrics": {
+          "elapsed": 0.025614,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 112,
+            "movement_cache_hits": 306,
+            "movement_cache_misses": 36,
+            "nodes": 153,
+            "policy_steps": 41,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 14,
+            "units": 5
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r3_s1",
+        "family": "hq_screen",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.03220999999984997,
+        "metrics": {
+          "elapsed": 0.029526,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "candidates_verified": 4,
+            "complete_candidates": 4,
+            "horizon_turns": 3,
+            "incomplete_candidates": 0,
+            "local_expansions": 112,
+            "movement_cache_hits": 306,
+            "movement_cache_misses": 36,
+            "nodes": 153,
+            "policy_steps": 41,
+            "regions": 1,
+            "regions_searched": 5,
+            "replies_evaluated": 8,
+            "transpositions": 14,
+            "units": 5
+          }
+        }
+      }
+    ]
+  },
+  "Heuristic ordered": {
+    "passed": 12,
+    "found": 16,
+    "total": 16,
+    "cases": [
+      {
+        "name": "breakthrough_artillery_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.04991829999971742,
+        "metrics": {
+          "elapsed": 0.049543,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 99,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 21,
+            "order_rollout_steps": 78,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.05098339999995005,
+        "metrics": {
+          "elapsed": 0.050619,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 99,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 21,
+            "order_rollout_steps": 78,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.0482958000002327,
+        "metrics": {
+          "elapsed": 0.047915,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 99,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 21,
+            "order_rollout_steps": 78,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.04589480000004187,
+        "metrics": {
+          "elapsed": 0.04539,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 99,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 21,
+            "order_rollout_steps": 78,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.057957400000304915,
+        "metrics": {
+          "elapsed": 0.057178,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 108,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 16,
+            "order_expansions": 25,
+            "order_rollout_steps": 83,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.06045300000005227,
+        "metrics": {
+          "elapsed": 0.060008,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 108,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 16,
+            "order_expansions": 25,
+            "order_rollout_steps": 83,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.05444869999973889,
+        "metrics": {
+          "elapsed": 0.053956,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 108,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 16,
+            "order_expansions": 25,
+            "order_rollout_steps": 83,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.05513859999973647,
+        "metrics": {
+          "elapsed": 0.054666,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 108,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 16,
+            "order_expansions": 25,
+            "order_rollout_steps": 83,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.05717300000014802,
+        "metrics": {
+          "elapsed": 0.056735,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 110,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 14,
+            "order_expansions": 25,
+            "order_rollout_steps": 85,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.05804600000010396,
+        "metrics": {
+          "elapsed": 0.057331,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 110,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 14,
+            "order_expansions": 25,
+            "order_rollout_steps": 85,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.05626930000016728,
+        "metrics": {
+          "elapsed": 0.055762,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 110,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 14,
+            "order_expansions": 25,
+            "order_rollout_steps": 85,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.06040230000007796,
+        "metrics": {
+          "elapsed": 0.060038,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 110,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 14,
+            "order_expansions": 25,
+            "order_rollout_steps": 85,
+            "order_transpositions": 1
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r0_s0",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.019401399999878777,
+        "metrics": {
+          "elapsed": 0.016178,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 101,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 36,
+            "order_rollout_steps": 65,
+            "order_transpositions": 8
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r1_s1",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.0183828999997786,
+        "metrics": {
+          "elapsed": 0.01471,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 101,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 36,
+            "order_rollout_steps": 65,
+            "order_transpositions": 8
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r2_s0",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.01945849999992788,
+        "metrics": {
+          "elapsed": 0.015251,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 101,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 36,
+            "order_rollout_steps": 65,
+            "order_transpositions": 8
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r3_s1",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.017111799999838695,
+        "metrics": {
+          "elapsed": 0.013724,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 101,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 36,
+            "order_rollout_steps": 65,
+            "order_transpositions": 8
+          }
+        }
+      }
+    ]
+  },
+  "Neural old": {
+    "passed": 1,
+    "found": 12,
+    "total": 16,
+    "cases": [
+      {
+        "name": "breakthrough_artillery_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5002385000002505,
+        "metrics": {
+          "elapsed": 0.279396,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 86,
+            "policy_steps": 86,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.4855126999996173,
+        "metrics": {
+          "elapsed": 0.292597,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 88,
+            "policy_steps": 88,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 1,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.49252960000012536,
+        "metrics": {
+          "elapsed": 0.293599,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 84,
+            "policy_steps": 84,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.503793300000325,
+        "metrics": {
+          "elapsed": 0.304535,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 94,
+            "policy_steps": 94,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.4927950999999666,
+        "metrics": {
+          "elapsed": 0.29111,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 96,
+            "policy_steps": 96,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5097560999997768,
+        "metrics": {
+          "elapsed": 0.309774,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 84,
+            "policy_steps": 84,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 1,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5216169000000264,
+        "metrics": {
+          "elapsed": 0.312079,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 86,
+            "policy_steps": 86,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 1,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5130793000002996,
+        "metrics": {
+          "elapsed": 0.31325,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 92,
+            "policy_steps": 92,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 1,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5145508000000518,
+        "metrics": {
+          "elapsed": 0.313988,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 92,
+            "policy_steps": 92,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5543142999999873,
+        "metrics": {
+          "elapsed": 0.293232,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 88,
+            "policy_steps": 88,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 1,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.458614199999829,
+        "metrics": {
+          "elapsed": 0.272844,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 86,
+            "policy_steps": 86,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.46996050000007017,
+        "metrics": {
+          "elapsed": 0.271506,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 6,
+            "distinct_bundles": 6,
+            "nodes": 84,
+            "policy_steps": 84,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 1,
+            "reply_bundles": 12,
+            "reply_checked_roots": 6,
+            "soft_targets": 0,
+            "value_evaluations": 18
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r0_s0",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.2959131999996316,
+        "metrics": {
+          "elapsed": 0.09959,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 3,
+            "distinct_bundles": 3,
+            "nodes": 69,
+            "policy_steps": 69,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 6,
+            "reply_checked_roots": 3,
+            "soft_targets": 0,
+            "value_evaluations": 9
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r1_s1",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.2942886000000726,
+        "metrics": {
+          "elapsed": 0.096567,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 3,
+            "distinct_bundles": 3,
+            "nodes": 69,
+            "policy_steps": 69,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 6,
+            "reply_checked_roots": 3,
+            "soft_targets": 0,
+            "value_evaluations": 9
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r2_s0",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.28389709999964907,
+        "metrics": {
+          "elapsed": 0.086276,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 3,
+            "distinct_bundles": 3,
+            "nodes": 69,
+            "policy_steps": 69,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 6,
+            "reply_checked_roots": 3,
+            "soft_targets": 0,
+            "value_evaluations": 9
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r3_s1",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.2825910000001386,
+        "metrics": {
+          "elapsed": 0.090769,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "common_reply_rounds": 2,
+            "complete_bundles": 3,
+            "distinct_bundles": 3,
+            "nodes": 69,
+            "policy_steps": 69,
+            "raw_baseline_retained": 1,
+            "raw_baseline_selected": 0,
+            "reply_bundles": 6,
+            "reply_checked_roots": 3,
+            "soft_targets": 0,
+            "value_evaluations": 9
+          }
+        }
+      }
+    ]
+  },
+  "Neural ordered": {
+    "passed": 4,
+    "found": 11,
+    "total": 16,
+    "cases": [
+      {
+        "name": "breakthrough_artillery_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.5867392000000109,
+        "metrics": {
+          "elapsed": 0.394032,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 104,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 24,
+            "order_rollout_steps": 80,
+            "order_transpositions": 2
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.6257881999999881,
+        "metrics": {
+          "elapsed": 0.424225,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 100,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 10,
+            "order_expansions": 22,
+            "order_rollout_steps": 78,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.6311455999998543,
+        "metrics": {
+          "elapsed": 0.421864,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 102,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 22,
+            "order_rollout_steps": 80,
+            "order_transpositions": 2
+          }
+        }
+      },
+      {
+        "name": "breakthrough_artillery_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.6243075000002136,
+        "metrics": {
+          "elapsed": 0.432449,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 101,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 22,
+            "order_rollout_steps": 79,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.5734625000000051,
+        "metrics": {
+          "elapsed": 0.386007,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 104,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 24,
+            "order_rollout_steps": 80,
+            "order_transpositions": 2
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.6232168999999885,
+        "metrics": {
+          "elapsed": 0.433012,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 105,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 24,
+            "order_rollout_steps": 81,
+            "order_transpositions": 2
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.6343342000000121,
+        "metrics": {
+          "elapsed": 0.431626,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 102,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 22,
+            "order_rollout_steps": 80,
+            "order_transpositions": 2
+          }
+        }
+      },
+      {
+        "name": "breakthrough_anti_air_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.6178150999999161,
+        "metrics": {
+          "elapsed": 0.416729,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 99,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 10,
+            "order_expansions": 22,
+            "order_rollout_steps": 77,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r0_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.6084433999999419,
+        "metrics": {
+          "elapsed": 0.415499,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 103,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 24,
+            "order_rollout_steps": 79,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r1_s1",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.6143053999999211,
+        "metrics": {
+          "elapsed": 0.414071,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 103,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 24,
+            "order_rollout_steps": 79,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r2_s0",
+        "family": "wall_breakthrough",
+        "passed": true,
+        "solution_in_candidates": true,
+        "elapsed": 0.5906635999999708,
+        "metrics": {
+          "elapsed": 0.400206,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 104,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 24,
+            "order_rollout_steps": 80,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "breakthrough_b_copter_r3_s1",
+        "family": "wall_breakthrough",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.6205203999998048,
+        "metrics": {
+          "elapsed": 0.421896,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 104,
+            "order_baseline_selected": 1,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 11,
+            "order_expansions": 24,
+            "order_rollout_steps": 80,
+            "order_transpositions": 3
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r0_s0",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.40794229999983145,
+        "metrics": {
+          "elapsed": 0.214683,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 107,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 13,
+            "order_expansions": 36,
+            "order_rollout_steps": 71,
+            "order_transpositions": 6
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r1_s1",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.4164389999996274,
+        "metrics": {
+          "elapsed": 0.230914,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 107,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 36,
+            "order_rollout_steps": 71,
+            "order_transpositions": 6
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r2_s0",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": true,
+        "elapsed": 0.43129940000017086,
+        "metrics": {
+          "elapsed": 0.241866,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 112,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 13,
+            "order_expansions": 37,
+            "order_rollout_steps": 75,
+            "order_transpositions": 5
+          }
+        }
+      },
+      {
+        "name": "hq_double_gate_r3_s1",
+        "family": "hq_screen",
+        "passed": false,
+        "solution_in_candidates": false,
+        "elapsed": 0.44485389999999825,
+        "metrics": {
+          "elapsed": 0.254647,
+          "exhausted": false,
+          "reason": "",
+          "counts": {
+            "nodes": 103,
+            "order_baseline_selected": 0,
+            "order_checked_roots": 8,
+            "order_complete_candidates": 12,
+            "order_expansions": 36,
+            "order_rollout_steps": 67,
+            "order_transpositions": 8
+          }
+        }
+      }
+    ]
+  }
+}

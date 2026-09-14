@@ -1,0 +1,28 @@
+[AWPGN 1]
+[InitialState {"format":"aw-ai-v2-state","version":2,"profile":"deterministic-v2","width":6,"height":6,"player":0,"funds":[1000,2000],"turn":0,"turn_limit":40,"winner":null,"next_id":0,"allowed_builds":["infantry","tank","artillery"],"income_capture_limit":7,"tiles":["factory","plain","plain","forest","forest","city","plain","city","plain","plain","city","mountain","plain","road","mountain","forest","road","city","city","road","forest","mountain","road","plain","mountain","city","plain","plain","city","plain","city","forest","forest","plain","plain","factory"],"owners":{"0":0,"35":1},"units":[{"id":"ai_infantry_1","owner":1,"kind":"infantry","pos":35,"hp":100,"acted":false},{"id":"human_infantry_1","owner":0,"kind":"infantry","pos":0,"hp":100,"acted":false}],"captures":{}}]
+[OpenTurn false]
+
+1. i: a6-b5x, a6+i
+2. i: f1-f4x, f1+i
+3. i: b5x, i: a6-a3x, a6+i
+4. i: f4x, i: f1-e2x, f1+i
+5. i: a3x, i: b5-b2x, i: a6-c6
+6. i: e2x, i: f4-f6x, i: f1-f4, f1+i
+7. i: b2x, i: c6-e6xf6, i: a3-a1x, a6+i
+8. i: f6x, i: e2-e5x, i: f4-f5, i: f1-f4, f1+i
+9. i: a1x, i: b2-e2x, i: e6xe5, i: a6-a3, a6+t
+10. i: f6x, i: e5x, i: f1-e1xe2, i: f4-f2xe2, i: f5-d6xe6, f1+t
+11. i: e2x, t: a6-c6xd6, i: a3-b5, i: a1-a2, a6+a
+12. i: e5x, i: e1xe2, t: f1-e2, i: f2-e3, i: f6-f5, i: d6-f6, f1+i
+13. t: c6-e6xe5, i: b5-d5xe5, a: a6-d6, i: a2, a6+i
+14. i: f6-e5, i: e3-c2, t: e2-b2xa2, i: e1-b1, i: f1-c1, i: f5-d4xd5
+15. a: d6xe5, i: d5-f6x, i: a2-a1xb1, i: a6-c6, t: e6-d5xd4, a6+i
+16. i: b1-a3x, t: b2-b1xa1, i: c1-a1x, i: c2-b2x, f1+t
+17. i: a6-a4xa3, i: c6-e5x, i: f6x, t: d5-b3xb2, a: d6-b4, a6+i
+18. i: a1x, t: b1-c3xb3, t: f1-e4xe5, i: b2x, f1+i
+19. t: b3xb2, i: f6x, i: e5x, a: b4xe4, i: a4-a2xb2, i: a6-a3, a6+t
+20. t: c3xb3, t: e4-e2, i: a1-b2x, i: f1-c1, f1+i
+21. i: f6x, i: e5x, i: a3-a1x, i: a2-b1xb2, t: a6-b3xb2, a: b4xc3
+22. i: b2x, t: c3-f4, i: c1xb1, t: e2, i: f1-f2, f1+t
+23. i: a1x
+1-0

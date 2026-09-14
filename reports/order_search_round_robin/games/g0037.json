@@ -1,0 +1,82 @@
+{
+  "id": "g0037",
+  "pair": [
+    "Heuristic old",
+    "Neural ordered"
+  ],
+  "map_index": 2,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural ordered",
+  "map": "diag_map_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 35,
+  "turns_by_side": [
+    18,
+    17
+  ],
+  "final_income": [
+    7000,
+    2000
+  ],
+  "final_state_sha256": "e49a67564ac5bec0fc1262252d499a270598a6260ba830e3476b9361afc00a94",
+  "search_seconds": [
+    4.9161384999995335,
+    17.79652319999991
+  ],
+  "search_counts": [
+    {
+      "regions": 17,
+      "units": 170,
+      "nodes": 9217,
+      "policy_steps": 1821,
+      "production_expansions": 1102,
+      "production_peak_frontier": 60,
+      "replies_evaluated": 128,
+      "horizon_turns": 53,
+      "complete_candidates": 68,
+      "candidates_verified": 68,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 29798,
+      "movement_cache_misses": 2563,
+      "local_expansions": 6294,
+      "regions_searched": 80,
+      "transpositions": 423
+    },
+    {
+      "nodes": 4391,
+      "order_expansions": 847,
+      "order_rollout_steps": 3544,
+      "order_checked_roots": 134,
+      "order_complete_candidates": 451,
+      "order_baseline_selected": 6,
+      "order_transpositions": 61
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural ordered": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 22.971,
+  "replay": "replays/g0037.awpgn"
+}

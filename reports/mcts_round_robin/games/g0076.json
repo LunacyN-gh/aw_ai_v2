@@ -1,0 +1,76 @@
+{
+  "id": "g0076",
+  "pair": [
+    "Ordered teacher",
+    "Teacher MCTS"
+  ],
+  "map_index": 5,
+  "swap": 1,
+  "blue": "Teacher MCTS",
+  "red": "Ordered teacher",
+  "map": "predeploy_diag_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 25,
+  "turns_by_side": [
+    13,
+    12
+  ],
+  "final_income": [
+    8000,
+    3000
+  ],
+  "final_state_sha256": "f55c194ba3947519464a63f276b7db4ab6bf139929b6cbb40e8db1ea0631d917",
+  "search_seconds": [
+    20.57096449999881,
+    3.4757229000015286
+  ],
+  "search_counts": [
+    {
+      "nodes": 17899,
+      "mcts_simulations": 1374,
+      "order_rollout_steps": 2262,
+      "mcts_duplicates": 935,
+      "heuristic_mcts_steps": 11526,
+      "mcts_expansions": 1209,
+      "mcts_value_evaluations": 1374,
+      "mcts_completed_simulations": 1374,
+      "mcts_depth_sum": 3232,
+      "mcts_max_depth": 5,
+      "mcts_order_proposals": 13,
+      "mcts_root_children": 178,
+      "mcts_root_visits": 1374,
+      "mcts_greedy_selected": 8,
+      "mcts_fallback": 0
+    },
+    {
+      "nodes": 4538,
+      "order_expansions": 1041,
+      "order_rollout_steps": 3497,
+      "order_transpositions": 158,
+      "order_checked_roots": 95,
+      "order_complete_candidates": 333,
+      "order_baseline_selected": 4
+    }
+  ],
+  "effective_settings": {
+    "Teacher MCTS": {
+      "type": "heuristic",
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    },
+    "Ordered teacher": {
+      "type": "heuristic",
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 24.063,
+  "replay": "replays/g0076.awpgn"
+}

@@ -1,0 +1,105 @@
+{
+  "id": "g0081",
+  "pair": [
+    "Neural MCTS",
+    "Teacher MCTS"
+  ],
+  "map_index": 0,
+  "swap": 0,
+  "blue": "Neural MCTS",
+  "red": "Teacher MCTS",
+  "map": "test_cities_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 23,
+  "turns_by_side": [
+    12,
+    11
+  ],
+  "final_income": [
+    7000,
+    3000
+  ],
+  "final_state_sha256": "92f8578e532bfe8b61dde150085c6a78a916c9e42af9a96fab12a4d3dccafcd1",
+  "search_seconds": [
+    22.201358399998753,
+    16.692407800000183
+  ],
+  "search_counts": [
+    {
+      "nodes": 7122,
+      "mcts_simulations": 903,
+      "order_rollout_steps": 963,
+      "mcts_duplicates": 441,
+      "policy_steps": 4501,
+      "mcts_expansions": 719,
+      "mcts_value_evaluations": 903,
+      "mcts_completed_simulations": 903,
+      "mcts_depth_sum": 2355,
+      "mcts_max_depth": 6,
+      "mcts_order_proposals": 12,
+      "mcts_root_children": 126,
+      "mcts_root_visits": 903,
+      "mcts_greedy_selected": 7,
+      "mcts_fallback": 0
+    },
+    {
+      "nodes": 14719,
+      "mcts_simulations": 1161,
+      "order_rollout_steps": 1673,
+      "mcts_duplicates": 912,
+      "heuristic_mcts_steps": 9717,
+      "mcts_expansions": 1084,
+      "mcts_value_evaluations": 1161,
+      "mcts_completed_simulations": 1161,
+      "mcts_depth_sum": 2969,
+      "mcts_max_depth": 6,
+      "mcts_order_proposals": 11,
+      "mcts_root_children": 125,
+      "mcts_root_visits": 1161,
+      "mcts_greedy_selected": 4,
+      "mcts_fallback": 0
+    }
+  ],
+  "effective_settings": {
+    "Neural MCTS": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "mcts",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    },
+    "Teacher MCTS": {
+      "type": "heuristic",
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    }
+  },
+  "elapsed_seconds": 39.11,
+  "replay": "replays/g0081.awpgn"
+}

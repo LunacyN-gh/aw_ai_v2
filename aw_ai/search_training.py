@@ -1,7 +1,7 @@
 """Search-policy iteration with terminal value labels and fixed-opponent checks.
 
-Policy targets are conditional distributions over beam candidates, NOT MCTS
-visit counts. The legacy raw actor-critic experiment remains in neural_training.
+Policy targets use conditional root visits for MCTS and score distributions for
+the older backends. The legacy raw actor-critic experiment remains in neural_training.
 """
 from collections import deque
 from dataclasses import asdict, dataclass, replace
@@ -26,6 +26,7 @@ from .scenarios import load, digest
 from .guidance import deployment_agent
 from .teacher_replay import TeacherReplay, training_batch
 from .promotion import promotion_decision, promotion_scores
+from .checkpoint_io import replace_with_retry, publish_report
 
 ITA = ('infantry', 'tank', 'artillery')
 
@@ -71,7 +72,10 @@ def search_turn(planner, state, rng, explore=False):
         return state, [], {'verified': 0, 'partial': 0}
     settings = getattr(getattr(getattr(planner,"policy",None),"network",None),"search_settings",None) or {}
     temperature = settings.get("target_temperature",.15) if settings.get("planner") == "bundle" else 2000.
-    weights = candidate_weights(candidates,temperature)
+    visits = getattr(analysis,'visit_weights',None)
+    weights = [visits.get(c.actions,0.) for c in candidates] if visits is not None else candidate_weights(candidates,temperature)
+    if not sum(weights):raise ValueError('Search produced no target mass')
+    weights = [w/sum(weights) for w in weights]
     selected = next((c for c in candidates if c.actions == analysis.actions), candidates[0])
     if explore:
         selected = rng.choices(candidates, weights=[(1-settings.get("execution_exploration",.1))*w+settings.get("execution_exploration",.1)/len(weights) for w in weights])[0]
@@ -199,8 +203,9 @@ def worker_init():
     torch.set_num_threads(1)
 
 
-def teacher_planner(rules, allowed, config):
-    planner = Planner(rules=rules,policy=HeuristicPolicy(allowed),config=config)
+def teacher_planner(rules, allowed, config, backend='old'):
+    from .order_search import OrderPlanner
+    planner = (OrderPlanner if backend=='ordered' else Planner)(rules=rules,policy=HeuristicPolicy(allowed),config=config)
     planner.expert_targets = True
     return planner
 
@@ -214,7 +219,7 @@ def play_job(job):
     rules = Rules()
     state = job['state']
     boot, opponent, side = job['boot'], job['opponent'], job['side']
-    planners = [teacher_planner(rules,job['allowed'],job['search']) for _ in range(2)]
+    planners = [teacher_planner(rules,job['allowed'],job['search'],job.get('teacher_search','old')) for _ in range(2)]
     if not boot:
         current = deployment_agent(restore_model(job['current']))
         planners[side] = Planner(rules=rules, policy=current, value=current, config=job['search'])
@@ -226,7 +231,7 @@ def play_job(job):
     learner_turns = [0,0]
     corrections_seconds = 0.
     initial_owners = state.owners.copy()
-    teacher = teacher_planner(rules,job['allowed'],job['search'])
+    teacher = teacher_planner(rules,job['allowed'],job['search'],job.get('teacher_search','old'))
     for _ in range(job['turns']):
         if rules.outcome(state) is not None:
             break
@@ -253,7 +258,7 @@ def play_job(job):
         played += 1
         verified += metrics['verified']; partial += metrics['partial']
         for key,count in metrics.get('search_counts',{}).items():
-            search_counts[key] = search_counts.get(key,0)+count
+            search_counts[key] = max(search_counts.get(key,0),count) if key=='mcts_max_depth' else search_counts.get(key,0)+count
         search_counts['soft_targets'] = search_counts.get('soft_targets',0)+metrics.get('soft_targets',0)
     winner = rules.outcome(state)
     labeled = label_result(examples,winner)
@@ -281,13 +286,14 @@ def evaluation_job(job):
     network = restore_model(job['network'])
     state, seed, player, mode = job['state'], job['seed'], job['player'], job['mode']
     rules = Rules()
-    teacher = Planner(rules=rules, policy=HeuristicPolicy(network.allowed_builds), config=job['search'])
+    teacher = teacher_planner(rules,network.allowed_builds,job['search'],job.get('teacher_search','old'))
     if job.get('opponent'):
         other = deployment_agent(restore_model(job['opponent']))
         teacher = Planner(rules=rules,policy=other,value=other,config=job['search'])
     agent = deployment_agent(network)
     learner = Planner(rules=rules, policy=agent, value=agent, config=job['search'])
     partial = verified = played = 0
+    search_counts=[{},{}]
     initial_owners = state.owners.copy()
     rng = random.Random(seed)
     for _ in range(job['turns']):
@@ -298,6 +304,9 @@ def evaluation_job(job):
         else:
             planner = learner if state.player == player else teacher
             analysis = planner.analyze(state)
+            for key,count in analysis.metrics.counts.items():
+                old=search_counts[state.player].get(key,0)
+                search_counts[state.player][key]=max(old,count) if key=='mcts_max_depth' else old+count
             if state.player == player:
                 partial += sum(not c.complete for c in analysis.alternatives)
                 verified += sum(c.verified for c in analysis.alternatives)
@@ -306,7 +315,7 @@ def evaluation_job(job):
     winner = rules.outcome(state)
     return {'mode': mode, 'seed': seed, 'map_hash':digest(job['state']), 'learner_side': player, 'winner': winner,
             'result': 'censored' if winner is None else 'draw' if winner == DRAW else 'win' if winner == player else 'loss',
-            'partial_candidates': partial, 'verified_candidates': verified,
+            'partial_candidates': partial, 'verified_candidates': verified, 'search_counts':search_counts,
             'played_turns':played, 'termination':termination_reason(state,rules,initial_owners)}
 
 
@@ -325,6 +334,7 @@ def evaluate(network, initial, config, games=4):
         jobs.extend(dict(network=payload,opponent=config['reference'],state=initial(1000000+game//2),
                          seed=1000000+game//2,player=game%2,mode='gate',turns=config['turns'],search=config['search'])
                     for game in range(games))
+    for job in jobs:job['teacher_search']=config.get('teacher_search','old')
     executor = config.get('executor')
     rows = list(executor.map(evaluation_job, jobs) if executor else map(evaluation_job, jobs))
     summary = {mode: {result: sum(r['mode'] == mode and r['result'] == result for r in rows)
@@ -358,7 +368,8 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
         search_mode="bundle", bundle_candidates=6, target_temperature=.15,
         exploration_fraction=.25, execution_exploration=.1, heuristic_scale=20000.,
         value_loss_weight=.5, entropy_weight=.01, bundle_version=2,
-        proposal_temperature=.7, policy_prior_weight=.1, eval_maps=None, train_maps=None, promotion_margin=.05, promotion_teacher_weight=.5):
+        proposal_temperature=.7, policy_prior_weight=.1, eval_maps=None, train_maps=None, promotion_margin=.05, promotion_teacher_weight=.5, teacher_search="ordered", mcts_simulations=128, mcts_depth=6,
+        mcts_c_puct=1.5, mcts_widening=2., mcts_max_children=16, mcts_visit_temperature=1.):
     if (min(games,turns,train_nodes,eval_every,eval_games,checkpoint_every,updates_per_game,batch_size,replay_size) < 1
             or batch_size < 2 or eval_games % 2 or bootstrap < 0 or seed < 0 or seed+games+bootstrap >= 1000000
             or (map_path is None and not train_maps and (not 8 <= size <= 64 or units < 1))):
@@ -366,7 +377,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
     if (not 0 <= teacher_fraction <= 1 or teacher_every < 0 or teacher_replay_size < 2
             or not 0 <= neural_value_weight <= 1 or (promotion_win_rate is not None and not .5 < promotion_win_rate <= 1)):
         raise ValueError('invalid teacher replay, value blend, or promotion settings')
-    if (search_mode not in ("bundle","beam") or bundle_candidates < 2
+    if (search_mode not in ("bundle","beam","mcts") or bundle_candidates < 2
             or not all(math.isfinite(x) for x in (target_temperature,heuristic_scale,value_loss_weight,entropy_weight,exploration_fraction,execution_exploration))
             or min(target_temperature,heuristic_scale) <= 0 or min(value_loss_weight,entropy_weight)<0
             or not 0 <= exploration_fraction <= 1 or not 0 <= execution_exploration <= 1):
@@ -377,6 +388,11 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
     if promotion_win_rate is not None:promotion_margin=promotion_win_rate-.5
     if not math.isfinite(promotion_margin) or not 0<=promotion_margin<=1 or not math.isfinite(promotion_teacher_weight) or not 0<=promotion_teacher_weight<=1:
         raise ValueError("invalid promotion margin or teacher weight")
+    from .bundle_mcts import validate as validate_mcts
+    mcts_settings=dict(mcts_simulations=mcts_simulations,mcts_depth=mcts_depth,mcts_c_puct=mcts_c_puct,
+                       mcts_widening=mcts_widening,mcts_max_children=mcts_max_children,mcts_visit_temperature=mcts_visit_temperature)
+    validate_mcts(mcts_settings)
+    if teacher_search not in ('old','ordered'):raise ValueError('Invalid teacher search')
     run_started = perf_counter()
     torch.set_num_threads(1); torch.manual_seed(seed)
     rng = random.Random(seed)
@@ -389,6 +405,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
         bundle_candidates=bundle_candidates,target_temperature=target_temperature,exploration_fraction=exploration_fraction,
         execution_exploration=execution_exploration,heuristic_scale=heuristic_scale,bundle_version=bundle_version,
         proposal_temperature=proposal_temperature,policy_prior_weight=policy_prior_weight)
+    if search_mode=="mcts":network.search_settings.update(mcts_settings)
     network.to(device)
     allowed = tuple(network.allowed_builds)
     if map_path and train_maps:
@@ -428,7 +445,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
     def evaluation_initial(map_seed):
         return evaluation_states[(map_seed-1000000)%len(evaluation_states)].clone() if evaluation_states else initial(map_seed)
     training_config = Config(seconds=train_seconds,nodes=train_nodes)
-    evaluation_config = {'turns':turns,'search':Config(seconds=eval_seconds,nodes=train_nodes), 'executor':executor}
+    evaluation_config = {'turns':turns,'search':Config(seconds=eval_seconds,nodes=train_nodes), 'executor':executor,'teacher_search':teacher_search}
     rules = Rules()
     optimizer = torch.optim.AdamW(network.parameters(),lr=3e-4,weight_decay=1e-4)
     replay = deque(maxlen=replay_size)
@@ -441,7 +458,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
         raise ValueError('baseline opponent can build units excluded by this training roster')
     fixed_opponent = model_payload(fixed_opponent) if fixed_opponent else None
     output = Path(output); output.parent.mkdir(parents=True,exist_ok=True)
-    report = {'training':'value-guided bundle distillation + terminal value regression' if search_mode=='bundle' else 'teacher-guided beam distillation + terminal value regression',
+    report = {'training':'bundle MCTS visit distillation + terminal value regression' if search_mode=='mcts' else 'value-guided bundle distillation + terminal value regression' if search_mode=='bundle' else 'teacher-guided beam distillation + terminal value regression',
               'seed':seed,'map_path':str(Path(map_path).resolve()) if map_path else None,
               'initial_state_hash':digest(fixed) if fixed else None, 'training_sizes':sizes,
               'allowed_builds':list(allowed),'income_capture_fraction':capture_fraction,
@@ -454,7 +471,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
               'training_maps':[str(Path(p).resolve()) for p in training_paths],
               'training_map_hashes':[digest(s) for s in training_states],
               'parameters':sum(p.numel() for p in network.parameters()),
-              'config':dict(train_seconds=train_seconds,train_nodes=train_nodes,eval_seconds=eval_seconds,
+              'config':dict(teacher_search=teacher_search,train_seconds=train_seconds,train_nodes=train_nodes,eval_seconds=eval_seconds,
                             eval_every=eval_every,eval_games=eval_games,checkpoint_every=checkpoint_every,
                             updates_per_game=updates_per_game,batch_size=batch_size,replay_size=replay_size,
                             workers=workers,device=device,worker_device='cpu',worker_threads=1,
@@ -467,11 +484,9 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
     def save(path=output, model=None):
         temporary = path.with_suffix(path.suffix+'.tmp')
         (model if model is not None else network).save(temporary, report)
-        temporary.replace(path)
+        replace_with_retry(temporary, path)
         summary = path.with_suffix('.json')
-        temporary = summary.with_suffix('.json.tmp')
-        temporary.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
-        temporary.replace(summary)
+        publish_report(summary, report)
     def check(game):
         nonlocal reference, reference_evaluation, snapshots
         evaluation_started = perf_counter()
@@ -533,7 +548,7 @@ def _run(output, games=4, turns=60, seed=0, size=8, units=4, bootstrap=2, checkp
             other = random.Random(seed+index).choice(snapshots) if opponent == 'snapshot' else fixed_opponent if opponent == 'baseline' else reference if opponent == 'reference' else None
             jobs.append(dict(seed=seed+index, state=initial(seed+index), boot=boot,
                              opponent=opponent, side=episode%2, allowed=allowed, search=training_config,
-                             turns=turns, current=current, other=other,teacher_every=teacher_every))
+                             turns=turns, current=current, other=other,teacher_every=teacher_every,teacher_search=teacher_search))
         # Ingest in seed order. All games in a round use the same frozen learner.
         # Training can overlap later workers while keeping policy lag bounded.
         results = executor.map(play_job, jobs) if executor else map(play_job, jobs)

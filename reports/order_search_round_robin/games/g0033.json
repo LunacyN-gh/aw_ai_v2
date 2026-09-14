@@ -1,0 +1,83 @@
+{
+  "id": "g0033",
+  "pair": [
+    "Heuristic old",
+    "Neural ordered"
+  ],
+  "map_index": 0,
+  "swap": 0,
+  "blue": "Heuristic old",
+  "red": "Neural ordered",
+  "map": "test_cities_6x6_ita.json",
+  "winner": 1,
+  "termination": "income_capture_limit",
+  "played_turns": 18,
+  "turns_by_side": [
+    9,
+    9
+  ],
+  "final_income": [
+    2000,
+    7000
+  ],
+  "final_state_sha256": "465521451ce5794cc96d845f5eb0b45b37ba874be1e078966ed6e5e3b346c7ce",
+  "search_seconds": [
+    1.7805154000002403,
+    7.6367077000002155
+  ],
+  "search_counts": [
+    {
+      "regions": 10,
+      "units": 62,
+      "nodes": 3886,
+      "policy_steps": 739,
+      "production_expansions": 436,
+      "production_peak_frontier": 30,
+      "replies_evaluated": 68,
+      "horizon_turns": 27,
+      "complete_candidates": 34,
+      "candidates_verified": 34,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 10317,
+      "movement_cache_misses": 719,
+      "local_expansions": 2711,
+      "transpositions": 196,
+      "regions_searched": 47,
+      "coordination_repairs": 2
+    },
+    {
+      "nodes": 2477,
+      "order_expansions": 605,
+      "order_rollout_steps": 1872,
+      "order_checked_roots": 62,
+      "order_complete_candidates": 263,
+      "order_baseline_selected": 6,
+      "order_transpositions": 70
+    }
+  ],
+  "effective_settings": {
+    "Heuristic old": {
+      "type": "heuristic",
+      "search": "old"
+    },
+    "Neural ordered": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 9.666,
+  "replay": "replays/g0033.awpgn"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "g0058",
+  "pair": [
+    "Ordered teacher",
+    "Neural MCTS"
+  ],
+  "map_index": 4,
+  "swap": 1,
+  "blue": "Neural MCTS",
+  "red": "Ordered teacher",
+  "map": "predeploy_6x6_ita.json",
+  "winner": 1,
+  "termination": "income_capture_limit",
+  "played_turns": 24,
+  "turns_by_side": [
+    12,
+    12
+  ],
+  "final_income": [
+    3000,
+    7000
+  ],
+  "final_state_sha256": "7dd3df4f38e879ac2d05f20a9c6903fbc4daa355c8b201496f86c943ae3ed2b6",
+  "search_seconds": [
+    23.209988200002954,
+    7.381202100001246
+  ],
+  "search_counts": [
+    {
+      "nodes": 6239,
+      "mcts_simulations": 698,
+      "order_rollout_steps": 991,
+      "mcts_expansions": 615,
+      "mcts_value_evaluations": 698,
+      "mcts_completed_simulations": 698,
+      "mcts_depth_sum": 1322,
+      "mcts_max_depth": 4,
+      "mcts_order_proposals": 12,
+      "mcts_duplicates": 239,
+      "policy_steps": 3760,
+      "mcts_root_children": 166,
+      "mcts_root_visits": 698,
+      "mcts_greedy_selected": 3,
+      "mcts_fallback": 0
+    },
+    {
+      "nodes": 9468,
+      "order_expansions": 1929,
+      "order_rollout_steps": 7539,
+      "order_transpositions": 241,
+      "order_checked_roots": 88,
+      "order_complete_candidates": 647,
+      "order_baseline_selected": 4
+    }
+  ],
+  "effective_settings": {
+    "Neural MCTS": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 1.0,
+        "planner": "mcts",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      },
+      "search": "mcts",
+      "mcts_parameters": {
+        "mcts_simulations": 128,
+        "mcts_depth": 6,
+        "mcts_c_puct": 1.5,
+        "mcts_widening": 2.0,
+        "mcts_max_children": 16,
+        "mcts_visit_temperature": 1.0
+      }
+    },
+    "Ordered teacher": {
+      "type": "heuristic",
+      "search": "ordered"
+    }
+  },
+  "elapsed_seconds": 30.797,
+  "replay": "replays/g0058.awpgn"
+}

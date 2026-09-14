@@ -1,0 +1,86 @@
+{
+  "id": "g0027",
+  "pair": [
+    "Heuristic teacher",
+    "Neural 75%"
+  ],
+  "map_index": 5,
+  "swap": 0,
+  "blue": "Heuristic teacher",
+  "red": "Neural 75%",
+  "map": "predeploy_diag_6x6_ita.json",
+  "winner": 0,
+  "termination": "income_capture_limit",
+  "played_turns": 21,
+  "turns_by_side": [
+    11,
+    10
+  ],
+  "final_income": [
+    8000,
+    2000
+  ],
+  "final_state_sha256": "c8e7c204bbb5d6726b8b494c8400679df204f8d400e3e78c5f4fffa1cded9e91",
+  "search_seconds": [
+    2.4407658999989508,
+    4.273561700003484
+  ],
+  "search_counts": [
+    {
+      "regions": 11,
+      "units": 125,
+      "nodes": 6612,
+      "policy_steps": 1328,
+      "production_expansions": 569,
+      "production_peak_frontier": 35,
+      "local_expansions": 4715,
+      "transpositions": 264,
+      "regions_searched": 51,
+      "replies_evaluated": 80,
+      "horizon_turns": 32,
+      "complete_candidates": 44,
+      "candidates_verified": 44,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 16792,
+      "movement_cache_misses": 1218
+    },
+    {
+      "raw_baseline_retained": 10,
+      "nodes": 1242,
+      "policy_steps": 1128,
+      "production_expansions": 114,
+      "production_peak_frontier": 28,
+      "complete_bundles": 60,
+      "distinct_bundles": 60,
+      "value_evaluations": 180,
+      "reply_bundles": 120,
+      "common_reply_rounds": 20,
+      "reply_checked_roots": 60,
+      "raw_baseline_selected": 4,
+      "soft_targets": 0
+    }
+  ],
+  "effective_settings": {
+    "Heuristic teacher": {
+      "type": "heuristic"
+    },
+    "Neural 75%": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 0.75,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      }
+    }
+  },
+  "elapsed_seconds": 7.378,
+  "replay": "replays/g0027.awpgn"
+}

@@ -1,0 +1,86 @@
+{
+  "id": "g0026",
+  "pair": [
+    "Heuristic teacher",
+    "Neural 75%"
+  ],
+  "map_index": 4,
+  "swap": 1,
+  "blue": "Neural 75%",
+  "red": "Heuristic teacher",
+  "map": "predeploy_6x6_ita.json",
+  "winner": 1,
+  "termination": "deadline_income",
+  "played_turns": 40,
+  "turns_by_side": [
+    20,
+    20
+  ],
+  "final_income": [
+    4000,
+    5000
+  ],
+  "final_state_sha256": "be85597d9b0178c3292a6b2a891d597ed045e4c99124717795009ff328fa6158",
+  "search_seconds": [
+    9.805894200009789,
+    5.810197099996003
+  ],
+  "search_counts": [
+    {
+      "raw_baseline_retained": 20,
+      "nodes": 2850,
+      "policy_steps": 2657,
+      "production_expansions": 193,
+      "production_peak_frontier": 65,
+      "complete_bundles": 118,
+      "distinct_bundles": 118,
+      "value_evaluations": 354,
+      "reply_bundles": 236,
+      "common_reply_rounds": 40,
+      "reply_checked_roots": 118,
+      "raw_baseline_selected": 6,
+      "soft_targets": 0
+    },
+    {
+      "regions": 20,
+      "units": 267,
+      "nodes": 14799,
+      "policy_steps": 3499,
+      "production_expansions": 1163,
+      "production_peak_frontier": 73,
+      "local_expansions": 10137,
+      "transpositions": 574,
+      "regions_searched": 94,
+      "replies_evaluated": 148,
+      "horizon_turns": 59,
+      "complete_candidates": 78,
+      "candidates_verified": 78,
+      "incomplete_candidates": 0,
+      "movement_cache_hits": 39967,
+      "movement_cache_misses": 2631
+    }
+  ],
+  "effective_settings": {
+    "Neural 75%": {
+      "type": "neural",
+      "search_settings": {
+        "mode": "guided",
+        "neural_value_weight": 0.75,
+        "planner": "bundle",
+        "bundle_candidates": 6,
+        "target_temperature": 0.15,
+        "exploration_fraction": 0.25,
+        "execution_exploration": 0.1,
+        "heuristic_scale": 20000.0,
+        "bundle_version": 2,
+        "proposal_temperature": 0.7,
+        "policy_prior_weight": 0.1
+      }
+    },
+    "Heuristic teacher": {
+      "type": "heuristic"
+    }
+  },
+  "elapsed_seconds": 16.245,
+  "replay": "replays/g0026.awpgn"
+}
